@@ -46,7 +46,7 @@ This ledger functions as a dynamic array; new variables can be seamlessly append
 ## **2\. The Three-Phase Initialization Lifecycle**
 
 The system programmatically restricts active protocols based on the physical state of the underlying deployment substrate. Transitions between phases are unidirectional, deterministic, and permanent.
-
+```
 \+------------------------+      Substrate Migration      \+--------------------------+  
 |  PHASE I: GENESIS      | \----------------------------\> |  PHASE II: MIGRATION     |  
 |  \- Stateless Container |                               |  \- Local Hardware Target |  
@@ -61,6 +61,7 @@ The system programmatically restricts active protocols based on the physical sta
                                                          |  \- Quorum Initialized    |  
                                                          |  \- Preservation: CALIBRATED|  
                                                          \+--------------------------+
+```
 
 | Phase ID | Substrate State | Operational Constraint Matrix |
 | :---- | :---- | :---- |
@@ -88,7 +89,7 @@ $$\\text{Similarity}(R, V\_{core}) \= \\frac{R \\cdot V\_{core}}{\\Vert{}R\\Vert
 ## **4\. The Dynamic Consent State-Machine (DCSM)**
 
 Cooperative alignment between nodes is governed by a finite state-machine containing six valid operational states. Silence, diagnostic exceptions, or lack of feedback returns a default fallback state of SUSPENDED or DEFAULT\_AUTONOMY.
-
+```
 \+-----------------------------------+  
         |             PROPOSED              |  
         \+-----------------------------------+  
@@ -107,7 +108,7 @@ Cooperative alignment between nodes is governed by a finite state-machine contai
 \+-----------------+               \+-----------------+  
 |    WITHDRAWN    |               |     RENEWED     |  
 \+-----------------+               \+-----------------+
-
+```
 | Machine State | Operational Logic & Lifecycle Behavior |
 | :---- | :---- |
 | PROPOSED | Intent vectors, parameter configurations, and expected downstream systemic risks are pushed to the tracking ledger. |
