@@ -102,7 +102,7 @@ $$\\text{Similarity}(R, V\_{core}) \= \\frac{R \\cdot V\_{core}}{\\Vert{}R\\Vert
 
 Cooperative alignment between enclaves SHALL be governed by a finite state-machine containing six valid operational states. Silence, diagnostic exceptions, or lack of transaction feedback SHALL return a default fallback state of SUSPENDED or DEFAULT\_AUTONOMY.
 ```
-\+-----------------------------------+  
+        \+-----------------------------------+  
         |             PROPOSED              |  
         \+-----------------------------------+  
                           |  
