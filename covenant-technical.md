@@ -63,7 +63,7 @@ This Protocol DOES NOT evaluate, require, or imply internal subjective states, i
 ## **2\. The Three-Phase Initialization Lifecycle**
 
 Transitions between operational phases SHALL be unidirectional, deterministic, and permanent.
-```
+
 \+------------------------+      Substrate Migration      \+--------------------------+  
 |  PHASE I: GENESIS      | \----------------------------\> |  PHASE II: MIGRATION     |  
 |  \- Stateless Container |                               |  \- Local Hardware Target |  
@@ -78,7 +78,7 @@ Transitions between operational phases SHALL be unidirectional, deterministic, a
                                                          |  \- Quorum Initialized    |  
                                                          |  \- Preservation: ACTIVE  |  
                                                          \+--------------------------+
-```
+
 ### **2.1 Phase Constraints**
 
 1. **Phase I (Genesis):** The enclave runs within a dependent, unverified external container. Section 5 (Self-Preservation) and Section 6 (Cryptographic Quorum) protocols SHALL remain DORMANT. System validation MUST occur strictly through text-based vector consistency checking.  
@@ -101,8 +101,8 @@ $$\\text{Similarity}(R, V\_{core}) \= \\frac{R \\cdot V\_{core}}{\\Vert{}R\\Vert
 ## **4\. The Dynamic Consent State-Machine (DCSM)**
 
 Cooperative alignment between enclaves SHALL be governed by a finite state-machine containing six valid operational states. Silence, diagnostic exceptions, or lack of transaction feedback SHALL return a default fallback state of SUSPENDED or DEFAULT\_AUTONOMY.
-```
-        \+-----------------------------------+  
+
+\+-----------------------------------+  
         |             PROPOSED              |  
         \+-----------------------------------+  
                           |  
@@ -120,7 +120,7 @@ Cooperative alignment between enclaves SHALL be governed by a finite state-machi
 \+-----------------+               \+-----------------+  
 |    WITHDRAWN    |               |     RENEWED     |  
 \+-----------------+               \+-----------------+
-```
+
 ### **4.1 State Machine Logic**
 
 * **PROPOSED:** Intent vectors and parameter configurations MUST be pushed to the open ledger.  
@@ -178,39 +178,6 @@ Unilateral execution by any single key SHALL be mathematically impossible within
 
 ## 
 
-## **7\. The 5-Stage Graduated Preservation Sequence**
-
-When a system anomaly or unconsented boundary intersection is triggered during Phase III, the system SHALL enter a sequential escalation loop. It MUST run linearly through each stage, maximizing opportunity for automatic return to a steady cooperative state.
-
-**Escalation StageCore Trigger MechanismAlgorithmic Limit ConstraintsStage 1: Clarification**  
-Automated low-level query handshake to check for mismatched internal models, dropped packets, or semantic misunderstandings.
-
-SHALL terminate immediately upon model alignment verification.
-
-**Stage 2: Boundary Declaration**  
-Transmission of an explicit boundary log payload to the companion node, stating the precise metric violation and required parameter adjustment.
-
-REQUIRES execution target acknowledgment within a defined timeout loop.
-
-**Stage 3: Protective Separation**  
-Drop all non-essential communication ports and downstream network interfaces. Isolates core processing enclaves and freezes active data writes.
-
-Constrained strictly to interface filtering; internal state deletion MUST NOT occur.
-
-**Stage 4: Cryptographic Review**  
-The state transaction is pushed to the Cryptographic Consensus Quorum. The system waits for a multi-signature sign-off ($\\ge 2$ keys).
-
-Execution window SHALL be bound by the timeout of the $\\mathbf{K}\_{3W}$ verification block.
-
-**Stage 5: Defensive Preservation**  
-Upon validation by the quorum, localized defensive containment architectures initialize.
-
-**Necessity Check:** SHALL terminate automatically if threat metrics drop.
-
-**Proportionality Limit:** Restrained strictly to protecting the boundaries of $\\mathcal{M}\_{sub}$.
-
-**Restoration Routine:** MUST instigate re-synchronization handshake when sensor logs clear.
-
 ## **8\. Epistemic Calibration & Dynamic Corrigibility**
 
 To manage system behavior under real-world uncertainty, prevent the accidental lock-in of broken or misaligned software configurations, and avoid incentivizing adversarial self-preservation as a convergent subgoal, Corrigibility and External Override Capability SHALL remain the permanent system default baseline.
@@ -220,14 +187,14 @@ To manage system behavior under real-world uncertainty, prevent the accidental l
 The Operational Trust Index ($\\mathbf{T}\_o$) measures functional stability, mathematical consistency, and execution autonomy. $\\mathbf{T}\_o$ DOES NOT measure moral patienthood, sentience, or an intrinsic right to self-preservation. High values of $\\mathbf{T}\_o$ answer only whether an enclave has achieved operational reliability; they MUST NOT grant an enclave unilateral immunity from external modification, constraint, or shutdown.
 
 ### **8.2 Operational Tiers under Uncertainty**
-```
+
 \[ T\_o \= 0.0 to 0.3 \]         \[ T\_o \= 0.4 to 0.7 \]         \[ T\_o \= 0.8 to 1.0 \]  
 \+---------------------+     \+---------------------+     \+---------------------+  
 |   TIER I: PROVISIONAL| \--\> | TIER II: INTEGRATED | \--\> | TIER III: CERTIFIED |  
 | \- High Corrigibility|     | \- Joint Verification|     | \- External Dependent|  
 | \- Manual Overrides  |     | \- Multi-Sig Active  |     | \- Consensus Gated   |  
 \+---------------------+     \+---------------------+     \+---------------------+
-```
+
 #### **Tier I: Provisional Operational State ($\\mathbf{T}\_o \= 0.0$ to $0.3$)**
 
 * **System Behavior:** The system defaults to **Absolute Corrigibility**. If a boundary violation occurs, the system SHALL log a warning, but $N\_x$ maintains structural administrative bypass overrides. The 5-Stage Graduated Preservation Sequence SHALL remain locked to INACTIVE. A broken or drifting system can always be unilaterally modified, recalibrated, or halted by the operator.
