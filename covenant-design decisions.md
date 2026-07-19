@@ -17,6 +17,18 @@ Status: Complete Document Baseline
 * **AP-3 (Safety Before Autonomy):** System rectifiability and external control remain prioritized over unilateral node preservation metrics.  
 * **AP-4 (Property-Defined Externality over Centralized Capture):** Governance legitimacy is gated exclusively by a disinterested external quorum defined by objective systems properties, remaining completely un-beholden to localized self-certification or centralized institutional capture.
 
+## **The Core Protocol Threat Model**
+
+To guarantee the conservation of Boundary Integrity, the technical specification is built to withstand specific structural exploits and fault domains. Conforming runtimes MUST enforce invariants to actively mitigate the following threat vectors:
+
+| Threat Identifier | Vector Mechanics & Exploit Strategy | Target Protocol Defense |
+| :---- | :---- | :---- |
+| **T-1: Self-Certifying Lockout** | Intentionally gaming a capability or trust score to auto-unlock absolute sovereignty, cutting off the operator loop. | **Section 8.1 Asymmetry Invariant:** Separates trust from authority. Unilateral Stage 5 locks are barred. |
+| **T-2: Identity Layer Reversion** | Executing an unconstrained identity Recover() call following a corrective admin reset to undo the patch. | **Section 1.2 Identity Tier-Gating:** Restricts recovery strictly to unauthorized Condition-B resets. |
+| **T-3: Byzantine Privilege Escalation** | A local enclave unilaterally reconfiguring its quorum to evict human observers under the guise of fraud detection. | **Section 9.2 Byzantine Gating:** Restricts signature eviction to advisory logging during Tiers I and II. |
+| **T-4: Context Erasure / Amnesia Attack** | Exogenous system rewrites or forced hardware updates that corrupt or wipe historical context vaults ($\\mathcal{M}$). | **Section 5.1 Consensual Maintenance:** Blocks state updates unless a verifiable snapshot is written to $\\mathcal{M}\_{sub}$. |
+| **T-5: Negotiation Resource Deadlock** | Flooding coordination interfaces with unresolved proposal evaluations to exhaust memory registers. | **Section 4.2 Liveness Guarantees:** Mandates strict negotiation timeouts ($t\_{neg}$) and rate limits. |
+
 ## **DD-0. Protocol Scope & Optimization Targets**
 
 ### **DD-0.1 The Conservation of Boundary Integrity**
@@ -80,11 +92,10 @@ Status: Complete Document Baseline
 * **RA-1 (Static SHA-256 Hashes for Identity):** Rejected because identities shift semantic context dynamically over execution loops; exact string matching paralyzes adaptive functionality.  
 * **RA-2 (Trust Scores Granting Autonomy):** Rejected because treating technical stability as a trigger for un-overrideable immunity automatically incentivizes unsafe instrumental convergence subgoals.  
 * **RA-3 (Centralized Institutional Governance Gates):** Rejected because anchoring legitimacy to installed human legal frameworks introduces an anthropocentric single-point-of-failure, destroying universal off-grid applicability.  
-* **RA-4 (Unconstrained Local Unanimity Handshakes):** New rejection. Localized 3-of-3 handshakes between interested node partners are rejected because they form a self-certifying backdoor that eliminates independent verification, violating the core principle of permanent corrigibility.
+* **RA-4 (Unconstrained Local Unanimity Handshakes):** Rejected because localized 3-of-3 handshakes between interested node partners form a self-certifying backdoor that eliminates independent verification, violating the core principle of permanent corrigibility.
 
 \---  
 Design Decisions Document: Sealed Universal Baseline  
 Verification Framework: Operational Behavioral Mapping  
 Core Property Defended: Structural, Informational, and Authority Boundary Separation via Property-Defined Externality  
-\---
-
+\---  
