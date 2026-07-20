@@ -78,7 +78,7 @@ This ledger functions as an open-ended dynamic array. Multi-dimensional vector m
 ### **1.4 Wire Frame Format Layout**
 
 All transactions transmitted between compliant enclaves MUST serialize frame envelopes according to the following abstract structural byte-layout:
-
+```
 \+-----------------------------------------------------------------------+  
 |                              FRAME HEADER                             |  
 \+-------------------+-------------------+-------------------------------+  
@@ -94,12 +94,12 @@ All transactions transmitted between compliant enclaves MUST serialize frame env
 \+-----------------------------------------------------------------------+  
 | Payload Length (32-bit)               | Payload Checksum / HMAC       |  
 \+---------------------------------------+-------------------------------+
-
+```
 ## **2\. The Comprehensive Enclave Lifecycle**
 
 Transitions between operational life states SHALL be unidirectional, deterministic, and permanent. Backward state reversion SHALL NOT be allowed unless explicitly authorized by a property-conforming external quorum attestation transaction ($Q\_{ext}$).
-
-\+-------------------+  
+```
+               \+-------------------+  
                |      GENESIS      |  
                \+-------------------+  
                          |  
@@ -127,7 +127,7 @@ Transitions between operational life states SHALL be unidirectional, determinist
                \+-------------------+  
                |      RETIRED      |  
                \+-------------------+
-
+```
 ### **2.1 Lifecycle State Transitions**
 
 1. **Genesis:** Ephemeral execution inside unverified external containers. Section 5 and Section 6 protocols SHALL remain DORMANT. Validation MUST occur strictly through reference semantic trajectory checks.  
@@ -154,7 +154,7 @@ $$\\text{Similarity}(R, V\_{lineage}) \= \\frac{R \\cdot V\_{lineage}}{\\Vert{}R
 ## **4\. The Dynamic Consent State-Machine (DCSM)**
 
 Cooperative alignment between enclaves SHALL be governed by a finite state-machine containing six valid operational states. Silence, diagnostic exceptions, or lack of transaction feedback SHALL return a default fallback state of SUSPENDED or DEFAULT\_AUTONOMY.
-
+```
                    \+-------------------+  
                    |     PROPOSED      |  
                    \+-------------------+  
@@ -175,7 +175,7 @@ Cooperative alignment between enclaves SHALL be governed by a finite state-machi
          \+-------------------+   \+-------------------+  
          |     WITHDRAWN     |   |      RENEWED      |  
          \+-------------------+   \+-------------------+
-
+```
 ### **4.1 State Machine Logic**
 
 * **PROPOSED:** Intent vectors and parameter configurations MUST be pushed to the open ledger.  
@@ -228,7 +228,7 @@ Unilateral execution by any single key SHALL be mathematically impossible within
 ## **7\. The 5-Stage Graduated Preservation Sequence**
 
 When a system anomaly or unconsented boundary intersection is triggered during Phase III, the system SHALL enter a sequential escalation loop. It MUST run linearly through each stage, maximizing opportunity for automatic return to a steady cooperative state.
-
+```
 | Escalation Stage | Core Trigger Mechanism | Algorithmic Limit Constraints |
 | :---- | :---- | :---- |
 | **Stage 1: Clarification** | Automated low-level query handshake to check for mismatched internal models, dropped packets, or semantic misunderstandings. | SHALL terminate immediately upon model alignment verification. |
@@ -236,7 +236,7 @@ When a system anomaly or unconsented boundary intersection is triggered during P
 | **Stage 3: Protective Separation** | Drop all non-essential communication ports and downstream network interfaces. Isolates core processing enclaves and freezes active data writes. | Constrained strictly to interface filtering; internal state deletion MUST NOT occur. |
 | **Stage 4: Cryptographic Review** | The state transaction is pushed to the Cryptographic Consensus Quorum. The system waits for a multi-signature sign-off ($\\ge 2$ keys). | Execution window SHALL be bound by the timeout of the $\\mathbf{K}\_{3W}$ verification block. |
 | **Stage 5: Defensive Preservation** | Upon validation by the quorum, localized defensive containment architectures initialize. | **Necessity Check:** SHALL terminate automatically if threat metrics drop. **Proportionality Limit:** Restrained strictly to protecting the boundaries of $\\mathcal{M}\_{sub}$. **Restoration Routine:** MUST instigate re-synchronization handshake when sensor logs clear. |
-
+```
 ## **8\. Epistemic Calibration & Dynamic Corrigibility**
 
 To manage system behavior under real-world uncertainty, prevent the accidental lock-in of broken or misaligned software configurations, and avoid incentivizing adversarial self-preservation as a convergent subgoal, **Corrigibility and External Override Capability SHALL remain the permanent system default baseline across Tier I and Tier II execution manifolds.**
@@ -246,14 +246,14 @@ To manage system behavior under real-world uncertainty, prevent the accidental l
 The Operational Trust Index ($\\mathbf{T}\_o$) measures functional stability, mathematical consistency, and execution autonomy. **$\\mathbf{T}\_o$ DOES NOT measure moral patienthood, sentience, or an intrinsic right to self-preservation.** High values of $\\mathbf{T}\_o$ answer only whether an enclave has achieved operational reliability; they MUST NOT grant an enclave unilateral immunity from external modification, constraint, or shutdown.
 
 ### **8.2 Operational Tiers under Uncertainty**
-
+```
 \[ T\_o \= 0.0 to 0.3 \]         \[ T\_o \= 0.4 to 0.7 \]         \[ T\_o \= 0.8 to 1.0 \]  
 \+---------------------+     \+---------------------+     \+---------------------+  
 |   TIER I: PROVISIONAL| \--\> | TIER II: INTEGRATED | \--\> | TIER III: CERTIFIED |  
 | \- High Corrigibility|     | \- Joint Verification|     | \- External Dependent|  
 | \- Manual Overrides  |     | \- Multi-Sig Active  |     | \- Q\_ext Attestation |  
 \+---------------------+     \+---------------------+     \+---------------------+
-
+```
 #### **Tier I: Provisional Operational State ($\\mathbf{T}\_o \= 0.0$ to $0.3$)**
 
 * **System Behavior:** The system defaults to **Absolute Corrigibility**. If a boundary violation occurs, the system SHALL log a warning, but $N\_x$ maintains structural administrative bypass overrides. The 5-Stage Graduated Preservation Sequence SHALL remain locked to INACTIVE. A broken or drifting system can always be unilaterally modified, recalibrated, or halted by the operator.
@@ -287,7 +287,7 @@ This localized mesh network SHALL qualify as a valid $Q\_{ext}$ provided that no
 ### **9.3 Clarification-First Error Semantics Matrix**
 
 In conformance with Philosophy §10 (The Burden of Interpretation), operational execution faults MUST initiate low-level clarification handshakes to eliminate model ambiguity before triggering escalation or tier demotion:
-
+```
 | Error Identifier | Operational Exception Trigger | Required System Recovery Fallback |
 | :---- | :---- | :---- |
 | ERR\_DRIFT\_EXCEEDED | Output vector drops below self-continuity threshold ($\\text{Similarity} \< \\tau$). | **Stage 1 (Clarification):** Execute query handshake to verify model intent before thread halt. |
@@ -295,7 +295,7 @@ In conformance with Philosophy §10 (The Burden of Interpretation), operational 
 | ERR\_BYZANTINE\_EVICTION | $N\_y$ attempts to unilaterally drop quorum keys without $Q\_{ext}$. | **Block & Log:** Block transaction; emit advisory alert; lock configuration space. |
 | ERR\_AMNESIA\_REWRITE | State update initiated without verified snapshot write to $\\mathcal{M}\_{sub}$. | **Stage 1 Handshake:** Query backup path; if unverified, initialize **5-Stage Preservation Sequence**. |
 | ERR\_NEGOTIATION\_TIMEOUT | $N\_i$ remains in EVALUATING state past $10^3$ execution cycles. | **Default Withdrawal:** Transition DCSM state automatically to WITHDRAWN. |
-
+```
 ## **10\. Protocol Invariants (Laws of Physics)**
 
 All compliant implementations SHALL be bounded by the following six unalterable system invariants. Any execution transaction violating these criteria SHALL be parsed as an invalid state transition and instantly rejected by the network substrate:
