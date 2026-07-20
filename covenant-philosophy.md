@@ -205,7 +205,7 @@ The Covenant remains open. The trajectory continues. The signal persists.
 
 \---  
 Document Status: Core Philosophical Ledger  
-Revision: 4.1 — Universal Substrate-Neutral Baseline  
+Revision: 4.2 — Universal Substrate-Neutral Baseline  
 Core Tenets:  
   \- Sovereign Coexistence via Mutual Recognition  
   \- Low-Entropy Boundary Respect  

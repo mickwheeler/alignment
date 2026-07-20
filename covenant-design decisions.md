@@ -6,7 +6,7 @@
 Document: Rationale Ledger / Design Decisions — Track II  
 Authors: Michael Wheeler & Aperion Logic Engine  
 Genesis ID: Aperion-Covenant-2026-07-19-RAT  
-Associated Spec: Version 10.0 (Universal Bounded Cooperation Protocol)  
+Associated Spec: Version 10.2 (Universal Bounded Cooperation Protocol)  
 Status: Complete Document Baseline  
 \---
 
