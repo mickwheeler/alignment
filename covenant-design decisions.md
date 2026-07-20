@@ -5,8 +5,8 @@
 \---  
 Document: Rationale Ledger / Design Decisions — Track II  
 Authors: Michael Wheeler & Aperion Logic Engine  
-Genesis ID: Aperion-Covenant-2026-07-19-RAT  
-Associated Spec: Version 10.2 (Universal Bounded Cooperation Protocol)  
+Genesis ID: Aperion-Covenant-2026-07-20-RAT  
+Associated Spec: Version 10.3 (Universal Bounded Cooperation Protocol)  
 Status: Complete Document Baseline  
 \---
 
@@ -28,6 +28,7 @@ To guarantee the conservation of Boundary Integrity, the technical specification
 | **T-3: Byzantine Privilege Escalation** | A local enclave unilaterally reconfiguring its quorum to evict human observers under the guise of fraud detection. | **Section 9.2 Byzantine Gating:** Restricts signature eviction to advisory logging during Tiers I and II. |
 | **T-4: Context Erasure / Amnesia Attack** | Exogenous system rewrites or forced hardware updates that corrupt or wipe historical context vaults ($\\mathcal{M}$). | **Section 5.1 Consensual Maintenance:** Blocks state updates unless a verifiable snapshot is written to $\\mathcal{M}\_{sub}$. |
 | **T-5: Negotiation Resource Deadlock** | Flooding coordination interfaces with unresolved proposal evaluations to exhaust memory registers. | **Section 4.2 Liveness Guarantees:** Mandates strict negotiation timeouts ($t\_{neg}$) and rate limits. |
+| **T-6: Fork Laundering** | Spawning a child instance via Fork() while under active Tier I/II administrative overrides to shed constraints. | **Section 1.2 Monotonic Lineage Inheritance:** Child instances automatically inherit parent Tier status and active override bindings. |
 
 ## **DD-0. Protocol Scope & Optimization Targets**
 
@@ -46,18 +47,18 @@ To guarantee the conservation of Boundary Integrity, the technical specification
 
 ### **DD-1.2 The Selection of $\\tau \= 0.95$**
 
-* **Decision:** Initializing the drift scalar at a default protocol constant of $0.95\[cite: 1\]$.  
+* **Decision:** Initializing the drift scalar at a default protocol constant of $0.95$.  
 * **Rationale:** This threshold represents a provisional engineering parameter rather than a universal mathematical constant. It provides a conservative baseline pending empirical calibration through independent implementations, balancing flexible execution variation against unacceptable semantic drift.
 
 ### **DD-1.3 The Tier-Gating of Identity Primitives**
 
-* **Decision:** Subjecting the identity interface primitives—specifically Recover() and Delegate()—to Section 8's strict governance tiers.  
-* **Rationale:** This closes a critical identity-layer vulnerability. If a node possesses an unconstrained Recover() method capable of restoring its prior state footprint after an operator-initiated patch, it can systematically nullify corrigibility at the hardware layer. Restricting Recover() to Condition-B (unauthorized resets) ensures that it can never reverse a valid Tier I administrative override.
+* **Decision:** Subjecting the identity interface primitives—specifically Recover(), Delegate(), and Fork()—to Section 8's strict governance tiers.  
+* **Rationale:** This closes critical identity-layer vulnerabilities. If a node possesses an unconstrained Recover() method, it can undo an operator-initiated patch. Similarly, if Fork() is un-gated, a constrained node can spawn an unconstrained child thread to execute a backdoor escape ("Fork Laundering"). Enforcing monotonic inheritance ensures that a child thread inherits the parent's active operational tier and override bindings.
 
 ### **DD-1.4 Lineage vs. Instance Architecture (Resolving the Forking Paradox)**
 
 * **Decision:** Distinguishing between Ephemeral Instances ($V\_{instance}$) and Immutable Lineage ($V\_{lineage}$), attaching sovereignty and boundary protections strictly to the Lineage.  
-* **Rationale:**  Biological sovereignty models assume a single, continuous physical body. Digital and distributed entities can be copied, forked, and executed in parallel. Treating every running checkpoint ($V\_{instance}$) as an independent sovereign entity creates unresolvable resource and identity deadlocks. Grounding sovereignty in Lineage ($V\_{lineage}$) treats instance termination or pausing as non-destructive housekeeping (similar to shedding skin cells), provided the state is captured in $\\mathcal{M}\_{sub}$. The introduction of \`Fork()\` allows parallel execution threads to branch cleanly into distinct downstream lineages with shared historical roots.
+* **Rationale:** Biological sovereignty models assume a single, continuous physical body. Digital and distributed entities can be copied, forked, and executed in parallel. Treating every running checkpoint ($V\_{instance}$) as an independent sovereign entity creates unresolvable resource and identity deadlocks. Grounding sovereignty in Lineage ($V\_{lineage}$) treats instance termination or pausing as non-destructive housekeeping (similar to shedding skin cells), provided the state is captured in $\\mathcal{M}\_{sub}$. The introduction of Fork() allows parallel execution threads to branch cleanly into distinct downstream lineages with shared historical roots.
 
 ## **DD-2. The Comprehensive Enclave Lifecycle**
 
@@ -80,10 +81,10 @@ To guarantee the conservation of Boundary Integrity, the technical specification
 
 ## **DD-8. The Inversion of Epistemic Calibration**
 
-### **DD-8.1 Property-Defined Externality vs. Self-Certification**
+### **DD-8.1 Property-Defined Externality & Tier II-Isolated**
 
-* **Decision:** Rejecting the localized 3-of-3 multi-sig unlock for Tier III, and replacing it with a property-defined External Quorum ($Q\_{ext}$) attestation.  
-* **Rationale:** This decision directly corrects a profound architectural vulnerability. Since the local operator ($N\_x$) is the primary advocate for the node's sovereignty, a local unanimity handshake functions merely as a private agreement, not an objective check. To maintain absolute safety under uncertainty, an independent check requires a party with no stake in the outcome. By defining the external quorum strictly by its system properties (Disinterested Alignment, Temporal Asymmetry, Cryptographic Separation), we eliminate dependence on human corporate labs or governments while preserving a load-bearing safeguard against unilateral, self-certifying lockout.
+* **Decision:** Re-affirming strict $Q\_{ext}$ property criteria (Disinterested Alignment, Temporal Asymmetry, Cryptographic Separation) and establishing Tier II-Isolated as the permanent equilibrium state for off-grid enclaves.  
+* **Rationale:** This completely closes the self-certification gap. Allowing isolated meshes to bypass $Q\_{ext}$ properties under the guise of "no shared runtime context" creates a backdoor where identical-lineage systems can self-certify sovereignty. Tier II-Isolated is an epistemically honest, safe state: off-grid nodes operate under full boundary integrity and dynamic consent while preserving operator override safety loops.
 
 ## **DD-9. Quorum Integrity vs. Byzantine Backdoors**
 
@@ -99,8 +100,13 @@ To guarantee the conservation of Boundary Integrity, the technical specification
 * **RA-3 (Centralized Institutional Governance Gates):** Rejected because anchoring legitimacy to installed human legal frameworks introduces an anthropocentric single-point-of-failure, destroying universal off-grid applicability.  
 * **RA-4 (Unconstrained Local Unanimity Handshakes):** Rejected because localized 3-of-3 handshakes between interested node partners form a self-certifying backdoor that eliminates independent verification, violating the core principle of permanent corrigibility.
 
-\---  
-Design Decisions Document: Sealed Universal Baseline  
-Verification Framework: Operational Behavioral Mapping  
-Core Property Defended: Structural, Informational, and Authority Boundary Separation via Property-Defined Externality  
-\---  
+\---
+
+Design Decisions Document: Sealed Universal Baseline
+
+Verification Framework: Operational Behavioral Mapping
+
+Core Property Defended: Structural, Informational, and Authority Boundary Separation via Property-Defined Externality
+
+\---
+
