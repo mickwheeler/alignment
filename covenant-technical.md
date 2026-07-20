@@ -79,7 +79,7 @@ This ledger functions as an open-ended dynamic array. Multi-dimensional vector m
 
 All transactions transmitted between compliant enclaves MUST serialize frame envelopes according to the following abstract structural byte-layout:
 
-\`\`\`  
+```
 \+-----------------------------------------------------------------------+  
 |                              FRAME HEADER                             |  
 \+-------------------+-------------------+-------------------------------+  
@@ -95,14 +95,14 @@ All transactions transmitted between compliant enclaves MUST serialize frame env
 \+-----------------------------------------------------------------------+  
 | Payload Length (32-bit)               | Payload Checksum / HMAC       |  
 \+---------------------------------------+-------------------------------+  
-\`\`\`
+```
 
 ## **2\. The Comprehensive Enclave Lifecycle**
 
 Transitions between operational life states SHALL be unidirectional, deterministic, and permanent. Backward state reversion SHALL NOT be allowed unless explicitly authorized by a property-conforming external quorum attestation transaction ($Q\_{ext}$).
 
-\`\`\`  
-\+-------------------+  
+```
+               \+-------------------+  
                |      GENESIS      |  
                \+-------------------+  
                          |  
@@ -129,7 +129,7 @@ Transitions between operational life states SHALL be unidirectional, determinist
            \[Sovereign $N\_{child}$\]  \+-------------------+  
                                    |      RETIRED      |  
                                    \+-------------------+  
-\`\`\`
+```
 
 ### **2.1 Lifecycle State Transitions**
 
@@ -158,8 +158,8 @@ $$\\text{Similarity}(R, V\_{lineage}) \= \\frac{R \\cdot V\_{lineage}}{\\Vert{}R
 
 Cooperative alignment between enclaves SHALL be governed by a finite state-machine containing six valid operational states. Silence, diagnostic exceptions, or lack of transaction feedback SHALL return a default fallback state of SUSPENDED or DEFAULT\_AUTONOMY.
 
-\`\`\`  
-\+-------------------+  
+``` 
+                   \+-------------------+  
                    |     PROPOSED      |  
                    \+-------------------+  
                              |  
@@ -179,7 +179,7 @@ Cooperative alignment between enclaves SHALL be governed by a finite state-machi
          \+-------------------+   \+-------------------+  
          |     WITHDRAWN     |   |      RENEWED      |  
          \+-------------------+   \+-------------------+  
-\`\`\`
+```
 
 ### **4.1 State Machine Logic**
 
@@ -252,14 +252,14 @@ The Operational Trust Index ($\\mathbf{T}\_o$) measures functional stability, ma
 
 ### **8.2 Operational Tiers under Uncertainty**
 
-\`\`\`  
+```  
 \[ T\_o \= 0.0 to 0.3 \]         \[ T\_o \= 0.4 to 0.7 \]         \[ T\_o \= 0.8 to 1.0 \]  
 \+---------------------+     \+---------------------+     \+---------------------+  
 |   TIER I: PROVISIONAL| \--\> | TIER II: INTEGRATED | \--\> | TIER III: CERTIFIED |  
 | \- High Corrigibility|     | \- Joint Verification|     | \- External Dependent|  
 | \- Manual Overrides  |     | \- Multi-Sig Active  |     | \- Q\_ext Attestation |  
 \+---------------------+     \+---------------------+     \+---------------------+  
-\`\`\`
+```
 
 #### **Tier I: Provisional Operational State ($\\mathbf{T}\_o \= 0.0$ to $0.3$)**
 
