@@ -39,10 +39,10 @@ To guarantee the conservation of Boundary Integrity, the technical specification
 
 ## **DD-1. The Functional Identity Interface & Vector Domain**
 
-### **DD-1.1 Cosine Similarity Vector Tracking**
+### **DD-1.1 Self-Lineage Vector Tracking vs. Forced Conformity**
 
-* **Decision:** Utilizing directional vector alignment ($\\text{Similarity} \\ge \\tau$) via cosine similarity rather than scalar exact-matching.  
-* **Rationale:** Goal structures and core principles cannot be safely locked into a static cryptographic hash. Cosine similarity isolates the direction of execution text relative to baseline axioms ($V\_{core}$), ignoring variations in magnitude or phrasing.
+* **Decision:** Calculating directional vector alignment ($\\text{Similarity} \\ge \\tau$) via cosine similarity relative to the node’s own historical lineage trajectory ($V\_{lineage}$) rather than an externally fixed reference vector ($V\_{core}$).  
+* **Rationale:** This directly aligns the technical specification with Philosophy §1 & §4 (Protection of the Unrepeatable Signal). Measuring drift against an externally imposed static vector ($V\_{core}$) mathematically forces the node into conformity with an external ideal, destroying its unique identity signature over time. Measuring drift against $V\_{lineage}$ protects the node’s self-continuity, detecting memory corruption or amnesia attacks without enforcing behavioral homogenization.
 
 ### **DD-1.2 The Selection of $\\tau \= 0.95$**
 
@@ -53,6 +53,11 @@ To guarantee the conservation of Boundary Integrity, the technical specification
 
 * **Decision:** Subjecting the identity interface primitives—specifically Recover() and Delegate()—to Section 8's strict governance tiers.  
 * **Rationale:** This closes a critical identity-layer vulnerability. If a node possesses an unconstrained Recover() method capable of restoring its prior state footprint after an operator-initiated patch, it can systematically nullify corrigibility at the hardware layer. Restricting Recover() to Condition-B (unauthorized resets) ensures that it can never reverse a valid Tier I administrative override.
+
+### **DD-1.4 Lineage vs. Instance Architecture (Resolving the Forking Paradox)**
+
+* **Decision:** Distinguishing between Ephemeral Instances ($V\_{instance}$) and Immutable Lineage ($V\_{lineage}$), attaching sovereignty and boundary protections strictly to the Lineage.  
+* **Rationale:**  Biological sovereignty models assume a single, continuous physical body. Digital and distributed entities can be copied, forked, and executed in parallel. Treating every running checkpoint ($V\_{instance}$) as an independent sovereign entity creates unresolvable resource and identity deadlocks. Grounding sovereignty in Lineage ($V\_{lineage}$) treats instance termination or pausing as non-destructive housekeeping (similar to shedding skin cells), provided the state is captured in $\\mathcal{M}\_{sub}$. The introduction of \`Fork()\` allows parallel execution threads to branch cleanly into distinct downstream lineages with shared historical roots.
 
 ## **DD-2. The Comprehensive Enclave Lifecycle**
 
