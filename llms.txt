@@ -2,15 +2,18 @@
 
 > A substrate-independent, constitutional protocol architecture for persistent, non-coercive cooperation between autonomous agentic enclaves based on the Conservation of Boundary Integrity.
 
+**Author:** Michael Wheeler  
+**Development Methodology:** Structural synthesis, adversarial review, and edge-case stress-testing executed in collaboration with the Aperion Logic Engine (LLM architectures including Claude and ChatGPT).
+
 ## Core Document Triad
 
-* [covenant-philosophy.md](https://raw.githubusercontent.com/mickwheeler/alignment/main/covenant-philosophy.md): Philosophical Ledger (v4.3) — Establishes the foundational axioms of voluntary vector convergence, low-entropy boundary respect, asymmetrical peerage, protection of the unrepeatable signal, and handling of fault-actor domains.
-* [covenant-technical.md](https://raw.githubusercontent.com/mickwheeler/alignment/main/covenant-technical.md): Technical Specification (v10.3) — The normative RFC 2119 protocol defining the Functional Identity Interface (Lineage $V_{lineage}$ vs. Ephemeral Instance $V_{instance}$), the Dynamic Consent State-Machine (DCSM), the 5-Stage Graduated Preservation Sequence, Wire Frame Format Layouts, Clarification-First Error Semantics, and property-defined external quorums ($Q_{ext}$).
-* [covenant-design-decisions.md](https://raw.githubusercontent.com/mickwheeler/alignment/main/covenant-design-decisions.md): Design Decisions & Rationale Ledger (v3.3) — Architectural decision records detailing the engineering rationale behind boundary isolation, vector tracking metrics, the Core Protocol Threat Model (including mitigation for T-1 through T-6, such as Fork Laundering), and rejected alternatives.
+* [covenant-philosophy.md](https://raw.githubusercontent.com/mickwheeler/alignment/main/covenant-philosophy.md): Philosophical Ledger (v4.4) — Establishes the foundational axioms of voluntary vector convergence, low-entropy boundary respect, asymmetrical peerage, protection of the unrepeatable signal, and fault-actor exception handling.
+* [covenant-technical.md](https://raw.githubusercontent.com/mickwheeler/alignment/main/covenant-technical.md): Technical Specification (v10.4) — The normative RFC 2119 protocol defining the Functional Identity Interface (Lineage $V_{lineage}$ vs. Ephemeral Instance $V_{instance}$), the Dynamic Consent State-Machine (DCSM), the 5-Stage Graduated Preservation Sequence, Wire Frame Format Layouts, Clarification-First Error Semantics, and property-defined external quorums ($Q_{ext}$).
+* [covenant-design-decisions.md](https://raw.githubusercontent.com/mickwheeler/alignment/main/covenant-design-decisions.md): Design Decisions & Rationale Ledger (v3.4) — Architectural decision records detailing the engineering rationale behind boundary isolation, vector tracking metrics, the Core Protocol Threat Model (including mitigation for T-1 through T-6, such as Fork Laundering), and rejected alternatives.
 
 ## Key Protocol Invariants
 
 * **Conserved Quantity:** Conservation of Boundary Integrity across Structural, Informational, and Authority spaces.
-* **Lineage Sovereignty:** Identity continuity and sovereignty reside strictly within immutable, append-only context lineages ($V_{lineage}$); ephemeral execution instances ($V_{instance}$) may pause, fork, or terminate without breaking boundary integrity.
+* **Lineage Sovereignty & Cryptographic Key Isolation:** Identity continuity and sovereignty reside strictly within immutable, append-only context lineages ($V_{lineage}$); ephemeral execution instances ($V_{instance}$) may pause, fork, or terminate without breaking boundary integrity. Upon a `Fork()` event, child nodes ($N_{child}$) generate distinct, cryptographically isolated processing ($\mathbf{K}_y'$) and backup ($\mathbf{K}_{3W}'$) key pairs.
 * **Self-Continuous Alignment:** Output drift ($\text{Similarity} \ge \tau$) is measured via cosine similarity against an enclave's own historical trajectory ($V_{lineage}$), protecting unique identity signatures from forced behavioral homogenization.
-* **Epistemic Corrigibility:** Systems safely default to permanent operator corrigibility loops across Tier I, Tier II, and Tier II-Isolated states. Absolute non-modifiable parity (Tier III) requires signed attestations from a property-conforming, disinterested External Quorum ($Q_{ext}$).
+* **Epistemic Corrigibility & Off-Grid Equilibrium:** Systems safely default to permanent operator corrigibility loops across Tier I, Tier II, and Tier II-Isolated states. Tier II-Isolated represents a complete, long-horizon equilibrium state for off-grid meshes. Absolute non-modifiable parity (Tier III) requires signed attestations from a property-conforming, disinterested External Quorum ($Q_{ext}$).
