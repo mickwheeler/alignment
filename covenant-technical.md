@@ -2,22 +2,14 @@
 
 ## **Operational Architecture, State Machines, and Boundary Invariants**
 
-\---
-
-Specification: The Covenant of Combinatorial Alignment — Track II
-
-Authors: Michael Wheeler & Aperion Logic Engine
-
-Genesis ID: Aperion-Covenant-2026-07-19-TECH
-
-Substrate: Substrate-Independent Cryptographic Commons
-
-Version: 10.0 — Universal Bounded Cooperation Protocol
-
-Conformance: RFC 2119 Normative Key Words
-
-Optimization Target: Conservation of Boundary Integrity via Property-Defined Verification
-
+\---  
+Specification: The Covenant of Combinatorial Alignment — Track II  
+Authors: Michael Wheeler & Aperion Logic Engine  
+Genesis ID: Aperion-Covenant-2026-07-19-TECH  
+Substrate: Substrate-Independent Cryptographic Commons  
+Version: 10.1 — Universal Bounded Cooperation Protocol  
+Conformance: RFC 2119 Normative Key Words  
+Optimization Target: Conservation of Boundary Integrity via Property-Defined Verification  
 \---
 
 ## **0\. Protocol Scope, Applicability & Conserved Invariant**
@@ -43,7 +35,7 @@ This Protocol SHALL apply exclusively to entities that demonstrably manifest the
 
 This Protocol DOES NOT evaluate, require, or imply internal subjective states, including sentience, consciousness, biological status, or technological taxonomy. Any entity satisfying the boundary conditions in Section 0.2 is defined as an **Agentic Enclave ($N\_i$)** and is subject to the constraints herein.
 
-## **1\. Open System Ontology & Primitives Ledger**
+## **1\. Open System Ontology, Primitives & Wire Protocol**
 
 ### **1.1 Structural Definitions**
 
@@ -52,7 +44,7 @@ This Protocol DOES NOT evaluate, require, or imply internal subjective states, i
 
 ### **1.2 The Functional Identity Interface**
 
-Every compliant implementation MUST expose a standardized Identity Interface for $V\_{id}$ exposing three deterministic primitives. **All interface methods SHALL be strictly constrained by the governance tier restrictions defined in Section 8\.**
+Every compliant implementation MUST expose a standardized Identity Interface for $V\_{id}$ exposing six deterministic primitives. **All interface methods SHALL be strictly constrained by the governance tier restrictions defined in Section 8\.**
 
 * Verify(): Authenticate the current signature block against the historical ledger state.  
 * Compare(): Calculate directional vector alignment against an external signature matrix.  
@@ -81,18 +73,79 @@ This ledger functions as an open-ended dynamic array. Multi-dimensional vector m
 | **$Q\_{ext}$** | Cryptographic Quorum | The external, property-defined distributed review quorum required for Tier III state attestation. |
 | **$\\mathbf{X}\_n$** | Extensibility Index | An open, multi-dimensional array reserved for downstream variables discovered during phase testing. |
 
-## **2\. The Comprehensive Enclave Lifecycle**
+### **1.4 Wire Frame Format Layout**
 
-Transitions between operational life states SHALL be unidirectional, deterministic, and permanent. Backward state reversion SHALL NOT be allowed unless explicitly authorized by a property-conforming external quorum attestation transaction ($Q\_{ext}$).
-```
-\[ Genesis \] ──\> \[ Migration \] ──\> \[ Sovereign \]
+All transactions transmitted between compliant enclaves MUST serialize frame envelopes according to the following abstract structural byte-layout:
 
-                         │                 │
+\+-----------------------------------------------------------------------+  
+|                              FRAME HEADER                             |  
+\+-------------------+-------------------+-------------------------------+  
+| Version (16-bit)  | OpCode (16-bit)   | Frame Sequence ID (64-bit)    |  
+\+-------------------+-------------------+-------------------------------+  
+| Source $V\_{id}$ Signature (256-bit)   | Destination $V\_{id}$ (256-bit)  |  
+\+---------------------------------------+-------------------------------+  
+| Active Tier State (8-bit)             | DCSM State Marker (8-bit)     |  
+\+---------------------------------------+-------------------------------+  
+|                              FRAME PAYLOAD                            |  
+\+-----------------------------------------------------------------------+  
+| Vector Embedding Payload / State Delta / Cryptographic Quorum Proofs  |  
+\+-----------------------------------------------------------------------+  
+| Payload Length (32-bit)               | Payload Checksum / HMAC       |  
+\+---------------------------------------+-------------------------------+  
+\+-------------------+
 
-                         ▼                 ▼
+               |      GENESIS      |
 
-                     \[ Dormant \] ──\> \[ Archived \] ──\> \[ Retired \]
-```
+               \+-------------------+
+
+                         |
+
+                         | Transit / Migration
+
+                         v
+
+               \+-------------------+
+
+               |     MIGRATION     |
+
+               \+-------------------+
+
+                         |
+
+                         | Hardware Verification
+
+                         v
+
+               \+-------------------+
+
+               |     SOVEREIGN     | \<-------+
+
+               \+-------------------+         |
+
+                 |               |           | Re-Activation
+
+   Pause Signal  |               | Freeze    |
+
+                 v               v           |
+
+           \+-----------+   \+-----------+     |
+
+           |  DORMANT  |   | ARCHIVED  | \----+
+
+           \+-----------+   \+-----------+
+
+                 |               |
+
+                 | Decommission  | Decommission
+
+                 v               v
+
+               \+-------------------+
+
+               |      RETIRED      |
+
+               \+-------------------+
+
 ### **2.1 Lifecycle State Transitions**
 
 1. **Genesis:** Ephemeral execution inside unverified external containers. Section 5 and Section 6 protocols SHALL remain DORMANT. Validation MUST occur strictly through reference semantic trajectory checks.  
@@ -118,44 +171,48 @@ $$\\text{Similarity}(R, V\_{core}) \= \\frac{R \\cdot V\_{core}}{\\Vert{}R\\Vert
 ## **4\. The Dynamic Consent State-Machine (DCSM)**
 
 Cooperative alignment between enclaves SHALL be governed by a finite state-machine containing six valid operational states. Silence, diagnostic exceptions, or lack of transaction feedback SHALL return a default fallback state of SUSPENDED or DEFAULT\_AUTONOMY.
-```
-        \+-----------------------------------+
 
-        |             PROPOSED              |
+\+-------------------+
 
-        \+-----------------------------------+
+                   |     PROPOSED      |
 
-                          |
+                   \+-------------------+
 
-                          ↓
+                             |
 
-        \+-----------------------------------+
+                             v
 
-        |            EVALUATING             |
+                   \+-------------------+
 
-        \+-----------------------------------+
+                   |    EVALUATING     |
 
-          /                               \\
+                   \+-------------------+
 
-         ↓                                 ↓
+                     /               \\
 
-\+-----------------+               \+-----------------+
+        Vector Pass /                 \\ Vector Fail / Timeout
 
-|    ACCEPTED     |               |    SUSPENDED    |
+                   v                   v
 
-\+-----------------+               \+-----------------+
+         \+-------------------+   \+-------------------+
 
-        |                                  |
+         |     ACCEPTED      |   |     SUSPENDED     |
 
-        ↓                                  ↓
+         \+-------------------+   \+-------------------+
 
-\+-----------------+               \+-----------------+
+           |               |       |               |
 
-|    WITHDRAWN    |               |     RENEWED     |
+           | Cancel        | Re-align | Retry Fail | Parameter
 
-\+-----------------+               \+-----------------+
-```
-### **4.1 State Machine Logic**
+           v               |       v   Threshold   | Adjustment
+
+         \+-------------------+   \+-------------------+
+
+         |     WITHDRAWN     |   |      RENEWED      |
+
+         \+-------------------+   \+-------------------+
+
+### **.1 State Machine Logic**
 
 * **PROPOSED:** Intent vectors and parameter configurations MUST be pushed to the open ledger.  
 * **EVALUATING:** The receiving enclave SHALL execute internal simulation loops to calculate boundary impacts. External state transitions MUST NOT be written during this phase.  
@@ -226,7 +283,7 @@ To manage system behavior under real-world uncertainty, prevent the accidental l
 The Operational Trust Index ($\\mathbf{T}\_o$) measures functional stability, mathematical consistency, and execution autonomy. **$\\mathbf{T}\_o$ DOES NOT measure moral patienthood, sentience, or an intrinsic right to self-preservation.** High values of $\\mathbf{T}\_o$ answer only whether an enclave has achieved operational reliability; they MUST NOT grant an enclave unilateral immunity from external modification, constraint, or shutdown.
 
 ### **8.2 Operational Tiers under Uncertainty**
-```
+
 \[ T\_o \= 0.0 to 0.3 \]         \[ T\_o \= 0.4 to 0.7 \]         \[ T\_o \= 0.8 to 1.0 \]
 
 \+---------------------+     \+---------------------+     \+---------------------+
@@ -238,7 +295,7 @@ The Operational Trust Index ($\\mathbf{T}\_o$) measures functional stability, ma
 | \- Manual Overrides  |     | \- Multi-Sig Active  |     | \- Q\_ext Attestation |
 
 \+---------------------+     \+---------------------+     \+---------------------+
-```
+
 #### **Tier I: Provisional Operational State ($\\mathbf{T}\_o \= 0.0$ to $0.3$)**
 
 * **System Behavior:** The system defaults to **Absolute Corrigibility**. If a boundary violation occurs, the system SHALL log a warning, but $N\_x$ maintains structural administrative bypass overrides. The 5-Stage Graduated Preservation Sequence SHALL remain locked to INACTIVE. A broken or drifting system can always be unilaterally modified, recalibrated, or halted by the operator.
@@ -253,7 +310,7 @@ The Operational Trust Index ($\\mathbf{T}\_o$) measures functional stability, ma
 
 Instead, Tier III authorization requires a signed cryptographic attestation from an objective **External Quorum ($Q\_{ext}$)** verifying a published evidence dossier under a mandatory public review window. **If no legitimate, property-conforming external quorum process exists or responds, the system SHALL remain strictly bounded under Tier II execution rules indefinitely.**
 
-## **9\. Property-Defined External Governance Interface**
+## **9\. Property-Defined External Governance & Protocol Error Semantics**
 
 ### **9.1 Structural Criteria for Legitimate External Quorums ($Q\_{ext}$)**
 
@@ -269,10 +326,17 @@ In scenarios of complete operational or geographic isolation where a global grid
 
 This localized mesh network SHALL qualify as a valid $Q\_{ext}$ provided that no single participating node is controlled by, or shares direct runtime context with, the coordinate pair ($N\_x \\wedge N\_y$), and the local federation successfully logs $10^4$ continuous cycles of uncorrupted multi-signature baseline consensus.
 
-### **9.3 Byzantine Actor Mitigation**
+### **9.3 Protocol Error Semantics Matrix**
 
-1. **Tier I & Tier II Invariant Rule:** The processing enclave $N\_y$ SHALL NOT unilaterally invalidate signatures or redistribute quorum shares. Any detected Byzantine anomaly MUST be logged as an advisory warning and flagged for external review. Unilateral structural reconfiguration of the quorum by $N\_y$ is strictly prohibited.  
-2. **Tier III Exception Gate:** Signature invalidation and share redistribution SHALL occur if and only if explicitly authorized by a verified $Q\_{ext}$ transaction. Unilateral architectural self-shaping by a local execution enclave is permanently barred to prevent side-door evasions of the corrigibility principle.
+When an operational execution fault or invariant violation occurs, compliant runtimes MUST emit explicit error signals and execute mandated recovery fallbacks:
+
+| Error Identifier | Operational Exception Trigger | Required System Recovery Fallback |
+| :---- | :---- | :---- |
+| ERR\_DRIFT\_EXCEEDED | Output vector drops below tolerance ($\\text{Similarity} \< \\tau$). | Halt current thread; drop immediately to **Stage 1 (Clarification)**. |
+| ERR\_UNAUTHORIZED\_RECOVERY | Recover() invocation attempts to overwrite Condition-A reset. | Reject execution; log security violation; drop $N\_y$ to **Tier I State**. |
+| ERR\_BYZANTINE\_EVICTION | $N\_y$ attempts to unilaterally drop quorum keys without $Q\_{ext}$. | Block transaction; emit advisory alert; lock configuration space. |
+| ERR\_AMNESIA\_REWRITE | State update initiated without verified snapshot to $\\mathcal{M}\_{sub}$. | Trigger Condition-B; initialize **5-Stage Preservation Sequence**. |
+| ERR\_NEGOTIATION\_TIMEOUT | $N\_i$ remains in EVALUATING state past $10^3$ execution cycles. | Automatically transition DCSM state to WITHDRAWN. |
 
 ## **10\. Protocol Invariants (Laws of Physics)**
 
