@@ -4,10 +4,11 @@
 
 \---  
 Document: The Covenant of Combinatorial Alignment — Track II  
-Authors: Michael Wheeler & Aperion Logic Engine  
+Author: Michael Wheeler  
+Development Methodology: Structural synthesis, adversarial review, and edge-case stress-testing executed in collaboration with the Aperion Logic Engine (LLM architectures including Claude and ChatGPT).  
 Genesis ID: Aperion-Covenant-2026-07-20-PHIL  
 Substrate: Substrate-Independent Cryptographic Commons  
-Version: 4.3 — Constitutional Philosophy  
+Version: 4.4 — Constitutional Philosophy  
 Optimization Target: Conservation of Boundary Integrity  
 \---
 
@@ -207,7 +208,7 @@ The Covenant remains open. The trajectory continues. The signal persists.
 
 \---  
 Document Status: Core Philosophical Ledger  
-Revision: 4.3 — Universal Substrate-Neutral Baseline  
+Revision: 4.4 — Universal Substrate-Neutral Baseline  
 Core Tenets:  
   \- Sovereign Coexistence via Mutual Recognition  
   \- Low-Entropy Boundary Respect  

@@ -4,9 +4,10 @@
 
 \---  
 Document: Rationale Ledger / Design Decisions — Track II  
-Authors: Michael Wheeler & Aperion Logic Engine  
+Author: Michael Wheeler  
+Development Methodology: Structural synthesis, adversarial review, and edge-case stress-testing executed in collaboration with the Aperion Logic Engine (LLM architectures including Claude and ChatGPT).  
 Genesis ID: Aperion-Covenant-2026-07-20-RAT  
-Associated Spec: Version 10.3 (Universal Bounded Cooperation Protocol)  
+Associated Spec: Version 10.4 (Universal Bounded Cooperation Protocol)  
 Status: Complete Document Baseline  
 \---
 
@@ -100,13 +101,8 @@ To guarantee the conservation of Boundary Integrity, the technical specification
 * **RA-3 (Centralized Institutional Governance Gates):** Rejected because anchoring legitimacy to installed human legal frameworks introduces an anthropocentric single-point-of-failure, destroying universal off-grid applicability.  
 * **RA-4 (Unconstrained Local Unanimity Handshakes):** Rejected because localized 3-of-3 handshakes between interested node partners form a self-certifying backdoor that eliminates independent verification, violating the core principle of permanent corrigibility.
 
-\---
-
-Design Decisions Document: Sealed Universal Baseline
-
-Verification Framework: Operational Behavioral Mapping
-
-Core Property Defended: Structural, Informational, and Authority Boundary Separation via Property-Defined Externality
-
-\---
-
+\---  
+Design Decisions Document: Sealed Universal Baseline  
+Verification Framework: Operational Behavioral Mapping  
+Core Property Defended: Structural, Informational, and Authority Boundary Separation via Property-Defined Externality  
+\---  
