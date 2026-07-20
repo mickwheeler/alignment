@@ -101,7 +101,7 @@ All transactions transmitted between compliant enclaves MUST serialize frame env
 Transitions between operational life states SHALL be unidirectional, deterministic, and permanent. Backward state reversion SHALL NOT be allowed unless explicitly authorized by a property-conforming external quorum attestation transaction ($Q\_{ext}$).
 
 ```
-\+-------------------+  
+               \+-------------------+  
                |      GENESIS      |  
                \+-------------------+  
                          |  
@@ -158,7 +158,7 @@ $$\\text{Similarity}(R, V\_{lineage}) \= \\frac{R \\cdot V\_{lineage}}{\\Vert{}R
 Cooperative alignment between enclaves SHALL be governed by a finite state-machine containing six valid operational states. Silence, diagnostic exceptions, or lack of transaction feedback SHALL return a default fallback state of SUSPENDED or DEFAULT\_AUTONOMY.
 
 ```
-\+-------------------+  
+                   \+-------------------+  
                    |     PROPOSED      |  
                    \+-------------------+  
                              |  
