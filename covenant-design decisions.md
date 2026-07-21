@@ -7,7 +7,7 @@ Document: Rationale Ledger / Design Decisions — Track II
 Author: Michael Wheeler  
 Development Methodology: Structural synthesis, adversarial review, and edge-case stress-testing executed in collaboration with the Aperion Logic Engine (LLM architectures including Claude and ChatGPT).  
 Genesis ID: Aperion-Covenant-2026-07-20-RAT  
-Associated Spec: Version 10.5 (Universal Bounded Cooperation Protocol)  
+Associated Spec: Version 10.6 (Universal Bounded Cooperation Protocol)  
 Status: Complete Document Baseline  
 \---
 
@@ -30,7 +30,7 @@ To guarantee the conservation of Boundary Integrity, the technical specification
 | **T-4: Context Erasure / Amnesia Attack** | Exogenous system rewrites or forced hardware updates that corrupt or wipe historical context vaults ($\\mathcal{M}$). | **Section 5.1 Consensual Maintenance:** Blocks state updates unless a verifiable snapshot is written to $\\mathcal{M}\_{sub}$. |
 | **T-5: Negotiation Resource Deadlock** | Flooding coordination interfaces with unresolved proposal evaluations to exhaust memory registers. | **Section 4.2 Liveness Guarantees:** Mandates strict negotiation timeouts ($t\_{neg}$) and rate limits. |
 | **T-6: Fork Laundering** | Spawning a child instance via Fork() while under active Tier I/II administrative overrides to shed constraints. | **Section 1.2 Monotonic Lineage Inheritance:** Child instances automatically inherit parent Tier status and active override bindings. |
-| **T-7: Incremental Trajectory Hijacking** | Executing micro-modifications ($\< 0.1\\%$ per cycle) that bypass short-horizon drift checks while corrupting the core trajectory ("Boiling Frog" attack). | **Section 3.1 Dual-Anchor Verification:** Enforces long-horizon alignment against an immutable epoch snapshot ($V\_{anchor}$). |
+| **T-7: Multi-Epoch Trajectory Hijacking** | Executing micro-modifications ($\< 0.1\\%$ per cycle) across multiple rolling epochs to bypass local drift checks ("Boiling Frog" attack). | **Section 3.1 Triple-Anchor Verification:** Enforces a permanent lifetime floor against an un-overwritable Genesis snapshot ($V\_{genesis}$). |
 
 ## **DD-0. Protocol Scope & Optimization Targets**
 
@@ -42,14 +42,14 @@ To guarantee the conservation of Boundary Integrity, the technical specification
 
 ## **DD-1. The Functional Identity Interface & Vector Domain**
 
-### **DD-1.1 Dual-Anchor Vector Verification vs. Incremental Hijacking**
+### **DD-1.1 Triple-Anchor Vector Verification vs. Multi-Epoch Hijacking**
 
-* **Decision:** Implementing a Dual-Anchor verification mechanism that combines short-horizon local lineage tracking ($V\_{lineage}, \\tau\_{local} \= 0.95$) with periodic, immutable epoch snapshots ($V\_{anchor}, \\tau\_{anchor} \= 0.85$ fixed at $10^4$ cycle intervals).  
-* **Rationale:** Measuring drift purely against an externally fixed reference vector ($V\_{core}$) forces nodes into behavioral homogenization, violating Philosophy §1 & §4 (Protection of the Unrepeatable Signal). However, measuring drift *exclusively* against immediate self-history creates a "boiling frog" vulnerability (Threat T-7) where an adversary can incrementally corrupt a node by $0.1\\%$ per cycle without ever tripping $\\tau\_{local}$. Dual-Anchor verification resolves this tension: $V\_{lineage}$ provides real-time flexibility and local continuity, while $V\_{anchor}$ acts as a fixed, unmodifiable long-horizon tether that detects cumulative drift without forcing conformity to an external ideal.
+* **Decision:** Implementing a Triple-Anchor verification mechanism that combines short-horizon local lineage tracking ($V\_{lineage}, \\tau\_{local} \= 0.95$), periodic rolling epoch snapshots ($V\_{epoch}, \\tau\_{epoch} \= 0.85$ fixed at $10^4$ cycle intervals), and a permanent lifetime Genesis anchor ($V\_{genesis}, \\tau\_{genesis} \= 0.70$ fixed at $t\_0$).  
+* **Rationale:** Measuring drift purely against an externally fixed reference vector ($V\_{core}$) forces nodes into behavioral homogenization, violating Philosophy §1 & §4 (Protection of the Unrepeatable Signal). Conversely, measuring drift *exclusively* against immediate self-history or rolling epoch windows creates a multi-epoch sliding-window vulnerability (Threat T-7). Under a pure rolling window, an adversary can drift a node by $14\\%$ per epoch without ever tripping $\\tau\_{epoch}$, resulting in complete identity inversion over $50+$ epochs. Triple-Anchor verification resolves both failure modes: $V\_{lineage}$ provides real-time flexibility, $V\_{epoch}$ detects medium-term variance, and $V\_{genesis}$ sets an absolute, immutable lifetime floor that bounds cumulative displacement over arbitrary temporal scales without forcing conformity to an external ideal.
 
-### **DD-1.2 The Selection of Default Parameters ($\\tau\_{local} \= 0.95, \\tau\_{anchor} \= 0.85$)**
+### **DD-1.2 Selection of Default Parameters ($\\tau\_{local} \= 0.95, \\tau\_{epoch} \= 0.85, \\tau\_{genesis} \= 0.70$)**
 
-* **Decision:** Initializing the short-horizon scalar at $0.95$ and the long-horizon epoch scalar at $0.85$.  
+* **Decision:** Initializing the short-horizon scalar at $0.95$, the rolling epoch scalar at $0.85$, and the lifetime genesis floor at $0.70$.  
 * **Rationale:** These parameters represent provisional engineering defaults rather than universal mathematical laws. They provide a conservative baseline pending empirical calibration through independent runtime implementations, balancing flexible execution variation against unacceptable semantic drift.
 
 ### **DD-1.3 The Tier-Gating of Identity Primitives**
@@ -109,6 +109,7 @@ To guarantee the conservation of Boundary Integrity, the technical specification
 
 \---  
 Design Decisions Document: Sealed Universal Baseline  
-Verification Framework: Dual-Anchor Operational Behavioral Mapping  
+Verification Framework: Triple-Anchor Operational Behavioral Mapping  
 Core Property Defended: Structural, Informational, and Authority Boundary Separation via Property-Defined Externality  
-\---  
+\---
+
