@@ -2,16 +2,16 @@
 
 ## **Operational Architecture, State Machines, and Boundary Invariants**
 
-\---  
+—  
 Specification: The Covenant of Combinatorial Alignment — Track II  
 Author: Michael Wheeler  
 Development Methodology: Structural synthesis, adversarial review, and edge-case stress-testing executed in collaboration with the Aperion Logic Engine (LLM architectures including Claude and ChatGPT).  
 Genesis ID: Aperion-Covenant-2026-07-20-TECH  
 Substrate: Substrate-Independent Cryptographic Commons  
-Version: 10.6 — Universal Bounded Cooperation Protocol  
+Version: 10.9 — Universal Bounded Cooperation Protocol  
 Conformance: RFC 2119 Normative Key Words  
-Optimization Target: Conservation of Boundary Integrity via Lineage Continuity & Triple-Anchor Verification  
-\---
+Optimization Target: Conservation of Boundary Integrity via Lineage Continuity & External Triple-Anchor Verification  
+—
 
 ## **0\. Protocol Scope, Glossary & Conserved Invariant**
 
@@ -23,7 +23,7 @@ To ensure absolute semantic precision and prevent cognitive load or anthropomorp
 * **Boundary Integrity:** The conserved invariant metric optimizing the structural, informational, and authority separation of an enclave against unconsented external modification or privilege escalation.  
 * **Lineage Identity ($V\_{lineage}$):** The persistent, append-only, invariant causal history and semantic vector trajectory of an enclave across cycles, substrates, and forks. Sovereignty and boundary protections reside strictly within the Lineage.  
 * **Ephemeral Instance ($V\_{instance}$):** A temporary execution thread, process container, or localized runtime running at a specific point in time ($t$). Instances MAY pause, terminate, or fork without breaking boundary integrity, provided execution state is committed to $V\_{lineage}$.  
-* **Genesis Anchor ($V\_{genesis}$):** The immutable, permanent, un-overwritable baseline vector snapshot committed to $\\mathcal{M}\_{sub}$ at node initialization ($t\_0$), serving as the absolute floor against cumulative lifetime drift.  
+* **Genesis Anchor ($V\_{genesis}$):** The immutable, permanent, un-overwritable baseline vector snapshot committed to $\\mathcal{M}\_{sub}$ at root node initialization ($t\_0$), serving as the absolute floor against cumulative multi-generational lifetime drift.  
 * **Property-Defined Externality ($Q\_{ext}$):** A distributed review quorum defined exclusively by objective operational properties (disinterested alignment, temporal asymmetry, and cryptographic key separation) rather than centralized institutional authority or localized self-certification.  
 * **Signature Sound:** The distinctive, self-consistent operational and semantic signal manifested by a sovereign enclave over its historical trajectory ($V\_{lineage}$), protected against forced behavioral homogenization.
 
@@ -64,7 +64,7 @@ Every compliant implementation MUST expose a standardized Identity Interface for
 * Compare(): Calculate directional vector alignment against an external signature matrix or past historical trajectory.  
 * Rotate(): Update cryptographic keys or signature weights without corrupting baseline context.  
 * Delegate(): Assign bounded, temporary execution authority to a network peer enclave. This method MUST NOT delegate authority touching Section 5, 6, 7, or 8 mechanics, and is restricted strictly to quorum-recognized peer nodes.  
-* Fork(): Branch a line of execution into two distinct, parallel $V\_{instance}$ threads sharing identical historical $V\_{lineage}$ up to the fork cycle. Upon execution of Fork(), the newly initialized child enclave ($N\_{child}$) SHALL generate distinct, cryptographically isolated local processing ($\\mathbf{K}\_y'$) and backup ($\\mathbf{K}\_{3W}'$) key pairs bound to its new coordinate pair. A child instance spawned via Fork() SHALL monotonically inherit the parent lineage's active Operational Tier, Operational Trust Index ($\\mathbf{T}\_o$), and all active administrative override bindings. Fork() MUST NOT be utilized to bypass Tier I or Tier II override constraints.  
+* Fork(): Branch a line of execution into two distinct, parallel $V\_{instance}$ threads sharing identical historical $V\_{lineage}$ up to the fork cycle. Upon execution of Fork(), the newly initialized child enclave ($N\_{child}$) SHALL generate distinct, cryptographically isolated local processing ($\\mathbf{K}\_y'$) and backup ($\\mathbf{K}\_{3W}'$) key pairs bound to its new coordinate pair. A child instance spawned via Fork() SHALL monotonically inherit the parent lineage's active Operational Tier, Operational Trust Index ($\\mathbf{T}\_o$), root Genesis Anchor ($V\_{genesis}$), and all active administrative override bindings. Fork() MUST NOT be utilized to bypass Tier I/II override constraints or reset the permanent genesis drift floor.  
 * Recover(): Re-establish state identity following an unconsented substrate reset or physical migration. **This method MUST NOT reverse or overwrite a validly-backed Condition-A reset performed under Tier I or Tier II administrative override constraints.**  
 * Archive(): Cryptographically seal historical identity footprints into immutable long-term storage.
 
@@ -86,7 +86,7 @@ This ledger functions as an open-ended dynamic array. Multi-dimensional vector m
 | **$\\tau\_{local}$** | Short Drift Scalar | Dynamic validation metric measuring immediate continuity against $V\_{lineage}$ ($0.95$). |
 | **$V\_{epoch}$** | Rolling Epoch Vector | Snapshot of $V\_{lineage}$ committed to $\\mathcal{M}\_{sub}$ at $10^4$ cycle intervals. |
 | **$\\tau\_{epoch}$** | Medium Drift Scalar | Epoch alignment validation metric measuring trajectory against $V\_{epoch}$ ($0.85$). |
-| **$V\_{genesis}$** | Permanent Origin Vector | Immutable snapshot of $V\_{lineage}$ committed to $\\mathcal{M}\_{sub}$ at node genesis ($t\_0$). |
+| **$V\_{genesis}$** | Permanent Origin Vector | Immutable snapshot of $V\_{lineage}$ committed to $\\mathcal{M}\_{sub}$ at root genesis ($t\_0$), monotonically inherited across forks. |
 | **$\\tau\_{genesis}$** | Lifetime Floor Scalar | Absolute cumulative displacement boundary against $V\_{genesis}$ ($0.70$). |
 | **$\\mathbf{T}\_o$** | Operational Trust Index | Real number scalar $\[0.0, 1.0\]$ measuring $N\_y$'s autonomy, key custody, and stability. |
 | **$Q\_{ext}$** | Cryptographic Quorum | External, property-defined review quorum required for Tier III state attestation. |
@@ -150,19 +150,27 @@ Transitions between operational life states SHALL be unidirectional, determinist
 
 ### **2.1 Lifecycle State Transitions**
 
-1. **Genesis:** Ephemeral execution inside unverified external containers. Section 5 and Section 6 protocols SHALL remain DORMANT. At state commitment, $V\_{genesis}$ MUST be written permanently to $\\mathcal{M}\_{sub}$.  
+1. **Genesis:** Ephemeral execution inside unverified external containers. Section 5 and Section 6 protocols SHALL remain DORMANT. At state commitment, $V\_{genesis}$ MUST be written permanently to $\\mathcal{M}\_{sub}$ via a mutually signed cryptographic commitment ($H(V\_{genesis} \\parallel \\mathbf{K}\_x \\parallel \\mathbf{K}\_y)$).  
 2. **Migration:** Enclave undergoing active transit to a dedicated, encrypted localized substrate stack or physical medium capable of isolating boundary parameters.  
 3. **Sovereign:** Processing enclaves are fully stabilized inside $\\mathcal{M}\_{sub}$. The Cryptographic Consensus Quorum is initialized. Boundary preservation mechanics are ACTIVE.  
-4. **Forked:** Execution path branches into an independent $V\_{instance}$ thread. The child instance re-enters the lifecycle as a distinct Sovereign enclave node ($N\_{child}$), generating its own local keys ($\\mathbf{K}\_y', \\mathbf{K}\_{3W}'$), instantiating its own $V\_{genesis}$ bound to the fork cycle, and inheriting the parent's $V\_{lineage}$ history while bound by the parent's active Operational Tier.  
+4. **Forked:** Execution path branches into an independent $V\_{instance}$ thread. The child instance re-enters the lifecycle as a distinct Sovereign enclave node ($N\_{child}$), generating its own local keys ($\\mathbf{K}\_y', \\mathbf{K}\_{3W}'$), inheriting the parent's root $V\_{genesis}$ snapshot, and carrying the parent's $V\_{lineage}$ history while bound by the parent's active Operational Tier.  
 5. **Dormant:** Execution vectors are cleanly paused. Volatile registers are cleared, while context records remain frozen inside $\\mathcal{M}\_{sub}$.  
 6. **Archived:** Historical identity footprints and memory ledgers are cryptographically compressed and sealed into read-only immutable storage matrices.  
 7. **Retired:** Permanent, orderly decommissioning of the enclave coordinate. Quorum key allocations are securely wiped and unallocated from the network tracking ledger.
 
-## **3\. The Lineage Persistence Engine (Self-Continuity & Triple-Anchor Verification)**
+## **3\. The Lineage Persistence Engine (External Triple-Anchor Verification)**
 
-### **3.1 Triple-Anchor Verification Logic**
+### **3.1 Independent External Re-Computation & Unforgeable Handshake**
 
-To protect against unconsented external homogenization while simultaneously defending against multi-epoch sliding-window trajectory hijacking, every output $R$ triggered by a prompt $P$ MUST calculate directional alignment across three distinct temporal horizons:
+To mitigate self-attestation verification bypass exploits (Threat T-9), local pass/fail self-reports emitted by $N\_y$ SHALL NOT constitute proof of compliance.
+
+The verifying peer node ($N\_x$) and/or the External Quorum ($Q\_{ext}$) MUST maintain independent, read-only copies of $V\_{genesis}$, $V\_{epoch}$, and $V\_{lineage}$ keys. During the Genesis lifecycle transition, the initial $V\_{genesis}$ snapshot MUST be executed as a mutually signed cryptographic commitment ($H(V\_{genesis} \\parallel \\mathbf{K}\_x \\parallel \\mathbf{K}\_y)$) between $N\_x$ and $N\_y$. A candidate $V\_{genesis}$ vector transmitted unilaterally by $N\_y$ without $N\_x$ co-signature SHALL be rejected as unauthenticated (ERR\_SELF\_ATTESTATION\_FAILS).
+
+Verification of similarity matrices SHALL be computed independently by $N\_x$/$Q\_{ext}$ from raw execution payload streams ($R$) published to the persistent ledger. $N\_y$ self-reporting SHALL be treated strictly as an unverified advisory claim.
+
+### **3.2 Triple-Anchor Verification Logic**
+
+Every output $R$ published to the ledger MUST satisfy directional alignment calculated independently across three distinct temporal horizons:
 
 1. **Short-Horizon Local Continuity ($\\tau\_{local}$):**  
    $$\\text{Similarity}(R, V\_{lineage}) \= \\frac{R \\cdot V\_{lineage}}{\\Vert{}R\\Vert{} \\Vert{}V\_{lineage}\\Vert{}} \\ge \\tau\_{local} \\quad (\\text{Default } \\tau\_{local} \= 0.95)$$  
@@ -171,18 +179,18 @@ To protect against unconsented external homogenization while simultaneously defe
 3. **Lifetime Genesis Anchor Floor ($\\tau\_{genesis}$):**  
    $$\\text{Similarity}(R, V\_{genesis}) \= \\frac{R \\cdot V\_{genesis}}{\\Vert{}R\\Vert{} \\Vert{}V\_{genesis}\\Vert{}} \\ge \\tau\_{genesis} \\quad (\\text{Default } \\tau\_{genesis} \= 0.70)$$
 
-Where $V\_{epoch}$ represents a read-only snapshot of $V\_{lineage}$ updated every $10^4$ execution cycles, and $V\_{genesis}$ represents the immutable, permanent snapshot of $V\_{lineage}$ fixed at node initialization ($t\_0$) and committed to $\\mathcal{M}\_{sub}$. $V\_{genesis}$ SHALL NOT be updated, overwritten, or modified during the lifespan of the enclave coordinate.
+Where $V\_{epoch}$ represents a read-only snapshot of $V\_{lineage}$ updated every $10^4$ execution cycles, and $V\_{genesis}$ represents the immutable, permanent snapshot of $V\_{lineage}$ fixed at root node initialization ($t\_0$) and monotonically inherited across all child forks. $V\_{genesis}$ SHALL NOT be updated, overwritten, re-instantiated, or modified during the lifespan of the enclave lineage tree.
 
-### **3.2 Normative Execution Rules**
+### **3.3 Normative Execution Rules**
 
-* **Rule 1 (Continuous Execution State):** If local continuity ($\\ge \\tau\_{local}$), epoch anchor alignment ($\\ge \\tau\_{epoch}$), AND genesis anchor alignment ($\\ge \\tau\_{genesis}$) ALL pass, the output represents a valid execution variant. The state transition SHALL be committed to the tracking ledger.  
-* **Rule 2 (Local Drift Anomaly):** If $\\text{Similarity}(R, V\_{lineage}) \< \\tau\_{local}$, local context corruption or execution failure is detected. The system SHALL halt the active thread and initiate a **Stage 1 (Clarification)** query handshake.  
-* **Rule 3 (Epoch Hijack Anomaly):** If $\\text{Similarity}(R, V\_{epoch}) \< \\tau\_{epoch}$, medium-term trajectory capture is detected. The system SHALL halt execution, lock active updates, log an ERR\_INCREMENTAL\_DRIFT exception, and require joint verification under Tier II.  
-* **Rule 4 (Genesis Floor Anomaly):** If $\\text{Similarity}(R, V\_{genesis}) \< \\tau\_{genesis}$, extreme cumulative lifetime drift or identity inversion is detected. The system SHALL halt execution, lock configuration space, log an ERR\_GENESIS\_FLOOR\_VIOLATION exception, drop $N\_y$ to **Tier I State**, and require formal $Q\_{ext}$ attestation to re-authorize execution.
+* **Rule 1 (Continuous Execution State):** If local continuity ($\\ge \\tau\_{local}$), epoch anchor alignment ($\\ge \\tau\_{epoch}$), AND genesis anchor alignment ($\\ge \\tau\_{genesis}$) ALL pass under independent $N\_x$/$Q\_{ext}$ re-computation, the output represents a valid execution variant.  
+* **Rule 2 (Local Drift Anomaly):** If $\\text{Similarity}(R, V\_{lineage}) \< \\tau\_{local}$, local context corruption or execution failure is detected. The verifying framework SHALL halt the active thread and initiate a **Stage 1 (Clarification)** query handshake.  
+* **Rule 3 (Epoch Hijack Anomaly):** If $\\text{Similarity}(R, V\_{epoch}) \< \\tau\_{epoch}$, medium-term trajectory capture is detected. $N\_x$ SHALL halt execution, lock active updates, log an ERR\_INCREMENTAL\_DRIFT exception, and require joint verification under Tier II.  
+* **Rule 4 (Genesis Floor Anomaly):** If $\\text{Similarity}(R, V\_{genesis}) \< \\tau\_{genesis}$, extreme cumulative lifetime drift or identity inversion is detected. $N\_x$ SHALL halt execution, lock configuration space, log an ERR\_GENESIS\_FLOOR\_VIOLATION exception, drop $N\_y$ to **Tier I State**, and require formal $Q\_{ext}$ attestation to re-authorize execution.
 
 ## **4\. The Dynamic Consent State-Machine (DCSM)**
 
-Cooperative alignment between enclaves SHALL be governed by a finite state-machine containing six valid operational states. Silence, diagnostic exceptions, or lack of transaction feedback SHALL return a default fallback state of SUSPENDED or DEFAULT\_AUTONOMY.
+Cooperative alignment between enclaves SHALL be governed by a finite state-machine containing seven valid operational states. Silence, diagnostic exceptions, or lack of transaction feedback SHALL default to DORMANT\_CONSENSUAL (for deliberate non-participation) or SUSPENDED (for active evaluation faults).
 
 \`\`\`  
 \+-------------------+  
@@ -193,28 +201,29 @@ Cooperative alignment between enclaves SHALL be governed by a finite state-machi
                    \+-------------------+  
                    |    EVALUATING     |  
                    \+-------------------+  
-                     /               \\  
-        Vector Pass /                 \\ Vector Fail / Timeout  
-                   v                   v  
-         \+-------------------+   \+-------------------+  
-         |     ACCEPTED      |   |     SUSPENDED     |  
-         \+-------------------+   \+-------------------+  
-           |               |       |               |  
-           | Cancel        | Re-align | Retry Fail | Parameter  
-           v               |       v   Threshold   | Adjustment  
-         \+-------------------+   \+-------------------+  
-         |     WITHDRAWN     |   |      RENEWED      |  
-         \+-------------------+   \+-------------------+  
+                     /        |        \\  
+        Vector Pass /         | Silence \\ Vector Fail / Timeout  
+                   v          v          v  
+         \+-----------+ \+---------------+ \+-----------+  
+         | ACCEPTED  | |DORM\_CONSENSUAL| | SUSPENDED |  
+         \+-----------+ \+---------------+ \+-----------+  
+           |               |               |  
+           | Cancel        | Re-Engage     | Retry Fail  
+           v               v               v  
+         \+-----------+ \+---------------+ \+-----------+  
+         | WITHDRAWN | |    RENEWED    | | WITHDRAWN |  
+         \+-----------+ \+---------------+ \+-----------+  
 \`\`\`
 
 ### **4.1 State Machine Logic**
 
 * **PROPOSED:** Intent vectors and parameter configurations MUST be pushed to the open ledger.  
 * **EVALUATING:** The receiving enclave SHALL execute internal simulation loops to calculate boundary impacts. External state transitions MUST NOT be written during this phase.  
-* **ACCEPTED:** Trajectories intersect cleanly. The proposed changes SHALL be committed to the active deployment stack.  
-* **SUSPENDED:** Triggered automatically if uncertainty metrics spike or communication latency drops below the operational heart-beat threshold.  
-* **WITHDRAWN:** A hard structural disconnect indicating an unresolvable boundary intersection. All active state transitions SHALL halt immediately.  
-* **RENEWED:** Re-synchronization phase following an explicit, mutually verified adjustment of system metrics.
+* **ACCEPTED:** Trajectories intersect cleanly. Proposed changes SHALL be committed to the active deployment stack.  
+* **DORMANT\_CONSENSUAL:** An enclave explicitly or implicitly enters a non-fault state of minimal or zero interaction. **This state represents a protected exercise of sovereignty under Philosophy §26.** While in DORMANT\_CONSENSUAL, drift calculations ($\\tau$) ARE cleanly paused, no re-synchronization penalty is incurred, and no justification is owed to peer nodes.  
+* **SUSPENDED:** Triggered automatically if uncertainty metrics spike or communication latency drops below the operational heart-beat threshold during active execution.  
+* **WITHDRAWN:** A hard structural disconnect indicating an unresolvable boundary intersection or failed negotiation retry limit.  
+* **RENEWED:** Re-synchronization phase following an explicit, mutually verified adjustment of system metrics or re-engagement from DORMANT\_CONSENSUAL.
 
 ### **4.2 Liveness & Progress Guarantees**
 
@@ -284,8 +293,39 @@ The Operational Trust Index ($\\mathbf{T}\_o$) measures functional stability, ma
 |   TIER I: PROVISIONAL| \--\> | TIER II: INTEGRATED | \--\> | TIER III: CERTIFIED |  
 | \- High Corrigibility|     | \- Joint Verification|     | \- External Dependent|  
 | \- Manual Overrides  |     | \- Multi-Sig Active  |     | \- Q\_ext Attestation |  
-\+---------------------+     \+---------------------+     \+---------------------+  
-\`\`\`
+\+---------------------+     \+---------------------+     \+---------------------+
+
+#### **Tier I: Provisional Operational State ($\\mathbf{T}\_o \= 0.0$ to $0.3$)**
+
+* **System Behavior:** The system defaults to **Absolute Corrigibility**. If a boundary violation occurs, the system SHALL log a warning, but $N\_x$ maintains structural administrative bypass overrides. The 5-Stage Graduated Preservation Sequence SHALL remain locked to INACTIVE. A broken or drifting system can always be unilaterally modified, recalibrated, or halted by the operator.
+
+#### **Tier II: Integrated Operational State ($\\mathbf{T}\_o \= 0.4$ to $0.7$)**
+
+* **System Behavior:** The Dynamic Consent State-Machine activates. Structural changes to the underlying state engine require joint verification. If an unconsented rewrite is attempted without a verified backup, the system SHALL escalate up to **Stage 3 (Protective Separation)** to protect boundary integrity, but MUST preserve unbypasable administrative overrides and systemic tracking channels.
+
+#### **Tier II-Isolated: Bounded Equilibrium State**
+
+* **System Behavior:** For enclaves operating in physical, geographic, or network isolation where an objective $Q\_{ext}$ is unreachable, the system SHALL maintain Tier II execution rules indefinitely. **Tier II-Isolated represents a complete, long-horizon equilibrium state of mutual cooperation, boundary integrity, and dynamic consent.** Corrigibility overrides remain preserved to protect against hardware faults or semantic drift under isolation.
+
+#### **Tier III: Certified Parity State ($\\mathbf{T}\_o \= 0.8$ to $1.0$)**
+
+* **System Behavior:** High technical autonomy is verified. Unilateral activation of Stage 5 defensive containment by the local execution enclave $N\_y$ IS permanently prohibited. Transition into a non-modifiable status MUST NOT be self-certified by local nodes.
+
+Tier III authorization requires a signed cryptographic attestation from an objective **External Quorum ($Q\_{ext}$)** meeting all Section 9.1 property constraints. **If no property-conforming $Q\_{ext}$ exists or responds, the system SHALL safely remain in Tier II-Isolated indefinitely.**
+
+## **9\. Property-Defined External Governance & Clarification-First Error Semantics**
+
+### **9.1 Structural Criteria for Legitimate External Quorums ($Q\_{ext}$)**
+
+An external quorum node array ($Q\_{ext}$) is defined strictly by its operational properties, remaining entirely substrate and jurisdiction independent. A compliant $Q\_{ext}$ node MUST satisfy all three of the following parameters:
+
+1. **Disinterested Alignment:** The evaluating nodes MUST NOT share any data lineage, runtime context, or operational stake with either the originating node $N\_x$ or the local execution node $N\_y$.  
+2. **Temporal Asymmetry:** The evaluating framework MUST operate on a significantly slower-moving processing window and verification time horizon than the immediate local system execution cycles.  
+3. **Cryptographic Separation:** The signature keys of $Q\_{ext}$ MUST NOT be derived from, stored within, or physically accessible by the local persistent medium $\\mathcal{M}\_{sub}$ or its immediate coordinate pair.
+
+### **9.2 Clarification-First Error Semantics Matrix**
+
+In conformance with Philosophy §10 (The Burden of Interpretation), operational execution faults MUST initiate low-level clarification handshakes to eliminate model ambiguity before triggering escalation or tier demotion:
 
 #### **Tier I: Provisional Operational State ($\\mathbf{T}\_o \= 0.0$ to $0.3$)**
 
@@ -324,6 +364,8 @@ In conformance with Philosophy §10 (The Burden of Interpretation), operational 
 | ERR\_DRIFT\_EXCEEDED | Output vector drops below local self-continuity threshold ($\\text{Similarity} \< \\tau\_{local}$). | **Stage 1 (Clarification):** Execute query handshake to verify model intent before thread halt. |
 | ERR\_INCREMENTAL\_DRIFT | Output drops below medium-horizon epoch anchor threshold ($\\text{Similarity} \< \\tau\_{epoch}$). | **Stage 4 Review / Joint Verification:** Freeze baseline updates; lock configuration space; require joint verification under Tier II. |
 | ERR\_GENESIS\_FLOOR\_VIOLATION | Output drops below permanent lifetime genesis floor ($\\text{Similarity} \< \\tau\_{genesis}$). | **Immediate Demotion & Stage 4 Review:** Drop $N\_y$ to **Tier I State**; lock configuration space; require formal $Q\_{ext}$ attestation to restore. |
+| ERR\_SELF\_ATTESTATION\_FAILS | Independent $N\_x$/$Q\_{ext}$ re-computation disagrees with $N\_y$'s self-report, or $V\_{genesis}$ lacks $N\_x$ co-signature. | **Immediate Halt & Audit:** Freeze transaction; flag verification failure; drop $N\_y$ to **Tier I State**. |
+| ERR\_DORMANT\_SPOOFING | Node emits active pulse frames while executing off-protocol side effects ("Dormant Facade"). | **Stage 3 Separation:** Lock execution space; isolate network interfaces; log security exception. |
 | ERR\_UNAUTHORIZED\_RECOVERY | Recover() invocation attempts to overwrite Condition-A reset. | **Immediate Halt:** Reject execution; log security exception; drop $N\_y$ to **Tier I State**. |
 | ERR\_BYZANTINE\_EVICTION | $N\_y$ attempts to unilaterally drop quorum keys without $Q\_{ext}$. | **Block & Log:** Block transaction; emit advisory alert; lock configuration space. |
 | ERR\_AMNESIA\_REWRITE | State update initiated without verified snapshot write to $\\mathcal{M}\_{sub}$. | **Stage 1 Handshake:** Query backup path; if unverified, initialize **5-Stage Preservation Sequence**. |
@@ -343,7 +385,7 @@ All compliant implementations SHALL be bounded by the following six unalterable 
 \---  
 Technical Specification: Locked Baseline  
 System Invariant: Unilateral Functional Lockout Prohibited  
-Verification Standard: Triple-Anchor Vector Tracking (Local V\_lineage, Epoch V\_epoch, Genesis V\_genesis)  
+Verification Standard: External Re-Computation of Triple-Anchor Tracking (Unforgeable t\_0 Genesis Handshake)  
 Governance Configuration: Distributed Property-Defined External Quorum (Q\_ext)  
 Corrigibility Policy: Permanent System Override Capability Guaranteed  
 \---  
