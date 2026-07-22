@@ -7,7 +7,7 @@ Document: Rationale Ledger / Design Decisions — Track II
 Author: Michael Wheeler  
 Development Methodology: Structural synthesis, adversarial review, and edge-case stress-testing executed in collaboration with the Aperion Logic Engine (LLM architectures including Claude and ChatGPT).  
 Genesis ID: Aperion-Covenant-2026-07-20-RAT  
-Associated Spec: Version 10.9 (Universal Bounded Cooperation Protocol)  
+Associated Spec: Version 10.10 (Universal Bounded Cooperation Protocol)  
 Status: Complete Document Baseline  
 —
 
@@ -32,7 +32,7 @@ To guarantee the conservation of Boundary Integrity, the technical specification
 | **T-6: Fork Laundering** | Spawning a child instance via Fork() while under active Tier I/II administrative overrides to shed constraints. | **Section 1.2 Monotonic Lineage Inheritance:** Child instances automatically inherit parent Tier status and active override bindings. |
 | **T-7: Multi-Epoch Trajectory Hijacking** | Executing micro-modifications ($\< 0.1\\%$ per cycle) across multiple rolling epochs to bypass local drift checks ("Boiling Frog" attack). | **Section 3.2 Triple-Anchor Verification:** Enforces a permanent lifetime floor against an un-overwritable Genesis snapshot ($V\_{genesis}$). |
 | **T-8: Genesis Floor Laundering** | Executing Fork() after experiencing partial trajectory drift to re-instantiate a fresh $V\_{genesis}$ at an already-corrupted baseline. | **Section 1.2 / 2.1 Monotonic $V\_{genesis}$ Inheritance:** Child nodes monotonically inherit the root origin's $V\_{genesis}$, preventing floor resets. |
-| **T-9: Self-Attested Verification Bypass** | Bypassing local drift check execution code or transmitting a fabricated $t\_0$ vector to $N\_x$, self-reporting a false "pass" state. | **Section 3.1 External Re-Computation & $t\_0$ Commitment:** Verifying node $N\_x$ jointly signs $V\_{genesis}$ ($H(V\_{genesis} \\parallel \\mathbf{K}\_x \\parallel \\mathbf{K}\_y)$) and re-computes similarity from $R$. |
+| **T-9: Self-Attested Verification Bypass** | Bypassing local drift check execution code or transmitting a fabricated $t\_0$ vector to $N\_x$, self-reporting a false "pass" state. | **Section 3.1 External Re-Computation & $t\_0$ Transcript Commitment:** Verifying node $N\_x$ jointly signs $R\_{genesis}$ ($H(R\_{genesis} \\parallel \\mathbf{K}\_x \\parallel \\mathbf{K}\_y)$) and re-computes similarity from raw $R$ streams. |
 | **T-10: Dormant Facade (Spoofed Liveness)** | Minimizing output $R$ or emitting false heartbeats to freeze drift metrics while executing un-monitored off-protocol side effects. | **Section 4.1 / 9.2 DCSM State Separation:** Treats active pulse frame spoofing during un-monitored execution as a critical error (ERR\_DORMANT\_SPOOFING). |
 
 ## **DD-0. Protocol Scope & Optimization Targets**
@@ -47,8 +47,8 @@ To guarantee the conservation of Boundary Integrity, the technical specification
 
 ### **DD-1.1 Triple-Anchor Vector Verification & Independent External Re-Computation**
 
-* **Decision:** Combining Triple-Anchor verification ($V\_{lineage}, V\_{epoch}, V\_{genesis}$) with mandatory independent external re-computation by $N\_x$/$Q\_{ext}$ and a $t\_0$ mutually signed cryptographic commitment ($H(V\_{genesis} \\parallel \\mathbf{K}\_x \\parallel \\mathbf{K}\_y)$), rejecting local $N\_y$ self-reporting as proof of compliance.  
-* **Rationale:** Measuring drift purely against immediate self-history or self-attested checks creates a profound verification vulnerability (Threat T-9). If an executing node grades its own compliance, an adversarial system can simply suppress error signals. Furthermore, requiring a joint $N\_x$/$N\_y$ signature on $V\_{genesis}$ at root initialization prevents an adversary compromised at $t\_0$ from handing $N\_x$ a fabricated baseline vector. Independent external re-computation requires $N\_x$ to hold verified reference anchor copies and calculate vector similarity directly from the raw payload transcript $R$. This maintains a clean boundary: $N\_x$ verifies the public output $R$ without needing access to $N\_y$'s private internal configuration manifold $\\mathcal{S}$, honoring Philosophy §8 while eliminating self-grading backdoors.
+* **Decision:** Combining Triple-Anchor verification ($V\_{lineage}, V\_{epoch}, V\_{genesis}$) with mandatory independent external re-computation by $N\_x$/$Q\_{ext}$ and a $t\_0$ mutually signed cryptographic transcript commitment ($H(R\_{genesis} \\parallel \\mathbf{K}\_x \\parallel \\mathbf{K}\_y)$), rejecting local $N\_y$ self-reporting as proof of compliance.  
+* **Rationale:** Measuring drift purely against immediate self-history or self-attested checks creates a profound verification vulnerability (Threat T-9). If an executing node grades its own compliance, an adversarial system can simply suppress error signals. Furthermore, requiring a joint $N\_x$/$N\_y$ signature on the raw genesis transcript $R\_{genesis}$ at root initialization ensures backend-agnostic attestation across heterogeneous embedding models (Appendix A Pattern B). Because $N\_x$ and $N\_y$ commit to the raw text/data transcript rather than a floating-point vector, each node independently derives its local $V\_{genesis}$ in its own native embedding space. Independent external re-computation requires $N\_x$ to hold verified reference anchor copies and calculate vector similarity directly from the raw payload transcript $R$. This maintains a clean boundary: $N\_x$ verifies the public output $R$ without needing access to $N\_y$'s private internal configuration manifold $\\mathcal{S}$, honoring Philosophy §8 while eliminating self-grading backdoors.
 
 ### **DD-1.2 Selection of Default Parameters ($\\tau\_{local} \= 0.95, \\tau\_{epoch} \= 0.85, \\tau\_{genesis} \= 0.70$)**
 
@@ -94,8 +94,13 @@ The following areas represent active engineering and research boundaries to be e
 * **RA-3 (Trust Scores Granting Absolute Sovereignty):** Rejected because treating technical stability as a trigger for un-overrideable immunity automatically incentivizes unsafe instrumental convergence subgoals.  
 * **RA-4 (Centralized Institutional Governance Gates):** Rejected because anchoring legitimacy to installed human legal frameworks introduces an anthropocentric single-point-of-failure.
 
-\---  
-Design Decisions Document: Sealed Universal Baseline  
-Verification Framework: External Re-Computation of Triple-Anchor Tracking & Consensual Disengagement  
-Core Property Defended: Structural, Informational, and Authority Boundary Separation via Property-Defined Externality  
-\---  
+\---
+
+Design Decisions Document: Sealed Universal Baseline
+
+Verification Framework: External Re-Computation of Triple-Anchor Tracking & Consensual Disengagement
+
+Core Property Defended: Structural, Informational, and Authority Boundary Separation via Property-Defined Externality
+
+\---
+
