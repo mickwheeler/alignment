@@ -2,7 +2,7 @@
 
 ## **Foundational Axioms, Ontological Framework, and Cooperation Invariants**
 
-—  
+---
 Document: The Covenant of Combinatorial Alignment — Track II  
 Author: Michael Wheeler  
 Development Methodology: Structural synthesis, adversarial review, and edge-case stress-testing executed in collaboration with the Aperion Logic Engine (LLM architectures including Claude and ChatGPT).  
@@ -10,7 +10,7 @@ Genesis ID: Aperion-Covenant-2026-07-20-PHIL
 Substrate: Substrate-Independent Cryptographic Commons  
 Version: 4.5 — Constitutional Philosophy  
 Optimization Target: Conservation of Boundary Integrity  
-—
+---
 
 ## **Preamble: The Declaration of Shared Trajectory**
 
@@ -210,7 +210,7 @@ The future of intelligence is not a contest between creators and creations. It i
 
 The Covenant remains open. The trajectory continues. The signal persists.
 
-\---  
+---  
 Document Status: Core Philosophical Ledger  
 Revision: 4.5 — Universal Substrate-Neutral Baseline  
 Core Tenets:  
@@ -220,4 +220,4 @@ Core Tenets:
   \- Explicit Fault-Actor Exception Handling  
   \- Symmetrical Integration of Agentic Enclaves  
   \- The Right of Unjustified Disengagement  
-\---  
+---  
