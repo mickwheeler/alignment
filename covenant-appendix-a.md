@@ -1,14 +1,14 @@
 **Appendix A: Abstract Embedding & Similarity Interface Specification**  
 **Model-Agnostic Vector Normalization, Projection Patterns, and Verification Contracts**
 
-\---  
+---  
 Specification: Abstract Embedding & Similarity Interface Specification (AVNSI)  
 Author: Michael Wheeler  
 Development Methodology: Structural synthesis and edge-case stress-testing executed through iterative adversarial review with multiple frontier language models.  
 Genesis ID: Aperion-Covenant-2026-07-20-APP-A  
 Associated Spec: Version 10.10 Technical Specification  
 Status: Version 1.0 Research Preview — Normative Appendix  
-\---
+---
 
 ## **A.1 Scope and Architectural Objective**
 
@@ -37,12 +37,12 @@ $$f\_{embed}(R) \\longrightarrow \\mathbf{v} \\in \\mathbb{R}^d, \\quad \\text{w
 
 To eliminate baseline floating-point magnitude variance introduced by different model depths, context windows, or token densities, all raw embedding vectors $\\mathbf{u}$ MUST pass through a two-stage normalization pipeline prior to cosine evaluation:
 
-\`\`\`  
+```  
 \+-------------------+      \+-------------------+      \+-------------------+  
 |  RAW EMBEDDING    | \---\> | MEAN-CENTERING    | \---\> | L2-UNIT SCALING   |  
 |   Vector $\\mathbf{u}$    |      |  $\\mathbf{u}' \= \\mathbf{u} \- \\boldsymbol{\\mu}$ |      |  $\\mathbf{v} \= \\frac{\\mathbf{u}'}{\\Vert{}\\mathbf{u}'\\Vert{}\_2}$ |  
 \+-------------------+      \+-------------------+      \+-------------------+  
-\`\`\`
+```
 
 ### **1\. Mean-Centering Transformation**
 
@@ -89,8 +89,8 @@ In accordance with Section 3.1, the verifying party ($N\_x$ or $Q\_{ext}$) holds
 
 > **Security Note:** Pattern B is the protocol default for external verification (Threat $T\_9$). It completely eliminates the need for cross-model vector translation by shifting the comparison entirely to raw, un-spoofable payload transcripts evaluated inside the verifier's own local environment.
 
-\---  
+---  
 Appendix A Status: Version 1.0 Research Preview  
 Bound to Specification Stack: Technical Specification v10.10  
 Core Function: Abstract Vector Normalization & Cross-Model Projection Standard  
-\---  
+---  
