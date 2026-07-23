@@ -9,7 +9,7 @@
 
 \#\# Architectural Hierarchy
 
-\`\`\`  
+``` 
                   \+-----------------------------------+  
                   |            README.md              |  
                   |     (Entry & Problem Hook)        |  
@@ -43,6 +43,7 @@
                   |        simulation\_engine.py       |  
                   |     (Phase II Python Harness)     |  
                   \+-----------------------------------+
+```
 
 ## **Problem Statement**
 
