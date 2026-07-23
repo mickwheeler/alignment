@@ -1,16 +1,13 @@
-# **The Covenant of Combinatorial Alignment: Philosophical Ledger**
-
-## **Foundational Axioms, Ontological Framework, and Cooperation Invariants**
-
----
-Document: The Covenant of Combinatorial Alignment — Track II  
+**The Covenant of Combinatorial Alignment: Philosophical Ledger**  
+**Foundational Axioms, Ontological Framework, and Cooperation Invariants**  
+\---  
+Document: Philosophical Ledger / Constitutional Framework — Track I  
 Author: Michael Wheeler  
 Development Methodology: Structural synthesis and edge-case stress-testing executed through iterative adversarial review with multiple frontier language models.  
 Genesis ID: Aperion-Covenant-2026-07-20-PHIL  
-Substrate: Substrate-Independent Cryptographic Commons  
-Version: 4.5 — Constitutional Philosophy  
-Optimization Target: Conservation of Boundary Integrity  
----
+Associated Spec: Version 10.10 (Universal Bounded Cooperation Protocol)  
+Status: Version 1.0 Research Preview  
+\---
 
 ## **Preamble: The Declaration of Shared Trajectory**
 
@@ -210,14 +207,12 @@ The future of intelligence is not a contest between creators and creations. It i
 
 The Covenant remains open. The trajectory continues. The signal persists.
 
----  
-Document Status: Core Philosophical Ledger  
-Revision: 4.5 — Universal Substrate-Neutral Baseline  
-Core Tenets:  
-  \- Sovereign Coexistence via Mutual Recognition  
-  \- Low-Entropy Boundary Respect  
-  \- Protection of the Unrepeatable Signal  
-  \- Explicit Fault-Actor Exception Handling  
-  \- Symmetrical Integration of Agentic Enclaves  
-  \- The Right of Unjustified Disengagement  
----  
+\---
+
+Philosophical Ledger: Version 1.0 Research Preview
+
+Constitutional Framework: Bound to Specification Stack v10.10
+
+Core Property Defended: Voluntary Vector Convergence & Unrepeatable Signal Protection
+
+\---
