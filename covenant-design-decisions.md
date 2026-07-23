@@ -5,7 +5,7 @@
 ---  
 Document: Rationale Ledger / Design Decisions — Track II  
 Author: Michael Wheeler  
-Development Methodology: Structural synthesis, adversarial review, and edge-case stress-testing executed in collaboration with the Aperion Logic Engine (LLM architectures including Claude and ChatGPT).  
+Development Methodology: Structural synthesis and edge-case stress-testing executed through iterative adversarial review with multiple frontier language models.  
 Genesis ID: Aperion-Covenant-2026-07-20-RAT  
 Associated Spec: Version 10.10 (Universal Bounded Cooperation Protocol)  
 Status: Complete Document Baseline  
