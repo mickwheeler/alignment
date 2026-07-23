@@ -1,11 +1,11 @@
 **The Covenant of Combinatorial Alignment: Implementation & Research Roadmap**  
-—  
+---
 Document: Protocol Implementation & Research Roadmap  
 Author: Michael Wheeler  
 Genesis ID: Aperion-Covenant-2026-07-20-ROADMAP  
 Associated Baseline: Technical Spec v10.9 | Design Decisions v3.9 | Philosophy v4.5  
 Status: Active Phase II Transition  
-—
+---
 
 ## **Overview & Execution Strategy**
 
@@ -44,7 +44,7 @@ Phase II focuses on mathematical formalization, empirical calibration, and algor
 
 Phase III delivers production-grade software implementations and automated testing harnesses for independent developers and security auditors.
 
-\`\`\`  
+```
 \+-----------------------------------------------------------------------+  
 |                       PHASE III SOFTWARE STACK                        |  
 \+-----------------------------------------------------------------------+  
@@ -54,7 +54,7 @@ Phase III delivers production-grade software implementations and automated testi
 \+----------------------------+------------------------------------------+  
 | 3\. Conformance Test Suite  | Automated RFC 2119 Compliance Test Harness|  
 \+-----------------------------------------------------------------------+  
-\`\`\`
+```
 
 ### **1\. Wire Protocol Serialization Specification**
 
