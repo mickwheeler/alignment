@@ -2,10 +2,10 @@
 
 \> A substrate-independent reference protocol architecture for persistent, non-coercive cooperation between autonomous multi-agent systems.
 
-\*\*Author:\*\* Michael Wheeler    
-\*\*Development Methodology:\*\* Structural synthesis, adversarial review, and edge-case stress-testing executed in collaboration with the Aperion Logic Engine (LLM architectures including Claude and ChatGPT).
+Author: Michael Wheeler    
+Development Methodology: Structural synthesis and edge-case stress-testing executed through iterative adversarial review with multiple frontier language models.
 
-\---
+---
 
 \#\# Problem Statement
 
@@ -18,7 +18,7 @@ This repository explores a fourth option: \*\*Distributed boundary verification 
 
 Rather than attempting to enforce uncomputable ethical rules or relying on self-attestation, the Covenant specification establishes a mathematical framework for conserving \*\*Boundary Integrity\*\* across Structural, Informational, and Authority spaces.
 
-\---
+---
 
 \#\# Core Technical Contributions
 
