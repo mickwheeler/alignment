@@ -68,7 +68,7 @@ Phase III delivers production-grade software implementations and automated testi
 
 * Publish an automated black-box test harness that evaluates candidate node runtimes against protocol invariants, verifying strict adherence to error semantics, tier demotions, and multi-sig escalation logic.
 
-\---  
+---  
 Roadmap Status: Active Transition to Phase II  
 Next Milestone: Phase II Monte Carlo Testbed Architecture & Appendix A Draft  
-\---  
+---  
