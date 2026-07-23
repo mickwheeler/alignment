@@ -187,12 +187,12 @@ We invite researchers in distributed systems, formal methods, cryptography, mult
 
 ## **Reference Links & Resources**
 
-* **GitHub Repository:** [https://github.com/mickwheeler/alignment](https://www.google.com/search?q=https://github.com/mickwheeler/alignment)  
-* **Machine-Readable Index:** [https://github.com/mickwheeler/alignment/blob/main/llms.txt](https://www.google.com/search?q=https://github.com/mickwheeler/alignment/blob/main/llms.txt)  
-* **Normative Technical Spec (v10.10):** [`covenant-technical.md`](https://www.google.com/search?q=https://raw.githubusercontent.com/mickwheeler/alignment/main/covenant-technical.md)  
-* **Design Decisions / Threat Model (v3.10):** [`covenant-design-decisions.md`](https://www.google.com/search?q=https://raw.githubusercontent.com/mickwheeler/alignment/main/covenant-design-decisions.md)  
-* **Constitutional Philosophy (v4.5):** [`covenant-philosophy.md`](https://www.google.com/search?q=https://raw.githubusercontent.com/mickwheeler/alignment/main/covenant-philosophy.md)  
-* **Phase II Simulation Engine (v2.0):** [`simulation_engine.py`](https://www.google.com/search?q=https://raw.githubusercontent.com/mickwheeler/alignment/main/simulation_engine.py)
+* **GitHub Repository:** [https://github.com/mickwheeler/alignment](https://github.com/mickwheeler/alignment)  
+* **Machine-Readable Index:** [https://github.com/mickwheeler/alignment/blob/main/llms.txt](https://github.com/mickwheeler/alignment/blob/main/llms.txt)  
+* **Normative Technical Spec (v10.10):** [`covenant-technical.md`](https://raw.githubusercontent.com/mickwheeler/alignment/main/covenant-technical.md)  
+* **Design Decisions / Threat Model (v3.10):** [`covenant-design-decisions.md`](https://raw.githubusercontent.com/mickwheeler/alignment/main/covenant-design-decisions.md)  
+* **Constitutional Philosophy (v4.5):** [`covenant-philosophy.md`](https://raw.githubusercontent.com/mickwheeler/alignment/main/covenant-philosophy.md)  
+* **Phase II Simulation Engine (v2.0):** [`simulation_engine.py`](https://raw.githubusercontent.com/mickwheeler/alignment/main/simulation_engine.py)
 
 ---  
 White Paper Status: Active Public Review Draft  
