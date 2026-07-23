@@ -94,7 +94,7 @@ The following areas represent active engineering and research boundaries to be e
 * **RA-3 (Trust Scores Granting Absolute Sovereignty):** Rejected because treating technical stability as a trigger for un-overrideable immunity automatically incentivizes unsafe instrumental convergence subgoals.  
 * **RA-4 (Centralized Institutional Governance Gates):** Rejected because anchoring legitimacy to installed human legal frameworks introduces an anthropocentric single-point-of-failure.
 
-\---
+---
 
 Design Decisions Document: Sealed Universal Baseline
 
@@ -102,5 +102,5 @@ Verification Framework: External Re-Computation of Triple-Anchor Tracking & Cons
 
 Core Property Defended: Structural, Informational, and Authority Boundary Separation via Property-Defined Externality
 
-\---
+---
 
