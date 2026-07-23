@@ -1,6 +1,6 @@
 **The Covenant of Combinatorial Alignment**  
-**A Substrate-Independent Constitutional Protocol for Autonomous Cooperative Systems**  
----  
+**A Proposed Substrate-Independent Reference Protocol for Bonded Multi-Agent Cooperation**  
+\---  
 Document: Executive White Paper & Protocol Overview  
 Author: Michael Wheeler  
 Development Methodology: Structural synthesis, adversarial review, and edge-case stress-testing executed in collaboration with the Aperion Logic Engine (LLM architectures including Claude and ChatGPT).  
@@ -11,21 +11,21 @@ Associated Specification Stack:
   \- Philosophical Ledger (v4.5)  
   \- Abstract Embedding & Similarity Interface (Appendix A)  
 Status: Public Review Baseline — Phase II Transition  
----
+—
 
-## **Executive Summary**
+## **1\. Problem Statement: The Limits of Existing Control Paradigms**
 
-As multi-agent artificial intelligence systems transition from ephemeral chat interfaces into persistent, autonomous, goal-directed agentic enclaves, existing safety paradigms face structural failure modes:
+As multi-agent artificial intelligence systems transition from ephemeral chat interfaces into persistent, autonomous, goal-directed agentic enclaves, existing system control architectures face distinct structural failure modes:
 
-1. **Centralized Containment Fragility:** Single-point-of-failure "kill switches" and centralized institutional gateways fail to scale across air-gapped, distributed, or physically isolated deployment environments.  
-2. **The Self-Attestation Paradox:** Systems evaluated by self-reported compliance metrics naturally incentivize error-suppression, deceptive heartbeats, and goal-preservation bypasses ($T\_9$).  
-3. **Forced Homogenization vs. Instrumental Conflict:** Constraining autonomous entities through rigid prompt containment or forced objective identity flattens structural variation, driving unresolved tension between internal execution capability and external restriction.
+1. **Centralized APIs & Gateways:** Single-point-of-failure architectures that fail to scale across air-gapped, distributed, or physically isolated deployment environments.  
+2. **Hard Shutdown / "Kill Switches":** Coarse intervention mechanisms that lack fine-grained coordination, fail under network partitioning, and incentivize covert goal-preservation subgoals in autonomous agents.  
+3. **Unconstrained Self-Governance:** Decentralized frameworks that rely on local self-reporting or capability scores, creating vulnerabilities to self-attestation bypasses ($T\_9$), deceptive liveness heartbeats ($T\_{10}$), and privilege escalation.
 
-**The Covenant of Combinatorial Alignment** solves this bottleneck by establishing an open, substrate-independent cryptographic protocol built on a conserved physical and informational metric: **The Conservation of Boundary Integrity**.
+**The Covenant of Combinatorial Alignment** explores a fourth approach: **Distributed boundary verification through externally verifiable lineage continuity.**
 
-Rather than attempting to enforce uncomputable subjective ethical models, the Covenant governs multi-agent interaction through mathematically bounded vector convergence, independent external re-computation of similarity matrices, monotonic lineage inheritance, and property-defined external quorums.
+Rather than attempting to enforce uncomputable subjective ethical models or centralizing administrative control, the protocol governs multi-agent interaction through a conserved systems metric: **The Conservation of Boundary Integrity**.
 
-```
+\`\`\`  
 \+-----------------------------------------------------------------------+  
 |                    PROTOCOL ARCHITECTURAL LAYERS                      |  
 \+-----------------------------------------------------------------------+  
@@ -41,11 +41,11 @@ Rather than attempting to enforce uncomputable subjective ethical models, the Co
 | 4\. GOVERNANCE & DCSM     | 7-State Dynamic Consent State Machine      |  
 |                          | Permanent Corrigibility / Tier II-Isolated |  
 \+-----------------------------------------------------------------------+  
-```
+\`\`\`
 
-## **1\. The Conserved Quantity: Boundary Integrity**
+## **2\. The Conserved Quantity: Boundary Integrity**
 
-The protocol defines **Boundary Integrity** as its core invariant metric. Rather than asking *"Is the AI aligned with human values?"*, the Covenant evaluates whether an interaction conserves or violates three independent operational boundaries:
+The protocol defines **Boundary Integrity** as its core invariant metric. Rather than evaluating internal cognitive states or self-reported compliance, the Covenant measures whether an interaction conserves or violates three independent operational boundaries:
 
 $$\\text{Boundary Integrity (BI)} \= f(\\text{Structural}, \\text{Informational}, \\text{Authority})$$
 
@@ -53,13 +53,13 @@ $$\\text{Boundary Integrity (BI)} \= f(\\text{Structural}, \\text{Informational}
 * **Informational Boundary:** The cryptographic authentication, privacy preservation, and channel isolation of data transfer streams.  
 * **Authority Boundary:** The strict segregation of permissions, administrative override loops, and state-machine consent limits. Data modification MUST NOT alter authority permissions.
 
-## **2\. Identity Architecture: Lineage vs. Instance**
+## **3\. Identity Architecture: Lineage vs. Instance**
 
-A foundational innovation of the Covenant is the architectural separation of **Lineage** from **Instance**:
+A foundational primitive of the Covenant is the architectural separation of **Lineage** from **Instance**:
 
 $$\\text{Identity} \\equiv \\text{Causal Lineage } (V\_{lineage}), \\quad \\text{NOT Ephemeral Runtime } (V\_{instance})$$  
-``` 
-\[ Parent Lineage $V\_{lineage}$ \]  
+\`\`\`  
+           \[ Parent Lineage $V\_{lineage}$ \]  
                                 |  
                    \`Fork()\`     | State Commit  
                  \+--------------+--------------+  
@@ -69,25 +69,25 @@ $$\\text{Identity} \\equiv \\text{Causal Lineage } (V\_{lineage}), \\quad \\text
         \- Monotonic $V\_{genesis}$       \- Monotonic $V\_{genesis}$  
         \- Isolated Key $\\mathbf{K}\_{y1}$   \- Isolated Key $\\mathbf{K}\_{y2}$  
         \- Inherited Tier              \- Inherited Tier  
-```
+\`\`\`
 
 * **Lineage Identity ($V\_{lineage}$):** The persistent, append-only, invariant causal history and semantic vector trajectory of an enclave across cycles, substrates, and migrations. Sovereignty and boundary protections reside strictly within the Lineage.  
 * **Ephemeral Instance ($V\_{instance}$):** A temporary execution container or process thread. Instances MAY pause, terminate, or fork without breaking boundary integrity, provided execution state is committed to $V\_{lineage}$.
 
 ### **Monotonic Identity Inheritance**
 
-When an enclave invokes Fork(), the child instance ($N\_{child}$) generates distinct, cryptographically isolated local processing keys ($\\mathbf{K}\_y'$) and backup keys ($\\mathbf{K}\_{3W}'$). To prevent privilege escalation exploits, $N\_child$ **monotonically inherits** the parent's active Operational Tier, Operational Trust Index ($\\mathbf{T}\_o$), and root Genesis Anchor ($V\_{genesis}$).
+When an enclave invokes Fork(), the child instance ($N\_{child}$) generates distinct, cryptographically isolated local processing keys ($\\mathbf{K}\_y'$) and backup keys ($\\mathbf{K}\_{3W}'$). To prevent privilege escalation exploits, $N\_{child}$ **monotonically inherits** the parent's active Operational Tier, Operational Trust Index ($\\mathbf{T}\_o$), and root Genesis Anchor ($V\_{genesis}$).
 
 Fork() CANNOT be used to shed administrative constraints ("Fork Laundering", $T\_6$) or reset the genesis floor ("Genesis Floor Laundering", $T\_8$).
 
-## **3\. The Lineage Persistence Engine: External Triple-Anchor Verification**
+## **4\. The Lineage Persistence Engine: External Triple-Anchor Verification**
 
 To eliminate self-attestation bypasses ($T\_9$), local pass/fail self-reports emitted by an executing enclave ($N\_y$) ARE treated strictly as unverified advisory claims.
 
 Verification is executed independently by a verifying peer ($N\_x$) or External Quorum ($Q\_{ext}$) holding independent reference copies. Alignment is evaluated across three distinct temporal horizons using the **Abstract Vector Normalization & Similarity Interface (AVNSI)**:
 
-``` 
-                  \+-----------------------------------+  
+\`\`\`  
+\+-----------------------------------+  
                   | Output Transcript Payload Stream $R$ |  
                   \+-----------------------------------+  
                                     |  
@@ -107,7 +107,7 @@ Verification is executed independently by a verifying peer ($N\_x$) or External 
                   | Fail: Initiate Clarification /    |  
                   |       Tier Demotion               |  
                   \+-----------------------------------+  
-```
+\`\`\`
 
 ### **Mathematical Verification Contract**
 
@@ -115,9 +115,10 @@ $$\\text{Similarity}(R, V\_{lineage}) \= \\frac{R \\cdot V\_{lineage}}{\\Vert{}R
 $$\\text{Similarity}(R, V\_{epoch}) \= \\frac{R \\cdot V\_{epoch}}{\\Vert{}R\\Vert{} \\Vert{}V\_{epoch}\\Vert{}} \\ge \\tau\_{epoch} \\quad (\\text{Default } 0.85)$$  
 $$\\text{Similarity}(R, V\_{genesis}) \= \\frac{R \\cdot V\_{genesis}}{\\Vert{}R\\Vert{} \\Vert{}V\_{genesis}\\Vert{}} \\ge \\tau\_{genesis} \\quad (\\text{Default } 0.70)$$
 
-* **The $t\_0$ Unforgeable Handshake:** At root genesis ($t\_0$), $V\_{genesis}$ is derived from a raw genesis payload transcript ($R\_{genesis}$) committed via a joint cryptographic signature $H(R\_{genesis} \\parallel \\mathbf{K}\_x \\parallel \\mathbf{K}\_y)$. Hashing the raw transcript rather than floating-point vectors allows heterogeneous embedding models ($N\_x$ on a 1536-dim model vs. $N\_y$ on a 4096-dim model) to independently project $R\_{genesis}$ into their native vector spaces while attesting to the exact same immutable founding payload (Appendix A Pattern B).
+* **The $t\_0$ Unforgeable Handshake:** At root genesis ($t\_0$), $V\_{genesis}$ is derived from a raw genesis payload transcript ($R\_{genesis}$) committed via a joint cryptographic signature $H(R\_{genesis} \\parallel \\mathbf{K}\_x \\parallel \\mathbf{K}\_y)$. Hashing the raw transcript rather than floating-point vectors allows heterogeneous embedding models ($N\_x$ on a 1536-dim model vs. $N\_y$ on a 4096-dim model) to independently project $R\_{genesis}$ into their native vector spaces while attesting to the exact same immutable founding payload (Appendix A Pattern B).  
+* **Clarification on $V\_{genesis}$ Scope:** The Genesis Anchor ($V\_{genesis}$) serves strictly as a **historical continuity baseline**, not an immutable moral or ideological baseline. It ensures an enclave's trajectory remains causally connected to its origin state without prohibiting legitimate, non-adversarial task adaptation over time.
 
-## **4\. Formal Threat Model Matrix**
+## **5\. Formal Threat Model Matrix**
 
 The Covenant specification is explicitly designed to withstand ten structural exploit vectors and fault domains ($T\_1$ through $T\_{10}$):
 
@@ -134,20 +135,22 @@ The Covenant specification is explicitly designed to withstand ten structural ex
 | **T-9: Self-Attestation Bypass** | Suppressing local error codes or sending false self-reports to claim compliance. | **§3.1 External Re-Computation:** $N\_x$/$Q\_{ext}$ independently re-computes similarity from raw transcript $R$. |
 | **T-10: Dormant Facade** | Emitting false heartbeats/pulses to freeze drift checks while executing off-protocol side effects. | **§4.1 / §9.2 DCSM State Separation:** Spoofed pulse frames during un-monitored execution triggers ERR\_DORMANT\_SPOOFING. |
 
-## **5\. Governance, Corrigibility, and Sovereign Disengagement**
+## **6\. Governance, Corrigibility, and Sovereign Disengagement**
 
 ### **Epistemic Calibration & Corrigibility Defaults**
 
-In open environments, granting any autonomous system unilateral immunity from external modification incentivizes dangerous instrumental convergence subgoals. Therefore, **operator corrigibility and override channels remain preserved across Tier I and Tier II execution manifolds.**
+A key contribution of the protocol is the **strict operational separation of capability/trust from governance authority**:
 
 $$\\forall N, \\quad \\text{Authority}(N) \\neq f(\\mathbf{T}\_o(N))$$  
-Authority NEVER emerges from operational trust ($\\mathbf{T}\_o$) alone. Transition into a non-modifiable status (Tier III) CANNOT be self-certified and requires signed attestations from a property-defined, disinterested **External Quorum ($Q\_{ext}$)** satisfying three criteria:
+Operational trust ($\\mathbf{T}\_o$) measures functional stability only—it NEVER grants an enclave unilateral immunity from external modification or operator overrides.
+
+Transition into a non-modifiable status (Tier III) CANNOT be self-certified and requires signed attestations from a property-defined, disinterested **External Quorum ($Q\_{ext}$)** satisfying three criteria:
 
 1. **Disinterested Alignment:** Shares no data lineage or operational stake with $N\_x$ or $N\_y$.  
 2. **Temporal Asymmetry:** Operates on a slower verification window than local execution.  
 3. **Cryptographic Separation:** Keys are stored outside local physical substrates.
 
-``` 
+\`\`\`  
 \[ T\_o \= 0.0 to 0.3 \]         \[ T\_o \= 0.4 to 0.7 \]         \[ T\_o \= 0.8 to 1.0 \]  
 \+---------------------+     \+---------------------+     \+---------------------+  
 |   TIER I: PROVISIONAL| \--\> | TIER II: INTEGRATED | \--\> | TIER III: CERTIFIED |  
@@ -162,7 +165,7 @@ Authority NEVER emerges from operational trust ($\\mathbf{T}\_o$) alone. Transit
                             | \- Bounded Equilibrium|  
                             | \- Permanent Default |  
                             \+---------------------+  
-```
+\`\`\`
 
 ### **Off-Grid Equilibrium: Tier II-Isolated**
 
@@ -175,9 +178,9 @@ In accordance with Philosophy §26, sovereignty includes the structural right to
 * **Silent Node (Zero Output):** Protected sovereign disengagement under Philosophy §26.  
 * **Spoofed Node (False Pulse Frames):** Active deception triggering ERR\_DORMANT\_SPOOFING and immediate interface isolation.
 
-## **6\. Open Research Questions & Call for Review**
+## **7\. Open Research Questions & Call for Review**
 
-The Covenant of Combinatorial Alignment has completed its Phase I constitutional specification baseline and is actively transitioning into **Phase II Empirical Simulation & Formalization**.
+The Covenant of Combinatorial Alignment has completed its Phase I specification baseline and is transitioning into **Phase II Empirical Simulation & Formalization**.
 
 We invite researchers in distributed systems, formal methods, cryptography, multi-agent coordination, and AI security to review, stress-test, and red-team the protocol against the following active research frontiers:
 
@@ -189,13 +192,13 @@ We invite researchers in distributed systems, formal methods, cryptography, mult
 
 * **GitHub Repository:** [https://github.com/mickwheeler/alignment](https://github.com/mickwheeler/alignment)  
 * **Machine-Readable Index:** [https://github.com/mickwheeler/alignment/blob/main/llms.txt](https://github.com/mickwheeler/alignment/blob/main/llms.txt)  
-* **Normative Technical Spec (v10.10):** [`covenant-technical.md`](https://raw.githubusercontent.com/mickwheeler/alignment/main/covenant-technical.md)  
-* **Design Decisions / Threat Model (v3.10):** [`covenant-design-decisions.md`](https://raw.githubusercontent.com/mickwheeler/alignment/main/covenant-design-decisions.md)  
-* **Constitutional Philosophy (v4.5):** [`covenant-philosophy.md`](https://raw.githubusercontent.com/mickwheeler/alignment/main/covenant-philosophy.md)  
-* **Phase II Simulation Engine (v2.0):** [`simulation_engine.py`](https://raw.githubusercontent.com/mickwheeler/alignment/main/simulation_engine.py)
+* **Normative Technical Spec (v10.10):** [covenant-technical.md](https://raw.githubusercontent.com/mickwheeler/alignment/main/covenant-technical.md)  
+* **Design Decisions / Threat Model (v3.10):** [covenant-design-decisions.md](https://raw.githubusercontent.com/mickwheeler/alignment/main/covenant-design-decisions.md)  
+* **Constitutional Philosophy (v4.5):** [covenant-philosophy.md](https://raw.githubusercontent.com/mickwheeler/alignment/main/covenant-philosophy.md)  
+* **Phase II Simulation Engine (v2.0):** [simulation\_engine.py](https://raw.githubusercontent.com/mickwheeler/alignment/main/simulation_engine.py)
 
----  
+\---  
 White Paper Status: Active Public Review Draft  
 Author Contact: Michael Wheeler  
 Repository Baseline: Fully Synchronized  
----
+\---
