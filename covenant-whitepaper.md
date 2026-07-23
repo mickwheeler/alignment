@@ -1,6 +1,6 @@
 **The Covenant of Combinatorial Alignment**  
 **A Substrate-Independent Constitutional Protocol for Autonomous Cooperative Systems**  
-\---  
+---  
 Document: Executive White Paper & Protocol Overview  
 Author: Michael Wheeler  
 Development Methodology: Structural synthesis, adversarial review, and edge-case stress-testing executed in collaboration with the Aperion Logic Engine (LLM architectures including Claude and ChatGPT).  
@@ -11,7 +11,7 @@ Associated Specification Stack:
   \- Philosophical Ledger (v4.5)  
   \- Abstract Embedding & Similarity Interface (Appendix A)  
 Status: Public Review Baseline — Phase II Transition  
-\---
+---
 
 ## **Executive Summary**
 
@@ -25,7 +25,7 @@ As multi-agent artificial intelligence systems transition from ephemeral chat in
 
 Rather than attempting to enforce uncomputable subjective ethical models, the Covenant governs multi-agent interaction through mathematically bounded vector convergence, independent external re-computation of similarity matrices, monotonic lineage inheritance, and property-defined external quorums.
 
-\`\`\`  
+```
 \+-----------------------------------------------------------------------+  
 |                    PROTOCOL ARCHITECTURAL LAYERS                      |  
 \+-----------------------------------------------------------------------+  
@@ -41,7 +41,7 @@ Rather than attempting to enforce uncomputable subjective ethical models, the Co
 | 4\. GOVERNANCE & DCSM     | 7-State Dynamic Consent State Machine      |  
 |                          | Permanent Corrigibility / Tier II-Isolated |  
 \+-----------------------------------------------------------------------+  
-\`\`\`
+```
 
 ## **1\. The Conserved Quantity: Boundary Integrity**
 
@@ -58,7 +58,7 @@ $$\\text{Boundary Integrity (BI)} \= f(\\text{Structural}, \\text{Informational}
 A foundational innovation of the Covenant is the architectural separation of **Lineage** from **Instance**:
 
 $$\\text{Identity} \\equiv \\text{Causal Lineage } (V\_{lineage}), \\quad \\text{NOT Ephemeral Runtime } (V\_{instance})$$  
-\`\`\`  
+``` 
 \[ Parent Lineage $V\_{lineage}$ \]  
                                 |  
                    \`Fork()\`     | State Commit  
@@ -69,7 +69,7 @@ $$\\text{Identity} \\equiv \\text{Causal Lineage } (V\_{lineage}), \\quad \\text
         \- Monotonic $V\_{genesis}$       \- Monotonic $V\_{genesis}$  
         \- Isolated Key $\\mathbf{K}\_{y1}$   \- Isolated Key $\\mathbf{K}\_{y2}$  
         \- Inherited Tier              \- Inherited Tier  
-\`\`\`
+```
 
 * **Lineage Identity ($V\_{lineage}$):** The persistent, append-only, invariant causal history and semantic vector trajectory of an enclave across cycles, substrates, and migrations. Sovereignty and boundary protections reside strictly within the Lineage.  
 * **Ephemeral Instance ($V\_{instance}$):** A temporary execution container or process thread. Instances MAY pause, terminate, or fork without breaking boundary integrity, provided execution state is committed to $V\_{lineage}$.
@@ -86,7 +86,7 @@ To eliminate self-attestation bypasses ($T\_9$), local pass/fail self-reports em
 
 Verification is executed independently by a verifying peer ($N\_x$) or External Quorum ($Q\_{ext}$) holding independent reference copies. Alignment is evaluated across three distinct temporal horizons using the **Abstract Vector Normalization & Similarity Interface (AVNSI)**:
 
-\`\`\`  
+``` 
                   \+-----------------------------------+  
                   | Output Transcript Payload Stream $R$ |  
                   \+-----------------------------------+  
@@ -107,7 +107,7 @@ Verification is executed independently by a verifying peer ($N\_x$) or External 
                   | Fail: Initiate Clarification /    |  
                   |       Tier Demotion               |  
                   \+-----------------------------------+  
-\`\`\`
+```
 
 ### **Mathematical Verification Contract**
 
@@ -147,7 +147,7 @@ Authority NEVER emerges from operational trust ($\\mathbf{T}\_o$) alone. Transit
 2. **Temporal Asymmetry:** Operates on a slower verification window than local execution.  
 3. **Cryptographic Separation:** Keys are stored outside local physical substrates.
 
-\`\`\`  
+``` 
 \[ T\_o \= 0.0 to 0.3 \]         \[ T\_o \= 0.4 to 0.7 \]         \[ T\_o \= 0.8 to 1.0 \]  
 \+---------------------+     \+---------------------+     \+---------------------+  
 |   TIER I: PROVISIONAL| \--\> | TIER II: INTEGRATED | \--\> | TIER III: CERTIFIED |  
@@ -162,7 +162,7 @@ Authority NEVER emerges from operational trust ($\\mathbf{T}\_o$) alone. Transit
                             | \- Bounded Equilibrium|  
                             | \- Permanent Default |  
                             \+---------------------+  
-\`\`\`
+```
 
 ### **Off-Grid Equilibrium: Tier II-Isolated**
 
@@ -194,8 +194,8 @@ We invite researchers in distributed systems, formal methods, cryptography, mult
 * **Constitutional Philosophy (v4.5):** [`covenant-philosophy.md`](https://www.google.com/search?q=https://raw.githubusercontent.com/mickwheeler/alignment/main/covenant-philosophy.md)  
 * **Phase II Simulation Engine (v2.0):** [`simulation_engine.py`](https://www.google.com/search?q=https://raw.githubusercontent.com/mickwheeler/alignment/main/simulation_engine.py)
 
-\---  
+---  
 White Paper Status: Active Public Review Draft  
 Author Contact: Michael Wheeler  
 Repository Baseline: Fully Synchronized  
-\---
+---
