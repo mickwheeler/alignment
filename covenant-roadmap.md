@@ -1,74 +1,98 @@
-**The Covenant of Combinatorial Alignment: Implementation & Research Roadmap**  
----
-Document: Protocol Implementation & Research Roadmap  
+**The Covenant of Combinatorial Alignment: Research & Implementation Roadmap**  
+**Execution Phases, Empirical Benchmarks, and Formalization Targets**  
+\---  
+Document: Implementation Roadmap & Engineering Plan  
 Author: Michael Wheeler  
+Development Methodology: Structural synthesis and edge-case stress-testing executed through iterative adversarial review with multiple frontier language models.  
 Genesis ID: Aperion-Covenant-2026-07-20-ROADMAP  
-Associated Baseline: Technical Spec v10.9 | Design Decisions v3.9 | Philosophy v4.5  
-Status: Active Phase II Transition  
----
+Associated Spec: Version 10.10 Specification Stack  
+Status: Version 1.0 Research Preview — Active Execution Framework  
+\---
 
-## **Overview & Execution Strategy**
+## **Overview & Methodology**
 
-The Covenant of Combinatorial Alignment has transitioned from an architectural proposal into a mathematically bounded, audit-ready constitutional protocol standard. This document defines the multi-phase engineering and empirical research roadmap required to transform the normative specification into executable, verifiable software assets.
+The development of the Covenant of Combinatorial Alignment follows a strict, multi-phase engineering progression. To ensure the framework remains structurally sound and resistant to edge-case vulnerabilities, the project transitions sequentially from formal constitutional definition through empirical simulation to production-grade deployment.
 
-## **Phase I: Constitutional Baseline (Completed)**
-
-* **Technical Specification (v10.9):** Standardized RFC 2119 normative protocol defining the Functional Identity Interface, Dynamic Consent State-Machine (DCSM), External Triple-Anchor Verification Engine, and Clarification-First Error Semantics.  
-* **Design Decisions & Rationale Ledger (v3.9):** Complete Architecture Decision Record (ADR) detailing design trade-offs, permanent corrigibility overrides, off-grid equilibrium states (Tier II-Isolated), and threat model coverage (Threats T-1 through T-10).  
-* **Philosophical Ledger (v4.5):** Substrate-neutral constitutional groundwork establishing low-entropy kindness, asymmetric peerage, protection of the unrepeatable signal, and the Right of Unjustified Disengagement (§26).
-
-## **Phase II: Empirical Simulation & Formalization (Active)**
-
-Phase II focuses on mathematical formalization, empirical calibration, and algorithmic stress-testing across synthetic multi-agent environments.
-
-### **1\. Abstract Embedding Interface (Appendix A)**
-
-* **Objective:** Define a deterministic, model-agnostic vector normalization interface that allows heterogeneous embedding architectures (text, multimodal, symbolic logic proofs) to produce mathematically comparable inputs for similarity evaluation ($\\text{Similarity}(R, V)$) without locking the protocol to a single neural backend.  
-* **Key Deliverable:** Appendix A: Abstract Vector Normalization & Similarity Specification.
-
-### **2\. Multi-Agent Monte Carlo Testbed**
-
-* **Objective:** Construct a modular, high-throughput simulation framework (Python / Rust) to test protocol invariants under simulated network partitions, adversarial trajectory hijacking (T-7 / T-8), self-attestation bypasses (T-9), and dormant facade exploits (T-10).  
-* **Key Deliverables:**  
-  * Empirical calibration of default drift scalars ($\\tau\_{local} \= 0.95, \\tau\_{epoch} \= 0.85, \\tau\_{genesis} \= 0.70$).  
-  * Behavioral analysis of DCSM state convergence under Byzantine fault conditions ($3f \+ 1$).  
-  * Parameter boundary maps for legitimate adaptation vs. malicious drift.
-
-### **3\. Open Research Formalization**
-
-* **OR-1 (Heterogeneous Embedding Comparability):** Prove bounds on cosine similarity variance across model quantization levels and parameter shifts.  
-* **OR-2 (Formal Liveness & Safety Proofs):** Author formal TLA+ or Coq machine specifications proving deadlock freedom across all 7 DCSM state transitions.  
-* **OR-3 (Empirical Metric Correlation):** Validate that vector similarity thresholds align predictably with human and machine evaluations of identity continuity.
-
-## **Phase III: Executable Reference Node & Conformance Suite**
-
-Phase III delivers production-grade software implementations and automated testing harnesses for independent developers and security auditors.
-
-```
+\`\`\`  
 \+-----------------------------------------------------------------------+  
-|                       PHASE III SOFTWARE STACK                        |  
+|                         DEVELOPMENT PHASES                            |  
 \+-----------------------------------------------------------------------+  
-| 1\. Wire Serialization Spec | Canonical Protocol Buffers / JSON-Schema |  
-\+----------------------------+------------------------------------------+  
-| 2\. Reference Node Runtime  | Rust-based Open-Source Reference Node    |  
-\+----------------------------+------------------------------------------+  
-| 3\. Conformance Test Suite  | Automated RFC 2119 Compliance Test Harness|  
+| PHASE I: Constitutional Specification Baseline (COMPLETED v10.10)     |  
+| \- Normative RFC 2119 Specification Stack                              |  
+| \- Architecture Decision Record & Threat Model Matrix (T-1 to T-10)    |  
+| \- Abstract Embedding & Similarity Interface (Appendix A)              |  
 \+-----------------------------------------------------------------------+  
-```
+                                   |  
+                                   v  
+| PHASE II: Empirical Simulation & Formalization (ACTIVE BASELINE)      |  
+| \- High-Throughput Python Simulation Engine Architecture (\`simulation\_engine.py\`) |  
+| \- Open Research Questions Resolution (OR-1 to OR-3)                  |  
+| \- Formal Safety & Liveness Verification (TLA+ / Coq Proofs)          |  
+| \- Executable Exploit & Verification Demos (\`examples/\`)               |  
+\+-----------------------------------------------------------------------+  
+                                   |  
+                                   v  
+| PHASE III: Reference Implementation & Production Deployment          |  
+| \- Production Rust Core Enclave Runtime (\`covenant-core\`)              |  
+| \- Hardware-Isolated Enclave Drivers (ARM TrustZone / AWS Nitro)       |  
+| \- Decentralized Property-Defined External Quorum Network ($Q\_{ext}$)  |  
+\+-----------------------------------------------------------------------+  
+\`\`\`
 
-### **1\. Wire Protocol Serialization Specification**
+## **Phase I: Constitutional Specification Baseline (Status: COMPLETED)**
 
-* Define concrete binary and text serialization formats (Protobuf / JSON-Schema) for Section 1.4 frame envelopes, cryptographic signature payloads, and state-machine transition proofs.
+Phase I focused on establishing the immutable structural foundation, normative RFC 2119 specifications, and threat model protections required to govern autonomous agentic enclaves.
 
-### **2\. Reference Node Implementation (covenantd)**
+* \[x\] **Spec-1.1:** Publish Normative Technical Specification (v10.10) defining the Functional Identity Interface, Wire Frame Layouts, 7-state DCSM, and Protocol Invariants.  
+* \[x\] **Spec-1.2:** Publish Architecture Decision Record (v3.10) detailing design rationale, trade-offs, and mitigations for Threats T-1 through T-10.  
+* \[x\] **Spec-1.3:** Publish Philosophical Ledger (v4.5) defining core axioms, low-entropy boundary respect, and §26 disengagement rights.  
+* \[x\] **Spec-1.4:** Define Abstract Vector Normalization & Similarity Interface (Appendix A) for model-agnostic cross-embedding verification.
 
-* Build a lightweight, modular Rust runtime executing the 7-primitive identity interface (Verify, Compare, Rotate, Delegate, Fork, Recover, Archive), local context vault backups to $\\mathcal{M}\_{sub}$, and independent $N\_x$/$Q\_{ext}$ triple-anchor re-computation loops.
+## **Phase II: Empirical Simulation & Formalization (Status: ACTIVE)**
 
-### **3\. Automated Conformance Test Suite**
+Phase II transitions the locked Version 1.0 Research Preview specification into empirical stress-testing, Monte Carlo simulation, formal methods verification, and research outreach.
 
-* Publish an automated black-box test harness that evaluates candidate node runtimes against protocol invariants, verifying strict adherence to error semantics, tier demotions, and multi-sig escalation logic.
+### **Key Active Milestones**
 
----  
-Roadmap Status: Active Transition to Phase II  
-Next Milestone: Phase II Monte Carlo Testbed Architecture & Appendix A Draft  
----  
+\`\`\`  
+\+-----------------------------------------------------------------------+  
+|                        PHASE II MILESTONES                            |  
+\+-----------------------------------------------------------------------+  
+| Milestone II-A: Formal Safety & Liveness Proofs                       |  
+| \- Draft TLA+ / Alloy specification mapping the 7-state DCSM           |  
+| \- Prove deadlock-freedom under $3f \+ 1$ Byzantine fault conditions     |  
+\+-----------------------------------------------------------------------+  
+| Milestone II-B: Empirical Drift Calibration (OR-3)                    |  
+| \- Execute $10^4$ to $10^6$ cycle Monte Carlo simulation runs           |  
+| \- Plot precision/recall heatmaps for $\\tau\_{local}, \\tau\_{epoch}, \\tau\_{genesis}$ |  
+\+-----------------------------------------------------------------------+  
+| Milestone II-C: Reference Demonstrations & Harnesses                  |  
+| \- Create modular execution scripts (\`examples/\`) demonstrating        |  
+|   exploit rejection (\`fork\_laundering.py\`, \`dormant\_facade.py\`)       |  
+\+-----------------------------------------------------------------------+  
+| Milestone II-D: Academic & Working Group Engagement                  |  
+| \- Submit Version 1.0 Research Preview to AI Alliance, MLCommons, and   |  
+|   distributed systems / AI security research groups                   |  
+\+-----------------------------------------------------------------------+  
+\`\`\`
+
+* \[x\] **Sim-2.1:** Release simulation\_engine.py (v2.0) modeling decoupled verifier views (VerifiedEnclaveView), dynamic trust-tier coupling (§8.2), epoch rollover (tick()), and multi-generational fork depth tracking.  
+* \[ \] **Sim-2.2 (OR-2):** Author formal TLA+ and Coq state-machine specifications verifying that DCSM transitions remain strictly deadlock-free under arbitrary Byzantine network conditions.  
+* \[ \] **Sim-2.3 (OR-3):** Conduct multi-agent Monte Carlo simulations across diverse domain tasks to empirically calibrate the default drift parameters ($\\tau\_{local} \= 0.95, \\tau\_{epoch} \= 0.85, \\tau\_{genesis} \= 0.70$).  
+* \[ \] **Sim-2.4 (OR-1):** Benchmarking AVNSI vector projection variance across heterogeneous neural backends (OpenAI, BGE, E5, Voyage, local GGUF embeddings).  
+* \[ \] **Sim-2.5:** Publish executable verification demonstration harnesses under /examples illustrating automated protocol rejection of Threat T-6 (Fork Laundering), Threat T-8 (Genesis Laundering), and Threat T-10 (Dormant Facade).
+
+## **Phase III: Production Reference Implementation & Enclave Hardware (Status: PLANNED)**
+
+Phase III moves the validated specification into a production-grade systems implementation designed for real-world deployment across distributed, cloud, and edge substrates.
+
+* \[ \] **Impl-3.1:** Implement covenant-core in Rust, providing zero-allocation serialization, cryptographic key isolation, and high-throughput AVNSI vector calculations.  
+* \[ \] **Impl-3.2:** Develop Hardware-Isolated Enclave drivers targeting ARM TrustZone, AWS Nitro Enclaves, and Intel SGX for physical key isolation ($\\mathbf{K}\_y, \\mathbf{K}\_{3W}$).  
+* \[ \] **Impl-3.3:** Deploy testnet for Property-Defined External Quorums ($Q\_{ext}$) satisfying Section 9.1 independence criteria (Disinterested Alignment, Temporal Asymmetry, Cryptographic Separation).  
+* \[ \] **Impl-3.4:** Establish open-source protocol compliance test suite (RFC conformance test vectors).
+
+\---  
+Roadmap Status: Active Phase II Execution  
+Specification Stack: Version 1.0 Research Preview (v10.10 Locked Baseline)  
+Next Major Target: Milestone II-B (Empirical Monte Carlo Calibration) & Milestone II-C (Demo Harnesses)  
+\---  
