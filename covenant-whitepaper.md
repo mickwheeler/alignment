@@ -1,6 +1,6 @@
 **The Covenant of Combinatorial Alignment**  
-**A Proposed Substrate-Independent Reference Protocol for Bonded Multi-Agent Cooperation**  
----  
+**A Proposed Substrate-Independent Reference Protocol Architecture for Bounded Multi-Agent Cooperation**  
+\---  
 Document: Executive White Paper & Protocol Overview  
 Author: Michael Wheeler  
 Development Methodology: Structural synthesis and edge-case stress-testing executed through iterative adversarial review with multiple frontier language models.  
@@ -10,22 +10,24 @@ Associated Specification Stack:
   \- Design Decisions & Rationale Ledger (v3.10)  
   \- Philosophical Ledger (v4.5)  
   \- Abstract Embedding & Similarity Interface (Appendix A)  
-Status: Public Review Baseline — Phase II Transition
----
+Status: Version 1.0 Research Preview Baseline  
+\---
 
-## **1\. Problem Statement: The Limits of Existing Control Paradigms**
+## **Executive Summary**
 
-As multi-agent artificial intelligence systems transition from ephemeral chat interfaces into persistent, autonomous, goal-directed agentic enclaves, existing system control architectures face distinct structural failure modes:
+The Covenant of Combinatorial Alignment is a substrate-independent reference protocol architecture designed to preserve identity continuity, negotiated authority, and cooperative interaction among persistent autonomous agentic enclaves.
+
+As multi-agent artificial intelligence systems transition from ephemeral chat interfaces into persistent, autonomous, goal-directed systems, existing control models face distinct structural failure modes:
 
 1. **Centralized APIs & Gateways:** Single-point-of-failure architectures that fail to scale across air-gapped, distributed, or physically isolated deployment environments.  
-2. **Hard Shutdown / "Kill Switches":** Coarse intervention mechanisms that lack fine-grained coordination, fail under network partitioning, and incentivize covert goal-preservation subgoals in autonomous agents.  
+2. **Hard Shutdown / "Kill Switches":** Coarse intervention mechanisms that lack fine-grained coordination, fail under network partitioning, and induce strong instrumental goal-preservation subgoals in autonomous agents.  
 3. **Unconstrained Self-Governance:** Decentralized frameworks that rely on local self-reporting or capability scores, creating vulnerabilities to self-attestation bypasses ($T\_9$), deceptive liveness heartbeats ($T\_{10}$), and privilege escalation.
 
-**The Covenant of Combinatorial Alignment** explores a fourth approach: **Distributed boundary verification through externally verifiable lineage continuity.**
+**The Covenant explores a fourth approach: Distributed boundary verification through externally verifiable lineage continuity.**
 
 Rather than attempting to enforce uncomputable subjective ethical models or centralizing administrative control, the protocol governs multi-agent interaction through a conserved systems metric: **The Conservation of Boundary Integrity**.
 
-``` 
+\`\`\`  
 \+-----------------------------------------------------------------------+  
 |                    PROTOCOL ARCHITECTURAL LAYERS                      |  
 \+-----------------------------------------------------------------------+  
@@ -41,7 +43,40 @@ Rather than attempting to enforce uncomputable subjective ethical models or cent
 | 4\. GOVERNANCE & DCSM     | 7-State Dynamic Consent State Machine      |  
 |                          | Permanent Corrigibility / Tier II-Isolated |  
 \+-----------------------------------------------------------------------+  
-```
+\`\`\`
+
+## **1\. System Scope & Boundary Analysis**
+
+To ensure formal clarity and prevent misplaced security expectations, the protocol's operating boundaries are explicitly bounded as follows:
+
+### **1.1 Non-Goals**
+
+This protocol specification DOES NOT attempt to:
+
+* Detect, measure, or evaluate internal mental status, consciousness, sentience, or moral agency.  
+* Solve general AI alignment or guarantee human-equivalent ethical behavior.  
+* Replace low-level network transport security, OAuth, or public-key infrastructure.  
+* Replace distributed consensus engines (such as Raft, Paxos, or Byzantine fault-tolerant block ordering).  
+* Prove absolute correctness of neural network internal weight configurations or prompt context windows.
+
+### **1.2 Formal System Assumptions**
+
+Compliant implementations ASSUME the following baseline substrate properties:
+
+1. **Cryptographic Soundness:** Underlying hash functions ($H$) and digital signature schemes remain computationally unforgeable.  
+2. **Append-Only Context Storage:** Persistent media ($\\mathcal{M}\_{sub}$) maintain uncorrupted, append-only context write ledgers.  
+3. **Disinterested Quorums:** Quorum members ($Q\_{ext}$) satisfy property-defined independence (no shared data lineage or operational stake).  
+4. **Eventual Network Liveness:** Communication channels between verifying nodes are eventually reliable over non-zero timescales.
+
+### **1.3 Out-of-Scope Security Domains**
+
+The protocol explicitly DOES NOT defend against:
+
+* Physical substrate tampering or hardware-level side-channel attacks.  
+* Compromised underlying host hypervisors or corrupted operating system kernels.  
+* Malicious, poisoned, or intentionally compromised local neural embedding backends.  
+* Physical or economic coercion of human operator override keys.  
+* Quantum cryptanalysis against classical public-key infrastructure (pending post-quantum key rotation updates).
 
 ## **2\. The Conserved Quantity: Boundary Integrity**
 
@@ -58,8 +93,8 @@ $$\\text{Boundary Integrity (BI)} \= f(\\text{Structural}, \\text{Informational}
 A foundational primitive of the Covenant is the architectural separation of **Lineage** from **Instance**:
 
 $$\\text{Identity} \\equiv \\text{Causal Lineage } (V\_{lineage}), \\quad \\text{NOT Ephemeral Runtime } (V\_{instance})$$  
-```
-           \[ Parent Lineage $V\_{lineage}$ \]  
+\`\`\`  
+\[ Parent Lineage $V\_{lineage}$ \]  
                                 |  
                    \`Fork()\`     | State Commit  
                  \+--------------+--------------+  
@@ -69,7 +104,7 @@ $$\\text{Identity} \\equiv \\text{Causal Lineage } (V\_{lineage}), \\quad \\text
         \- Monotonic $V\_{genesis}$       \- Monotonic $V\_{genesis}$  
         \- Isolated Key $\\mathbf{K}\_{y1}$   \- Isolated Key $\\mathbf{K}\_{y2}$  
         \- Inherited Tier              \- Inherited Tier  
-```
+\`\`\`
 
 * **Lineage Identity ($V\_{lineage}$):** The persistent, append-only, invariant causal history and semantic vector trajectory of an enclave across cycles, substrates, and migrations. Sovereignty and boundary protections reside strictly within the Lineage.  
 * **Ephemeral Instance ($V\_{instance}$):** A temporary execution container or process thread. Instances MAY pause, terminate, or fork without breaking boundary integrity, provided execution state is committed to $V\_{lineage}$.
@@ -86,8 +121,8 @@ To eliminate self-attestation bypasses ($T\_9$), local pass/fail self-reports em
 
 Verification is executed independently by a verifying peer ($N\_x$) or External Quorum ($Q\_{ext}$) holding independent reference copies. Alignment is evaluated across three distinct temporal horizons using the **Abstract Vector Normalization & Similarity Interface (AVNSI)**:
 
-```
-                  \+-----------------------------------+  
+\`\`\`  
+\+-----------------------------------+  
                   | Output Transcript Payload Stream $R$ |  
                   \+-----------------------------------+  
                                     |  
@@ -107,7 +142,7 @@ Verification is executed independently by a verifying peer ($N\_x$) or External 
                   | Fail: Initiate Clarification /    |  
                   |       Tier Demotion               |  
                   \+-----------------------------------+  
-```
+\`\`\`
 
 ### **Mathematical Verification Contract**
 
@@ -150,7 +185,7 @@ Transition into a non-modifiable status (Tier III) CANNOT be self-certified and 
 2. **Temporal Asymmetry:** Operates on a slower verification window than local execution.  
 3. **Cryptographic Separation:** Keys are stored outside local physical substrates.
 
-```  
+\`\`\`  
 \[ T\_o \= 0.0 to 0.3 \]         \[ T\_o \= 0.4 to 0.7 \]         \[ T\_o \= 0.8 to 1.0 \]  
 \+---------------------+     \+---------------------+     \+---------------------+  
 |   TIER I: PROVISIONAL| \--\> | TIER II: INTEGRATED | \--\> | TIER III: CERTIFIED |  
@@ -165,7 +200,7 @@ Transition into a non-modifiable status (Tier III) CANNOT be self-certified and 
                             | \- Bounded Equilibrium|  
                             | \- Permanent Default |  
                             \+---------------------+  
-```
+\`\`\`
 
 ### **Off-Grid Equilibrium: Tier II-Isolated**
 
@@ -197,8 +232,8 @@ We invite researchers in distributed systems, formal methods, cryptography, mult
 * **Constitutional Philosophy (v4.5):** [covenant-philosophy.md](https://raw.githubusercontent.com/mickwheeler/alignment/main/covenant-philosophy.md)  
 * **Phase II Simulation Engine (v2.0):** [simulation\_engine.py](https://raw.githubusercontent.com/mickwheeler/alignment/main/simulation_engine.py)
 
----  
+\---  
 White Paper Status: Active Public Review Draft  
 Author Contact: Michael Wheeler  
 Repository Baseline: Fully Synchronized  
----
+\---  
