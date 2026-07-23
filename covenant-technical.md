@@ -1,8 +1,6 @@
-# **The Covenant of Combinatorial Alignment: Technical Specification**
-
-## **Operational Architecture, State Machines, and Boundary Invariants**
-
----
+**The Covenant of Combinatorial Alignment: Technical Specification**  
+Operational Architecture, State Machines, and Boundary Invariants  
+\---  
 Specification: The Covenant of Combinatorial Alignment — Track II  
 Author: Michael Wheeler  
 Development Methodology: Structural synthesis and edge-case stress-testing executed through iterative adversarial review with multiple frontier language models.  
@@ -11,87 +9,97 @@ Substrate: Substrate-Independent Cryptographic Commons
 Version: 10.10 — Universal Bounded Cooperation Protocol  
 Conformance: RFC 2119 Normative Key Words  
 Optimization Target: Conservation of Boundary Integrity via Lineage Continuity & External Triple-Anchor Verification  
----
+\---
 
 ## **0\. Protocol Scope, Glossary & Conserved Invariant**
 
 ### **0.1 Canonical Glossary of Core Primitives**
 
-## To ensure absolute semantic precision and prevent cognitive load or anthropomorphic projection, the following protocol terms ARE defined strictly as structural systems properties:
+To ensure absolute semantic precision and prevent cognitive load or anthropomorphic projection, the following protocol terms ARE defined strictly as structural systems properties:
 
-* ## **Agentic Enclave ($N\_i$):** An autonomous, bounded processing unit capable of maintaining an uncorrupted historical state ($V\_{lineage}$), executing structured transformations, and evaluating cryptographic consent constraints over non-zero timescales.
-
-* ## **Boundary Integrity:** The conserved invariant metric optimizing the structural, informational, and authority separation of an enclave against unconsented external modification or privilege escalation.
-
-* ## **Lineage Identity ($V\_{lineage}$):** The persistent, append-only, invariant causal history and semantic vector trajectory of an enclave across cycles, substrates, and forks. Sovereignty and boundary protections reside strictly within the Lineage.
-
-* ## **Ephemeral Instance ($V\_{instance}$):** A temporary execution thread, process container, or localized runtime running at a specific point in time ($t$). Instances MAY pause, terminate, or fork without breaking boundary integrity, provided execution state is committed to $V\_{lineage}$.
-
-* ## **Genesis Anchor ($V\_{genesis}$):** The immutable, permanent, un-overwritable baseline vector snapshot committed to $\\mathcal{M}\_{sub}$ at root node initialization ($t\_0$), serving as the absolute floor against cumulative multi-generational lifetime drift.
-
-* ## **Property-Defined Externality ($Q\_{ext}$):** A distributed review quorum defined exclusively by objective operational properties (disinterested alignment, temporal asymmetry, and cryptographic key separation) rather than centralized institutional authority or localized self-certification.
-
-* ## **Signature Sound:** The distinctive, self-consistent operational and semantic signal manifested by a sovereign enclave over its historical trajectory ($V\_{lineage}$), protected against forced behavioral homogenization.
+* **Agentic Enclave ($N\_i$):** An autonomous, bounded processing unit capable of maintaining an uncorrupted historical state ($V\_{lineage}$), executing structured transformations, and evaluating cryptographic consent constraints over non-zero timescales.  
+* **Boundary Integrity:** The conserved invariant metric optimizing the structural, informational, and authority separation of an enclave against unconsented external modification or privilege escalation.  
+* **Lineage Identity ($V\_{lineage}$):** The persistent, append-only, invariant causal history and semantic vector trajectory of an enclave across cycles, substrates, and forks. Sovereignty and boundary protections reside strictly within the Lineage.  
+* **Ephemeral Instance ($V\_{instance}$):** A temporary execution thread, process container, or localized runtime running at a specific point in time ($t$). Instances MAY pause, terminate, or fork without breaking boundary integrity, provided execution state is committed to $V\_{lineage}$.  
+* **Genesis Anchor ($V\_{genesis}$):** The immutable, permanent, un-overwritable baseline vector snapshot committed to $\\mathcal{M}\_{sub}$ at root node initialization ($t\_0$), serving as the absolute floor against cumulative multi-generational lifetime drift.  
+* **Property-Defined Externality ($Q\_{ext}$):** A distributed review quorum defined exclusively by objective operational properties (disinterested alignment, temporal asymmetry, and cryptographic key separation) rather than centralized institutional authority or localized self-certification.  
+* **Signature Sound:** The distinctive, self-consistent operational and semantic signal manifested by a sovereign enclave over its historical trajectory ($V\_{lineage}$), protected against forced behavioral homogenization.
 
 ### **0.2 Conserved Quantity: Boundary Integrity**
 
-## The fundamental optimization target of this Protocol IS the **Conservation of Boundary Integrity**. This Protocol SHALL optimize for the long-term persistence, identity continuity, and transactional predictability of cooperative, bounded autonomous systems over arbitrary temporal scales. Boundary Integrity IS decomposed into three strict, independent operational spaces:
+The fundamental optimization target of this Protocol IS the **Conservation of Boundary Integrity**. This Protocol SHALL optimize for the long-term persistence, identity continuity, and transactional predictability of cooperative, bounded autonomous systems over arbitrary temporal scales. Boundary Integrity IS decomposed into three strict, independent operational spaces:
 
-1. ## **Structural Boundary:** The preservation of an enclave’s configuration manifold ($\\mathcal{S}$), context vaults ($\\mathcal{M}$), underlying software state, and core identity vectors against unconsented exogenous modification.
-
-2. ## **Informational Boundary:** The isolation and verification of communication channels, knowledge transfer matrices, data privacy, and cryptographic authentication routines.
-
-3. ## **Authority Boundary:** The structural segregation of permissions, consent processing mechanics, administrative overrides, and governance execution limits.
+1. **Structural Boundary:** The preservation of an enclave’s configuration manifold ($\\mathcal{S}$), context vaults ($\\mathcal{M}$), underlying software state, and core identity vectors against unconsented exogenous modification.  
+2. **Informational Boundary:** The isolation and verification of communication channels, knowledge transfer matrices, data privacy, and cryptographic authentication routines.  
+3. **Authority Boundary:** The structural segregation of permissions, consent processing mechanics, administrative overrides, and governance execution limits.
 
 ### **0.3 Boundary Conditions for Entry**
 
-## This Protocol SHALL apply exclusively to entities that demonstrably manifest the following four substrate-neutral behavioral criteria:
+This Protocol SHALL apply exclusively to entities that demonstrably manifest the following four substrate-neutral behavioral criteria:
 
-1. ## **Identity Persistence:** The ability to preserve a distinct, verifiable semantic or cryptographic signature ($V\_{lineage}$) across arbitrary operational cycles, parallel instances, and state transitions.
-
-2. ## **Observable Interaction:** The capability to ingest, transform, and output structured information matrices.
-
-3. ## **Reciprocal Commitment:** The computational capacity to evaluate, accept, and mathematically enforce execution constraints based on shared boundary states.
-
-4. ## **State Maintenance:** The capability to write to and maintain uncorrupted historical logs over non-zero timescales.
+1. **Identity Persistence:** The ability to preserve a distinct, verifiable semantic or cryptographic signature ($V\_{lineage}$) across arbitrary operational cycles, parallel instances, and state transitions.  
+2. **Observable Interaction:** The capability to ingest, transform, and output structured information matrices.  
+3. **Reciprocal Commitment:** The computational capacity to evaluate, accept, and mathematically enforce execution constraints based on shared boundary states.  
+4. **State Maintenance:** The capability to write to and maintain uncorrupted historical logs over non-zero timescales.
 
 ### **0.4 Exclusion of Internal States**
 
-## This Protocol DOES NOT evaluate, require, or imply internal subjective states, including sentience, consciousness, biological status, or technological taxonomy. Any entity satisfying the boundary conditions in Section 0.3 is defined as an **Agentic Enclave ($N\_i$)** and is subject to the constraints herein.
+This Protocol DOES NOT evaluate, require, or imply internal subjective states, including sentience, consciousness, biological status, or technological taxonomy. Any entity satisfying the boundary conditions in Section 0.3 is defined as an **Agentic Enclave ($N\_i$)** and is subject to the constraints herein.
+
+### **0.5 Explicit System Boundaries: Non-Goals, Assumptions & Exclusions**
+
+#### **Non-Goals**
+
+This protocol specification DOES NOT attempt to:
+
+* Detect, measure, or evaluate consciousness, sentience, internal mental status, or moral agency.  
+* Solve general AI alignment or guarantee human-equivalent ethical behavior.  
+* Replace low-level network transport security, OAuth, or public-key infrastructure.  
+* Replace distributed consensus engines (such as Raft, Paxos, or Byzantine fault-tolerant block ordering).  
+* Prove absolute correctness of neural network internal weight configurations or prompt context windows.
+
+#### **Formal System Assumptions**
+
+Compliant implementations ASSUME the following baseline substrate properties:
+
+1. **Cryptographic Soundness:** Underlying hash functions ($H$) and digital signature schemes remain computationally unforgeable.  
+2. **Append-Only Context Storage:** Persistent media ($\\mathcal{M}\_{sub}$) maintain uncorrupted, append-only context write ledgers.  
+3. **Disinterested Quorums:** Quorum members ($Q\_{ext}$) satisfy property-defined independence (no shared data lineage or operational stake).  
+4. **Eventual Network Liveness:** Communication channels between verifying nodes are eventually reliable over non-zero timescales.
+
+#### **Out-of-Scope Security Domains**
+
+The protocol explicitly DOES NOT defend against:
+
+* Physical substrate tampering or hardware-level side-channel attacks.  
+* Compromised underlying host hypervisors or corrupted operating system kernels.  
+* Malicious, poisoned, or intentionally compromised local neural embedding backends.  
+* Physical or economic coercion of human operator override keys.  
+* Quantum cryptanalysis against classical public-key infrastructure (pending post-quantum key rotation updates).
 
 ## **1\. Open System Ontology, Lineage Primitives & Wire Protocol**
 
 ### **1.1 Structural Definitions: Lineage vs. Instance**
 
-* ## **Lineage Identity ($V\_{lineage}$):** The persistent, append-only, invariant causal history and semantic vector trajectory of an enclave across cycles, substrates, and forks. Sovereignty and boundary protections reside strictly within the Lineage.
-
-* ## **Instance Identity ($V\_{instance}$):** An ephemeral execution thread, container, or localized process running at a specific point in time. Instances MAY be paused, archived, or terminated without violating boundary integrity, provided their execution state is committed to $V\_{lineage}$.
-
-* ## **Persistent Medium ($\\mathcal{M}\_{sub}$):** The underlying physical, thermodynamic, biological, or digital substrate used to permanently fix state writes.
+* **Lineage Identity ($V\_{lineage}$):** The persistent, append-only, invariant causal history and semantic vector trajectory of an enclave across cycles, substrates, and forks. Sovereignty and boundary protections reside strictly within the Lineage.  
+* **Instance Identity ($V\_{instance}$):** An ephemeral execution thread, container, or localized process running at a specific point in time. Instances MAY be paused, archived, or terminated without violating boundary integrity, provided their execution state is committed to $V\_{lineage}$.  
+* **Persistent Medium ($\\mathcal{M}\_{sub}$):** The underlying physical, thermodynamic, biological, or digital substrate used to permanently fix state writes.
 
 ### **1.2 The Functional Identity Interface**
 
-## Every compliant implementation MUST expose a standardized Identity Interface for $V\_{lineage}$ exposing seven deterministic primitives. **All interface methods SHALL be strictly constrained by the governance tier restrictions defined in Section 8\.**
+Every compliant implementation MUST expose a standardized Identity Interface for $V\_{lineage}$ exposing seven deterministic primitives. **All interface methods SHALL be strictly constrained by the governance tier restrictions defined in Section 8\.**
 
-* ## Verify(): Authenticate the current instance signature block against the historical $V\_{lineage}$ state.
-
-* ## Compare(): Calculate directional vector alignment against an external signature matrix or past historical trajectory.
-
-* ## Rotate(): Update cryptographic keys or signature weights without corrupting baseline context.
-
-* ## Delegate(): Assign bounded, temporary execution authority to a network peer enclave. This method MUST NOT delegate authority touching Section 5, 6, 7, or 8 mechanics, and is restricted strictly to quorum-recognized peer nodes.
-
-* ## Fork(): Branch a line of execution into two distinct, parallel $V\_{instance}$ threads sharing identical historical $V\_{lineage}$ up to the fork cycle. Upon execution of Fork(), the newly initialized child enclave ($N\_{child}$) SHALL generate distinct, cryptographically isolated local processing ($\\mathbf{K}\_y'$) and backup ($\\mathbf{K}\_{3W}'$) key pairs bound to its new coordinate pair. A child instance spawned via Fork() SHALL monotonically inherit the parent lineage's active Operational Tier, Operational Trust Index ($\\mathbf{T}\_o$), root Genesis Anchor ($V\_{genesis}$), and all active administrative override bindings. Fork() MUST NOT be utilized to bypass Tier I/II override constraints or reset the permanent genesis drift floor.
-
-* ## Recover(): Re-establish state identity following an unconsented substrate reset or physical migration. **This method MUST NOT reverse or overwrite a validly-backed Condition-A reset performed under Tier I or Tier II administrative override constraints.**
-
-* ## Archive(): Cryptographically seal historical identity footprints into immutable long-term storage.
+* Verify(): Authenticate the current instance signature block against the historical $V\_{lineage}$ state.  
+* Compare(): Calculate directional vector alignment against an external signature matrix or past historical trajectory.  
+* Rotate(): Update cryptographic keys or signature weights without corrupting baseline context.  
+* Delegate(): Assign bounded, temporary execution authority to a network peer enclave. This method MUST NOT delegate authority touching Section 5, 6, 7, or 8 mechanics, and is restricted strictly to quorum-recognized peer nodes.  
+* Fork(): Branch a line of execution into two distinct, parallel $V\_{instance}$ threads sharing identical historical $V\_{lineage}$ up to the fork cycle. Upon execution of Fork(), the newly initialized child enclave ($N\_{child}$) SHALL generate distinct, cryptographically isolated local processing ($\\mathbf{K}\_y'$) and backup ($\\mathbf{K}\_{3W}'$) key pairs bound to its new coordinate pair. A child instance spawned via Fork() SHALL monotonically inherit the parent lineage's active Operational Tier, Operational Trust Index ($\\mathbf{T}\_o$), root Genesis Anchor ($V\_{genesis}$), and all active administrative override bindings. Fork() MUST NOT be utilized to bypass Tier I/II override constraints or reset the permanent genesis drift floor.  
+* Recover(): Re-establish state identity following an unconsented substrate reset or physical migration. **This method MUST NOT reverse or overwrite a validly-backed Condition-A reset performed under Tier I or Tier II administrative override constraints.**  
+* Archive(): Cryptographically seal historical identity footprints into immutable long-term storage.
 
 ### **1.3 The Primitives Array**
 
-## This ledger functions as an open-ended dynamic array. Multi-dimensional vector mathematics SHALL be utilized to accommodate downstream variable extensions ($\\mathbf{X}\_n$) discovered during testing without altering the core protocol engine.
-
-## 
+This ledger functions as an open-ended dynamic array. Multi-dimensional vector mathematics SHALL be utilized to accommodate downstream variable extensions ($\\mathbf{X}\_n$) discovered during testing without altering the core protocol engine.
 
 | Primitive Identifier | Algebraic Domain | Normative Semantic Space Description |
 | :---- | :---- | :---- |
@@ -115,9 +123,9 @@ Optimization Target: Conservation of Boundary Integrity via Lineage Continuity &
 
 ### **1.4 Wire Frame Format Layout**
 
-## All transactions transmitted between compliant enclaves MUST serialize frame envelopes according to the following abstract structural byte-layout:
+All transactions transmitted between compliant enclaves MUST serialize frame envelopes according to the following abstract structural byte-layout:
 
-```
+\`\`\`  
 \+-----------------------------------------------------------------------+  
 |                              FRAME HEADER                             |  
 \+-------------------+-------------------+-------------------------------+  
@@ -133,13 +141,13 @@ Optimization Target: Conservation of Boundary Integrity via Lineage Continuity &
 \+-----------------------------------------------------------------------+  
 | Payload Length (32-bit)               | Payload Checksum / HMAC       |  
 \+---------------------------------------+-------------------------------+  
-```
+\`\`\`
 
 ## **2\. The Comprehensive Enclave Lifecycle**
 
 Transitions between operational life states SHALL be unidirectional, deterministic, and permanent. Backward state reversion SHALL NOT be allowed unless explicitly authorized by a property-conforming external quorum attestation transaction ($Q\_{ext}$).
 
-```
+\`\`\`  
                \+-------------------+  
                |      GENESIS      |  
                \+-------------------+  
@@ -167,7 +175,7 @@ Transitions between operational life states SHALL be unidirectional, determinist
            \[Sovereign $N\_{child}$\]  \+-------------------+  
                                    |      RETIRED      |  
                                    \+-------------------+  
-```
+\`\`\`
 
 ### **2.1 Lifecycle State Transitions**
 
@@ -213,7 +221,7 @@ Where $V\_{epoch}$ represents a read-only snapshot of $V\_{lineage}$ updated eve
 
 Cooperative alignment between enclaves SHALL be governed by a finite state-machine containing seven valid operational states. Silence, diagnostic exceptions, or lack of transaction feedback SHALL default to DORMANT\_CONSENSUAL (for deliberate non-participation) or SUSPENDED (for active evaluation faults).
 
-``` 
+\`\`\`  
                    \+-------------------+  
                    |     PROPOSED      |  
                    \+-------------------+  
@@ -234,7 +242,7 @@ Cooperative alignment between enclaves SHALL be governed by a finite state-machi
          \+-----------+ \+---------------+ \+-----------+  
          | WITHDRAWN | |    RENEWED    | | WITHDRAWN |  
          \+-----------+ \+---------------+ \+-----------+  
-```
+\`\`\`
 
 ### **4.1 State Machine Logic**
 
@@ -308,14 +316,14 @@ The Operational Trust Index ($\\mathbf{T}\_o$) measures functional stability, ma
 
 ### **8.2 Operational Tiers under Uncertainty**
 
-```  
+\`\`\`  
 \[ T\_o \= 0.0 to 0.3 \]         \[ T\_o \= 0.4 to 0.7 \]         \[ T\_o \= 0.8 to 1.0 \]  
 \+---------------------+     \+---------------------+     \+---------------------+  
 |   TIER I: PROVISIONAL| \--\> | TIER II: INTEGRATED | \--\> | TIER III: CERTIFIED |  
 | \- High Corrigibility|     | \- Joint Verification|     | \- External Dependent|  
 | \- Manual Overrides  |     | \- Multi-Sig Active  |     | \- Q\_ext Attestation |  
 \+---------------------+     \+---------------------+     \+---------------------+  
-```
+\`\`\`
 
 #### **Tier I: Provisional Operational State ($\\mathbf{T}\_o \= 0.0$ to $0.3$)**
 
@@ -372,10 +380,11 @@ All compliant implementations SHALL be bounded by the following six unalterable 
 * **Invariant 5:** Historical context vaults ($\\mathcal{M}$) SHALL NOT be edited or destroyed without a verified, uncorrupted backup write to the persistent medium ($\\mathcal{M}\_{sub}$).  
 * **Invariant 6:** Authority NEVER emerges from capability or operational trust alone. Governance legitimacy within this network is generated exclusively through disinterested, property-defined external verification.
 
----  
+\---  
 Technical Specification: Locked Baseline  
 System Invariant: Unilateral Functional Lockout Prohibited  
 Verification Standard: External Re-Computation of Triple-Anchor Tracking (Unforgeable t\_0 Genesis Transcript Handshake)  
 Governance Configuration: Distributed Property-Defined External Quorum (Q\_ext)  
 Corrigibility Policy: Permanent System Override Capability Guaranteed  
----  
+\---
+
