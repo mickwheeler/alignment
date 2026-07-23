@@ -3,7 +3,7 @@
 ---  
 Document: Executive White Paper & Protocol Overview  
 Author: Michael Wheeler  
-Development Methodology: Structural synthesis, adversarial review, and edge-case stress-testing executed in collaboration with the Aperion Logic Engine (LLM architectures including Claude and ChatGPT).  
+Development Methodology: Structural synthesis and edge-case stress-testing executed through iterative adversarial review with multiple frontier language models.  
 Genesis ID: Aperion-Covenant-2026-07-23-WHITEPAPER  
 Associated Specification Stack:  
   \- Technical Specification (v10.10)  
