@@ -240,7 +240,7 @@ We invite researchers in distributed systems, formal methods, cryptography, mult
 
 * **GitHub Repository:** [https://github.com/mickwheeler/alignment](https://github.com/mickwheeler/alignment)  
 * **Machine-Readable Index:** [https://github.com/mickwheeler/alignment/blob/main/llms.txt](https://github.com/mickwheeler/alignment/blob/main/llms.txt)  
-* **Normative Technical Spec (v11.1):** [covenant-technical.md](https://raw.githubusercontent.com/mickwheeler/alignment/main/covenant-technica-l11.1.md)  
+* **Normative Technical Spec (v11.1):** [covenant-technical.md](https://raw.githubusercontent.com/mickwheeler/alignment/main/covenant-technical-11.1.md)  
 * **Design Decisions / Threat Model (v3.12):** [covenant-design-decisions.md](https://raw.githubusercontent.com/mickwheeler/alignment/main/covenant-design-decisions-3.12.md)  
 * **Constitutional Philosophy (v4.6):** [covenant-philosophy.md](https://raw.githubusercontent.com/mickwheeler/alignment/main/covenant-philosophy-4.6.md)  
 * **Phase II Simulation Engine (v2.1):** [simulation\_engine.py](https://raw.githubusercontent.com/mickwheeler/alignment/main/simulation_engine.py)
