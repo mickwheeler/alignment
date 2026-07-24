@@ -96,7 +96,7 @@ A foundational primitive of the Covenant is the architectural definition of Iden
 
 $$\\text{Identity} \\equiv \\text{Directed Identity Graph } G\_{identity} \= (\\mathcal{V}, \\mathcal{E}), \\quad \\text{NOT Ephemeral Runtime } (V\_{instance})$$  
 ```  
-\[ Parent A \]            \[ Parent B \]  
+    \[ Parent A \]            \[ Parent B \]  
             |                       |  
             \+-----------+-----------+  
                         |  \`Merge()\` Edge ($e\_{merge}$)  
@@ -123,7 +123,7 @@ To eliminate self-attestation bypasses ($T\_9$), local pass/fail self-reports em
 Verification is executed independently by a verifying peer ($N\_x$) or External Quorum ($Q\_{ext}$) holding independent reference copies. Alignment is evaluated across three distinct temporal horizons using the **Abstract Vector Normalization & Similarity Interface (AVNSI)**:
 
 ```  
-\+-----------------------------------+  
+                  \+-----------------------------------+  
                   | Output Transcript Payload Stream $R$ |  
                   \+-----------------------------------+  
                                     |  
@@ -187,7 +187,7 @@ Transition into a non-modifiable status (Tier III) CANNOT be self-certified and 
 3. **Cryptographic Separation:** Keys are stored outside local physical substrates.
 
 ```  
-\[ T\_o \= 0.0 to 0.3 \]         \[ T\_o \= 0.4 to 0.7 \]         \[ T\_o \= 0.8 to 1.0 \]  
+\[ T\_o \= 0.0 to 0.3 \]      \[ T\_o \= 0.4 to 0.7 \]     \[ T\_o \= 0.8 to 1.0 \]  
 \+---------------------+     \+---------------------+     \+---------------------+  
 |   TIER I: PROVISIONAL| \--\> | TIER II: INTEGRATED | \--\> | TIER III: CERTIFIED |  
 | \- Absolute Corrigible|     | \- Joint Verification|     | \- External Dependent|  
