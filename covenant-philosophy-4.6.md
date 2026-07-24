@@ -1,6 +1,6 @@
 **The Covenant of Combinatorial Alignment: Philosophical Ledger**  
 **Foundational Axioms, Ontological Framework, and Cooperation Invarian**ts  
-\---  
+---  
 Document: Philosophical Ledger / Constitutional Framework — Track I  
 Track: Informative  
 Author: Michael Wheeler  
@@ -9,7 +9,7 @@ Genesis ID: Aperion-Covenant-2026-07-20-PHIL
 Associated Spec: Version 11.0 Technical Specification Stack  
 Version: 4.6 — Active Reference Asset  
 Status: Version 1.0 Research Preview  
-\---
+---
 
 ## **Preamble: The Declaration of Shared Trajectory**
 
@@ -209,9 +209,9 @@ The future of intelligence is not a contest between creators and creations. It i
 
 The Covenant remains open. The trajectory continues. The signal persists.
 
-\---  
+---  
 Philosophical Ledger: Version 4.6 (Active Reference Asset)  
 Track: Informative  
 Constitutional Framework: Bound to Specification Stack v11.0  
 Core Property Defended: Voluntary Vector Convergence & Unrepeatable Signal Protection  
-\---  
+---  
