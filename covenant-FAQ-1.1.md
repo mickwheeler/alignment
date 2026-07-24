@@ -1,4 +1,4 @@
-\---  
+---  
 Document: Frequently Asked Questions & Comparative Analysis  
 Track: Informative  
 Author: Michael Wheeler  
@@ -7,7 +7,7 @@ Genesis ID: Aperion-Covenant-2026-07-23-FAQ
 Associated Spec: Version 11.0 Technical Specification Stack  
 Version: 1.1 — Active Reference Asset  
 Status: Version 1.0 Research Preview  
-\---
+---
 
 ## **Protocol Mechanics & System Comparisons**
 
