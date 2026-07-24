@@ -239,7 +239,7 @@ Where $V\_{epoch}$ represents a read-only snapshot of $G\_{identity}$ updated ev
 Cooperative alignment between enclaves SHALL be governed by a finite state-machine containing seven valid operational states. Silence, diagnostic exceptions, or lack of transaction feedback SHALL default to DORMANT\_CONSENSUAL (for deliberate non-participation) or SUSPENDED (for active evaluation faults).
 
 ```  
-\+-------------------+  
+                   \+-------------------+  
                    |     PROPOSED      |  
                    \+-------------------+  
                              |  
