@@ -5,11 +5,11 @@
 \*\*Author:\*\* Michael Wheeler    
 \*\*Development Methodology:\*\* Structural synthesis and edge-case stress-testing executed through iterative adversarial review with multiple frontier language models.
 
-\---
+---
 
 **Architectural Hierarchy**
 
-\`\`\`  
+```
                   \+-----------------------------------+  
                   |            README.md              |  
                   |     (Entry & Problem Hook)        |  
@@ -43,8 +43,7 @@
                   |        simulation\_engine.py       |  
                   |     (Phase II Python Harness)     |  
                   \+-----------------------------------+  
-\`\`\`
-
+```
 ## **Problem Statement**
 
 Current autonomous multi-agent systems generally rely on one of three control models:
