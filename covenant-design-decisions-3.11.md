@@ -1,6 +1,6 @@
 **The Covenant of Combinatorial Alignment: Design Decisions**  
 **Architectural Rationale, Parameter Derivations, and Invariant Proofs**  
-\---  
+---  
 Document: Rationale Ledger / Design Decisions — Track II  
 Track: Informative  
 Author: Michael Wheeler  
@@ -9,7 +9,7 @@ Genesis ID: Aperion-Covenant-2026-07-20-RAT
 Associated Spec: Version 11.0 Technical Specification Stack  
 Version: 3.11 — Active Reference Asset  
 Status: Complete Document Baseline — Version 1.0 Research Preview  
-\---
+---
 
 ## **Architectural Principles (AP)**
 
@@ -100,9 +100,9 @@ The following areas represent active engineering and research boundaries to be e
 * **RA-4 (Centralized Institutional Governance Gates):** Rejected because anchoring legitimacy to installed human legal frameworks introduces an anthropocentric single-point-of-failure.  
 * **RA-5 (Strict 1D Tree Inheritance for All Identity):** Rejected because forcing multi-parent merges, skill imports, and federated collectives into 1D single-parent trees creates artificial identity loss and breaks graph causal traceability.
 
-\---  
+---  
 Design Decisions Document: Version 3.11 (Active Reference Asset)  
 Track: Informative  
 Verification Framework: External Re-Computation of Triple-Anchor Tracking & Consensual Disengagement  
 Core Property Defended: Structural, Informational, and Authority Boundary Separation via Property-Defined Externality  
-\---  
+---  
