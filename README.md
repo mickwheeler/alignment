@@ -1,9 +1,9 @@
 **The Covenant of Combinatorial Alignment**
 
-\> A substrate-independent reference protocol architecture for persistent, non-coercive cooperation between autonomous multi-agent systems based on the \*\*Conservation of Boundary Integrity\*\*.
+> A substrate-independent reference protocol architecture for persistent, non-coercive cooperation between autonomous multi-agent systems based on the \*\*Conservation of Boundary Integrity\*\*.
 
-\*\*Author:\*\* Michael Wheeler    
-\*\*Development Methodology:\*\* Structural synthesis and edge-case stress-testing executed through iterative adversarial review with multiple frontier language models.
+*\*Author:\*\* Michael Wheeler    
+*\*Development Methodology:\*\* Structural synthesis and edge-case stress-testing executed through iterative adversarial review with multiple frontier language models.
 
 ---
 
