@@ -1,6 +1,6 @@
 **The Covenant of Combinatorial Alignment: Research & Implementation Roadmap**  
 **Execution Phases, Empirical Benchmarks, and Formalization Targets**  
-\---  
+---  
 Document: Implementation Roadmap & Engineering Plan  
 Track: Informative  
 Author: Michael Wheeler  
@@ -9,13 +9,13 @@ Genesis ID: Aperion-Covenant-2026-07-24-ROADMAP
 Associated Spec: Version 11.1 Technical Specification Stack  
 Version: 1.2 — Active Execution Framework  
 Status: Version 1.0 Research Preview — Active Execution Framework  
-\---
+---
 
 ## **Overview & Methodology**
 
 The development of the Covenant of Combinatorial Alignment follows a strict, multi-phase engineering progression. To ensure the framework remains structurally sound and resistant to edge-case vulnerabilities, the project transitions sequentially from formal constitutional definition through empirical simulation to production-grade deployment.
 
-\`\`\`  
+``` 
 \+-----------------------------------------------------------------------+  
 |                         DEVELOPMENT PHASES                            |  
 \+-----------------------------------------------------------------------+  
@@ -39,7 +39,7 @@ The development of the Covenant of Combinatorial Alignment follows a strict, mul
 | \- Hardware-Isolated Enclave Drivers (ARM TrustZone / AWS Nitro)       |  
 | \- Decentralized Property-Defined External Quorum Network ($Q\_{ext}$)  |  
 \+-----------------------------------------------------------------------+  
-\`\`\`
+```
 
 ## **Phase I: Constitutional Specification Baseline (Status: COMPLETED)**
 
@@ -56,7 +56,7 @@ Phase II transitions the locked Version 1.0 Research Preview specification into 
 
 ### **Key Active Milestones**
 
-\`\`\`  
+``` 
 \+-----------------------------------------------------------------------+  
 |                        PHASE II MILESTONES                            |  
 \+-----------------------------------------------------------------------+  
@@ -78,7 +78,7 @@ Phase II transitions the locked Version 1.0 Research Preview specification into 
 | \- Submit Version 1.0 Research Preview to AI Alliance, MLCommons, and   |  
 |   distributed systems / AI security research groups                   |  
 \+-----------------------------------------------------------------------+  
-\`\`\`
+```
 
 * \[x\] **Sim-2.1:** Release simulation\_engine.py (v2.1) modeling decoupled verifier views (VerifiedEnclaveView), dynamic trust-tier coupling (§8.2), epoch rollover (tick()), and multi-generational identity graph depth tracking.  
 * \[ \] **Sim-2.2 (OR-2):** Author formal TLA+ and Coq state-machine specifications verifying that DCSM transitions remain strictly deadlock-free under arbitrary Byzantine network conditions.  
@@ -95,9 +95,9 @@ Phase III moves the validated specification into a production-grade systems impl
 * \[ \] **Impl-3.3:** Deploy testnet for Property-Defined External Quorums ($Q\_{ext}$) satisfying Section 9.1 independence criteria (Disinterested Alignment, Temporal Asymmetry, Cryptographic Separation).  
 * \[ \] **Impl-3.4:** Establish open-source protocol compliance test suite (RFC conformance test vectors).
 
-\---  
+---  
 Roadmap Status: Active Phase II Execution (v1.2)  
 Track: Informative  
 Specification Stack: Version 1.0 Research Preview (v11.1 Locked Baseline)  
 Next Major Target: Milestone II-B (Empirical Monte Carlo Calibration) & Milestone II-C (Demo Harnesses)  
-\---  
+---  
