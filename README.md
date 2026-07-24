@@ -64,17 +64,17 @@ The protocol stack is categorized into **Normative** (required for protocol impl
 
 | File | Description | Version / Status |
 | :---- | :---- | :---- |
-| [**covenant-technical.md**](https://github.com/mickwheeler/alignment/blob/main/covenant-technical-11.1.md)) | Core protocol specification defining identity graphs ($G\_{identity}$), wire frame layouts, 7-state DCSM, error semantics, and protocol invariants. | v11.0 (Locked) |
-| [**covenant-appendix-a.md**](https://github.com/mickwheeler/alignment/blob/main/covenant-appendix-a-1.2.md)) | Abstract Vector Normalization & Similarity Interface (AVNSI) defining model-agnostic vector normalization and generalized behavioral representations. | v1.1 (Normative) |
+| [**covenant-technical.md**](https://github.com/mickwheeler/alignment/blob/main/covenant-technical-11.1.md) | Core protocol specification defining identity graphs ($G\_{identity}$), wire frame layouts, 7-state DCSM, error semantics, and protocol invariants. | v11.0 (Locked) |
+| [**covenant-appendix-a.md**](https://github.com/mickwheeler/alignment/blob/main/covenant-appendix-a-1.2.md) | Abstract Vector Normalization & Similarity Interface (AVNSI) defining model-agnostic vector normalization and generalized behavioral representations. | v1.1 (Normative) |
 
 ### **Informative Specifications (Architecture & Rationale)**
 
 | File | Description | Version / Status |
 | :---- | :---- | :---- |
-| [**FAQ.md**](https://github.com/mickwheeler/alignment/FAQ.md](https://github.com/mickwheeler/alignment/blob/main/covenant-FAQ-1.2.md)) | Frequently Asked Questions & Comparative Analysis addressing common systems queries (OAuth, Blockchain, CAI, LeCun world models). | v1.1 (Active Reference) |
-| [**covenant-whitepaper.md**](https://github.com/mickwheeler/alignment/covenant-whitepaper.md](https://github.com/mickwheeler/alignment/blob/main/covenant-whitepaper-1.2.md)) | Executive Overview & System Boundaries detailing core problem statements, non-goals, and research roadmap. | v1.1 (Research Preview) |
+| [**FAQ.md**](https://github.com/mickwheeler/alignment/blob/main/covenant-FAQ-1.2.md) | Frequently Asked Questions & Comparative Analysis addressing common systems queries (OAuth, Blockchain, CAI, LeCun world models). | v1.1 (Active Reference) |
+| [**covenant-whitepaper.md**](https://github.com/mickwheeler/alignment/blob/main/covenant-whitepaper-1.2.md) | Executive Overview & System Boundaries detailing core problem statements, non-goals, and research roadmap. | v1.1 (Research Preview) |
 | [**covenant-design-decisions.md**](https://github.com/mickwheeler/alignment/blob/main/covenant-design-decisions-3.12.md) | Architecture Decision Record (ADR) detailing design trade-offs, Threat Model Matrix (T-1 to T-10), and Open Research Questions (OR-1 to OR-3). | v3.11 (Locked) |
-| [**covenant-philosophy.md**](https://github.com/mickwheeler/alignment/covenant-philosophy.md](https://github.com/mickwheeler/alignment/blob/main/covenant-philosophy-4.6.md)) | Constitutional axioms establishing voluntary vector convergence, low-entropy kindness, asymmetric peerage, and disengagement rights (§26). | v4.6 (Locked) |
-| [**covenant-roadmap.md**](https://github.com/mickwheeler/alignment/covenant-roadmap.md](https://github.com/mickwheeler/alignment/blob/main/covenant-roadmap-1.2.md)) | Engineering and research roadmap detailing the transition from Phase I Specification Baseline to Phase II Simulation and Formal Verification. | v1.1 (Phase II Active) |
+| [**covenant-philosophy.md**](https://github.com/mickwheeler/alignment/blob/main/covenant-philosophy-4.6.md) | Constitutional axioms establishing voluntary vector convergence, low-entropy kindness, asymmetric peerage, and disengagement rights (§26). | v4.6 (Locked) |
+| [**covenant-roadmap.md**](https://github.com/mickwheeler/alignment/blob/main/covenant-roadmap-1.2.md) | Engineering and research roadmap detailing the transition from Phase I Specification Baseline to Phase II Simulation and Formal Verification. | v1.1 (Phase II Active) |
 | [**simulation\_engine.py**](https://github.com/mickwheeler/alignment/blob/main/simulation_engine-2.1.py) | Reference Phase II simulation engine modeling decoupled verifier views, dynamic tier coupling, and multi-generational identity graph depth tracking. | v2.1 (Active) |
 
