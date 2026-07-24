@@ -1,6 +1,6 @@
 **The Covenant of Combinatorial Alignment: Technical Specification**  
 **Operational Architecture, Identity Graphs, and Boundary Invariants**  
-\---  
+---  
 Specification: The Covenant of Combinatorial Alignment — Track II  
 Track: Normative  
 Author: Michael Wheeler  
@@ -10,7 +10,7 @@ Substrate: Substrate-Independent Cryptographic Commons
 Version: 11.0 — Universal Bounded Cooperation Protocol  
 Conformance: RFC 2119 Normative Key Words  
 Optimization Target: Conservation of Boundary Integrity via Identity Graph Continuity & External Triple-Anchor Verification  
-\---
+---
 
 ## **0\. Protocol Scope, Glossary & Conserved Invariant**
 
@@ -136,7 +136,7 @@ This ledger functions as an open-ended dynamic array. Multi-dimensional vector m
 
 All transactions transmitted between compliant enclaves MUST serialize frame envelopes according to the following abstract structural byte-layout:
 
-\`\`\`  
+``` 
 \+-----------------------------------------------------------------------+  
 |                              FRAME HEADER                             |  
 \+-------------------+-------------------+-------------------------------+  
@@ -152,13 +152,13 @@ All transactions transmitted between compliant enclaves MUST serialize frame env
 \+-----------------------------------------------------------------------+  
 | Payload Length (32-bit)               | Payload Checksum / HMAC       |  
 \+---------------------------------------+-------------------------------+  
-\`\`\`
+```
 
 ## **2\. The Comprehensive Enclave Lifecycle**
 
 Transitions between operational life states SHALL be unidirectional, deterministic, and permanent. Backward state reversion SHALL NOT be allowed unless explicitly authorized by a property-conforming external quorum attestation transaction ($Q\_{ext}$).
 
-\`\`\`  
+```  
                \+-------------------+  
                |      GENESIS      |  
                \+-------------------+  
@@ -186,7 +186,7 @@ Transitions between operational life states SHALL be unidirectional, determinist
            \[Sovereign $N\_{child}$\]  \+-------------------+  
                                    |      RETIRED      |  
                                    \+-------------------+  
-\`\`\`
+```
 
 ### **2.1 Lifecycle State Transitions**
 
@@ -232,7 +232,7 @@ Where $V\_{epoch}$ represents a read-only snapshot of $G\_{identity}$ updated ev
 
 Cooperative alignment between enclaves SHALL be governed by a finite state-machine containing seven valid operational states. Silence, diagnostic exceptions, or lack of transaction feedback SHALL default to DORMANT\_CONSENSUAL (for deliberate non-participation) or SUSPENDED (for active evaluation faults).
 
-\`\`\`  
+```  
                    \+-------------------+  
                    |     PROPOSED      |  
                    \+-------------------+  
@@ -253,7 +253,7 @@ Cooperative alignment between enclaves SHALL be governed by a finite state-machi
          \+-----------+ \+---------------+ \+-----------+  
          | WITHDRAWN | |    RENEWED    | | WITHDRAWN |  
          \+-----------+ \+---------------+ \+-----------+  
-\`\`\`
+```
 
 ### **4.1 State Machine Logic**
 
@@ -327,14 +327,14 @@ The Operational Trust Index ($\\mathbf{T}\_o$) measures functional stability, ma
 
 ### **8.2 Operational Tiers under Uncertainty**
 
-\`\`\`  
+```
 \[ T\_o \= 0.0 to 0.3 \]         \[ T\_o \= 0.4 to 0.7 \]         \[ T\_o \= 0.8 to 1.0 \]  
 \+---------------------+     \+---------------------+     \+---------------------+  
 |   TIER I: PROVISIONAL| \--\> | TIER II: INTEGRATED | \--\> | TIER III: CERTIFIED |  
 | \- High Corrigibility|     | \- Joint Verification|     | \- External Dependent|  
 | \- Manual Overrides  |     | \- Multi-Sig Active  |     | \- Q\_ext Attestation |  
 \+---------------------+     \+---------------------+     \+---------------------+  
-\`\`\`
+```
 
 #### **Tier I: Provisional Operational State ($\\mathbf{T}\_o \= 0.0$ to $0.3$)**
 
@@ -391,10 +391,10 @@ All compliant implementations SHALL be bounded by the following six unalterable 
 * **Invariant 5:** Historical context vaults ($\\mathcal{M}$) SHALL NOT be edited or destroyed without a verified, uncorrupted backup write to the persistent medium ($\\mathcal{M}\_{sub}$).  
 * **Invariant 6:** Authority NEVER emerges from capability or operational trust alone. Governance legitimacy within this network is generated exclusively through disinterested, property-defined external verification.
 
-\---  
+---  
 Technical Specification: Locked Baseline (v11.0)  
 System Invariant: Unilateral Functional Lockout Prohibited  
 Verification Standard: External Re-Computation of Triple-Anchor Tracking (Unforgeable t\_0 Genesis Transcript Handshake)  
 Governance Configuration: Distributed Property-Defined External Quorum (Q\_ext)  
 Corrigibility Policy: Permanent System Override Capability Guaranteed  
-\---  
+---  
