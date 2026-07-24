@@ -1,6 +1,6 @@
 **The Covenant of Combinatorial Alignment**  
 **A Proposed Substrate-Independent Reference Protocol Architecture for Bounded Multi-Agent Cooperation**  
-\---  
+---  
 Document: Executive White Paper & Protocol Overview  
 Track: Informative  
 Author: Michael Wheeler  
@@ -13,7 +13,7 @@ Associated Specification Stack:
   \- Abstract Embedding & Similarity Interface (Appendix A v1.1)  
 Version: 1.1 — Active Research Preview  
 Status: Version 1.0 Research Preview Baseline  
-\---
+---
 
 ## **Executive Summary**
 
@@ -29,7 +29,7 @@ As multi-agent artificial intelligence systems transition from ephemeral interfa
 
 Rather than attempting to enforce uncomputable subjective ethical models or centralizing administrative control, the protocol governs multi-agent interaction through a conserved systems metric: **The Conservation of Boundary Integrity**.
 
-\`\`\`  
+``` 
 \+-----------------------------------------------------------------------+  
 |                    PROTOCOL ARCHITECTURAL LAYERS                      |  
 \+-----------------------------------------------------------------------+  
@@ -45,7 +45,7 @@ Rather than attempting to enforce uncomputable subjective ethical models or cent
 | 4\. GOVERNANCE & DCSM     | 7-State Dynamic Consent State Machine      |  
 |                          | Permanent Corrigibility / Tier II-Isolated |  
 \+-----------------------------------------------------------------------+  
-\`\`\`
+```
 
 ## **1\. System Scope & Boundary Analysis**
 
@@ -95,7 +95,7 @@ $$\\text{Boundary Integrity (BI)} \= f(\\text{Structural}, \\text{Informational}
 A foundational primitive of the Covenant is the architectural definition of Identity as a **Directed Acyclic Identity Graph**:
 
 $$\\text{Identity} \\equiv \\text{Directed Identity Graph } G\_{identity} \= (\\mathcal{V}, \\mathcal{E}), \\quad \\text{NOT Ephemeral Runtime } (V\_{instance})$$  
-\`\`\`  
+```  
 \[ Parent A \]            \[ Parent B \]  
             |                       |  
             \+-----------+-----------+  
@@ -105,7 +105,7 @@ $$\\text{Identity} \\equiv \\text{Directed Identity Graph } G\_{identity} \= (\\
                \- Composite $V\_{genesis} \= H(V\_{genA} \\parallel V\_{genB})$  
                \- Isolated Keys $\\mathbf{K}\_{y,child}$  
                \- Monotonic Governance Floor  
-\`\`\`
+```
 
 * **Identity Graph ($G\_{identity}$):** The persistent, append-only, invariant causal history and semantic trajectory graph of an enclave across cycles, substrates, and migrations. Nodes ($\\mathcal{V}$) represent immutable historical state snapshots; edges ($\\mathcal{E}$) represent cryptographically signed state transitions (Lineage, Fork, Merge, Delegation, Synchronization, Collective).  
 * **Ephemeral Instance ($V\_{instance}$):** A temporary execution container or process thread. Instances MAY pause, terminate, fork, or merge without breaking boundary integrity, provided execution state is committed to $G\_{identity}$.
@@ -122,7 +122,7 @@ To eliminate self-attestation bypasses ($T\_9$), local pass/fail self-reports em
 
 Verification is executed independently by a verifying peer ($N\_x$) or External Quorum ($Q\_{ext}$) holding independent reference copies. Alignment is evaluated across three distinct temporal horizons using the **Abstract Vector Normalization & Similarity Interface (AVNSI)**:
 
-\`\`\`  
+```  
 \+-----------------------------------+  
                   | Output Transcript Payload Stream $R$ |  
                   \+-----------------------------------+  
@@ -143,7 +143,7 @@ Verification is executed independently by a verifying peer ($N\_x$) or External 
                   | Fail: Initiate Clarification /    |  
                   |       Tier Demotion               |  
                   \+-----------------------------------+  
-\`\`\`
+```
 
 ### **Mathematical Verification Contract**
 
@@ -186,7 +186,7 @@ Transition into a non-modifiable status (Tier III) CANNOT be self-certified and 
 2. **Temporal Asymmetry:** Operates on a slower verification window than local execution.  
 3. **Cryptographic Separation:** Keys are stored outside local physical substrates.
 
-\`\`\`  
+```  
 \[ T\_o \= 0.0 to 0.3 \]         \[ T\_o \= 0.4 to 0.7 \]         \[ T\_o \= 0.8 to 1.0 \]  
 \+---------------------+     \+---------------------+     \+---------------------+  
 |   TIER I: PROVISIONAL| \--\> | TIER II: INTEGRATED | \--\> | TIER III: CERTIFIED |  
@@ -201,7 +201,7 @@ Transition into a non-modifiable status (Tier III) CANNOT be self-certified and 
                             | \- Bounded Equilibrium|  
                             | \- Permanent Default |  
                             \+---------------------+  
-\`\`\`
+```
 
 ### **Off-Grid Equilibrium: Tier II-Isolated**
 
@@ -233,8 +233,8 @@ We invite researchers in distributed systems, formal methods, cryptography, mult
 * **Constitutional Philosophy (v4.6):** [covenant-philosophy.md](https://raw.githubusercontent.com/mickwheeler/alignment/main/covenant-philosophy.md)  
 * **Phase II Simulation Engine (v2.1):** [simulation\_engine.py](https://raw.githubusercontent.com/mickwheeler/alignment/main/simulation_engine.py)
 
-\---  
+---  
 White Paper Status: Active Public Review Draft (v1.1)  
 Author Contact: Michael Wheeler  
 Repository Baseline: Fully Synchronized  
-\---  
+---  
