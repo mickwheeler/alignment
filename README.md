@@ -64,8 +64,8 @@ The protocol stack is categorized into **Normative** (required for protocol impl
 
 | File | Description | Version / Status |
 | :---- | :---- | :---- |
-| [**covenant-technical.md**](https://www.google.com/search?q=./covenant-technical.md](https://github.com/mickwheeler/alignment/blob/main/covenant-technical-11.1.md)) | Core protocol specification defining identity graphs ($G\_{identity}$), wire frame layouts, 7-state DCSM, error semantics, and protocol invariants. | v11.0 (Locked) |
-| [**covenant-appendix-a.md**](https://www.google.com/search?q=./covenant-appendix-a.md](https://github.com/mickwheeler/alignment/blob/main/covenant-appendix-a-1.2.md)) | Abstract Vector Normalization & Similarity Interface (AVNSI) defining model-agnostic vector normalization and generalized behavioral representations. | v1.1 (Normative) |
+| [**covenant-technical.md**](https://github.com/mickwheeler/alignment/blob/main/covenant-technical-11.1.md)) | Core protocol specification defining identity graphs ($G\_{identity}$), wire frame layouts, 7-state DCSM, error semantics, and protocol invariants. | v11.0 (Locked) |
+| [**covenant-appendix-a.md**](https://github.com/mickwheeler/alignment/blob/main/covenant-appendix-a-1.2.md)) | Abstract Vector Normalization & Similarity Interface (AVNSI) defining model-agnostic vector normalization and generalized behavioral representations. | v1.1 (Normative) |
 
 ### **Informative Specifications (Architecture & Rationale)**
 
