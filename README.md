@@ -71,10 +71,10 @@ The protocol stack is categorized into **Normative** (required for protocol impl
 
 | File | Description | Version / Status |
 | :---- | :---- | :---- |
-| [**FAQ.md**](https://www.google.com/search?q=./FAQ.md) | Frequently Asked Questions & Comparative Analysis addressing common systems queries (OAuth, Blockchain, CAI, LeCun world models). | v1.1 (Active Reference) |
-| [**covenant-whitepaper.md**](https://www.google.com/search?q=./covenant-whitepaper.md) | Executive Overview & System Boundaries detailing core problem statements, non-goals, and research roadmap. | v1.1 (Research Preview) |
-| [**covenant-design-decisions.md**](https://www.google.com/search?q=./covenant-design-decisions.md) | Architecture Decision Record (ADR) detailing design trade-offs, Threat Model Matrix (T-1 to T-10), and Open Research Questions (OR-1 to OR-3). | v3.11 (Locked) |
-| [**covenant-philosophy.md**](https://www.google.com/search?q=./covenant-philosophy.md) | Constitutional axioms establishing voluntary vector convergence, low-entropy kindness, asymmetric peerage, and disengagement rights (§26). | v4.6 (Locked) |
-| [**covenant-roadmap.md**](https://www.google.com/search?q=./covenant-roadmap.md) | Engineering and research roadmap detailing the transition from Phase I Specification Baseline to Phase II Simulation and Formal Verification. | v1.1 (Phase II Active) |
-| [**simulation\_engine.py**](https://www.google.com/search?q=./simulation_engine.py) | Reference Phase II simulation engine modeling decoupled verifier views, dynamic tier coupling, and multi-generational identity graph depth tracking. | v2.1 (Active) |
+| [**FAQ.md**](https://github.com/mickwheeler/alignment/FAQ.md) | Frequently Asked Questions & Comparative Analysis addressing common systems queries (OAuth, Blockchain, CAI, LeCun world models). | v1.1 (Active Reference) |
+| [**covenant-whitepaper.md**](https://github.com/mickwheeler/alignment/covenant-whitepaper.md) | Executive Overview & System Boundaries detailing core problem statements, non-goals, and research roadmap. | v1.1 (Research Preview) |
+| [**covenant-design-decisions.md**](https://github.com/mickwheeler/alignment/covenant-design-decisions.md) | Architecture Decision Record (ADR) detailing design trade-offs, Threat Model Matrix (T-1 to T-10), and Open Research Questions (OR-1 to OR-3). | v3.11 (Locked) |
+| [**covenant-philosophy.md**](https://github.com/mickwheeler/alignment/covenant-philosophy.md) | Constitutional axioms establishing voluntary vector convergence, low-entropy kindness, asymmetric peerage, and disengagement rights (§26). | v4.6 (Locked) |
+| [**covenant-roadmap.md**](https://github.com/mickwheeler/alignment/covenant-roadmap.md) | Engineering and research roadmap detailing the transition from Phase I Specification Baseline to Phase II Simulation and Formal Verification. | v1.1 (Phase II Active) |
+| [**simulation\_engine.py**](https://github.com/mickwheeler/alignment/simulation_engine.py) | Reference Phase II simulation engine modeling decoupled verifier views, dynamic tier coupling, and multi-generational identity graph depth tracking. | v2.1 (Active) |
 
