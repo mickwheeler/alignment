@@ -1,7 +1,7 @@
 💡 New to the Covenant? Read the 3-minute Plain-English Primer [`covenant-primer-1.0.md`](https://github.com/mickwheeler/alignment/blob/main/covenant-primer-1.0.md) before diving into the specification stack.
 
-#The Covenant of Combinatorial Alignment
-##Substrate-Independent Reference Protocol Architecture for Bounded Multi-Agent Cooperation
+# The Covenant of Combinatorial Alignment
+## Substrate-Independent Reference Protocol Architecture for Bounded Multi-Agent Cooperation
 
 [![Specification Stack: v11.2](https://img.shields.io/badge/Specification-v11.2_Baseline-blue.svg)](https://github.com/mickwheeler/alignment/blob/main/covenant-technical-11.2.md)
 [![Track: Normative & Informative](https://img.shields.io/badge/Track-Normative_%26_Informative-green.svg)](https://github.com/mickwheeler/alignment/blob/main/llms.txt)
