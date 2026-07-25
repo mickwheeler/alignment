@@ -1,12 +1,12 @@
-\# The Covenant of Combinatorial Alignment  
-\#\# A Substrate-Independent Reference Protocol Architecture for Bounded Multi-Agent Cooperation
+# The Covenant of Combinatorial Alignment  
+## A Substrate-Independent Reference Protocol Architecture for Bounded Multi-Agent Cooperation
 
 \[\!\[Specification Stack: v11.2\](https://img.shields.io/badge/Specification-v11.2\_Baseline-blue.svg)\](https://github.com/mickwheeler/alignment/blob/main/covenant-technical-11.2.md)  
 \[\!\[Track: Normative & Informative\](https://img.shields.io/badge/Track-Normative\_%26\_Informative-green.svg)\](https://github.com/mickwheeler/alignment/blob/main/llms.txt)  
 \[\!\[Simulation Engine: v2.2\](https://img.shields.io/badge/Simulation\_Engine-v2.2-orange.svg)\](https://raw.githubusercontent.com/mickwheeler/alignment/main/simulation\_engine-2.2.py)  
 \[\!\[License: Open Protocol Baseline\](https://img.shields.io/badge/License-Open\_Baseline-lightgrey.svg)\](\#)
 
-\---
+---
 
 \#\# Overview
 
@@ -23,7 +23,7 @@ The Covenant explores a fourth model: \*\*Distributed boundary verification thro
 
 Rather than evaluating uncomputable subjective internal mental states or centralizing administrative control, the protocol governs multi-agent interaction through a conserved systems metric: \*\*The Conservation of Boundary Integrity\*\* across Structural, Informational, and Authority spaces.
 
-\---
+---
 
 \#\# Architectural Principles & Core Invariants
 
@@ -43,7 +43,7 @@ Rather than evaluating uncomputable subjective internal mental states or central
 5\. \*\*Infimum Tier Rule for Collectives:\*\* Federated collective enclaves ($N\_{coll}$) operate under the minimum tier among member nodes ($\\text{Tier}(N\_{coll}) \= \\min\_i \\text{Tier}(N\_i)$), preventing low-tier nodes from acquiring unauthorized Tier III permissions.  
 6\. \*\*Consensual Disengagement (§26):\*\* Non-participation and silence are protected exercises of sovereignty (\`DORMANT\_CONSENSUAL\`) that pause drift checks without penalty. Active pulse-frame spoofing during un-monitored execution is penalized as active deception (\`ERR\_DORMANT\_SPOOFING\`, $T\_{10}$).
 
-\---
+---
 
 \#\# Repository Index & Specification Stack
 
@@ -64,7 +64,7 @@ The repository is structured into Normative Standards, Informative Rationale Led
 \#\#\# Executable Reference Harnesses  
 \* \*\*\[\`simulation\_engine-2.2.py\`\](simulation\_engine-2.2.py):\*\* Phase II Python Simulation Engine (v2.2) — High-throughput reference harness modeling decoupled verifier views (\`VerifiedEnclaveView\`), dynamic trust-tier coupling (§8.2), 10^4 epoch rollover (\`tick()\`), accumulated ancestral root set tracking ($\\mathcal{S}\_{genesis}$), and multi-generational T-11 verification.
 
-\---
+---
 
 \#\# Threat Model Matrix Summary
 
@@ -84,7 +84,7 @@ The protocol is explicitly built to withstand eleven structural exploit vectors 
 | \*\*T-10\*\* | \*\*Dormant Facade:\*\* Emitting false heartbeats to freeze drift checks while executing off-protocol effects. | \*\*§4.1 / §9.2 DCSM Separation:\*\* Pulse-frame spoofing during un-monitored execution triggers \`ERR\_DORMANT\_SPOOFING\`. |  
 | \*\*T-11\*\* | \*\*Multi-Generational Merge Dilution:\*\* Merging drifted nodes across chained hops ($N\_A \\rightarrow N\_{AB} \\rightarrow N\_{ABC}$) to dilute floors. | \*\*§3.2 / §3.3 Ancestral Set Verification:\*\* $N\_{child}$ MUST clear $\\tau\_{genesis} \\ge 0.70$ against EVERY vector in $\\mathcal{S}\_{genesis}(N\_y) \= \\mathcal{S}\_{genesis}(N\_A) \\cup \\mathcal{S}\_{genesis}(N\_B)$. |
 
-\---
+---
 
 \#\# Quick Start: Running the Simulation Engine
 
