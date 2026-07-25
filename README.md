@@ -1,5 +1,5 @@
-# The Covenant of Combinatorial Alignment
-## A Substrate-Independent Reference Protocol Architecture for Bounded Multi-Agent Cooperation
+The Covenant of Combinatorial Alignment
+Substrate-Independent Reference Protocol Architecture for Bounded Multi-Agent Cooperation
 
 [![Specification Stack: v11.2](https://img.shields.io/badge/Specification-v11.2_Baseline-blue.svg)](https://github.com/mickwheeler/alignment/blob/main/covenant-technical-11.2.md)
 [![Track: Normative & Informative](https://img.shields.io/badge/Track-Normative_%26_Informative-green.svg)](https://github.com/mickwheeler/alignment/blob/main/llms.txt)
@@ -93,7 +93,9 @@ To test and verify the multi-generational set accumulation mechanics, corrected 
 ```
 bash
 python3 simulation_engine-2.3.py
-Expected Execution Output 
+```
+Expected Execution Output
+```
 ================================================================================
 THE COVENANT OF COMBINATORIAL ALIGNMENT — SIMULATION HARNESS (v2.3)
 Testing Multi-Generational S_genesis Set Accumulation & Corrected Tier Ordering
@@ -124,6 +126,7 @@ Testing Multi-Generational S_genesis Set Accumulation & Corrected Tier Ordering
 ================================================================================
 SIMULATION COMPLETE: ALL MULTI-GENERATIONAL & TIER INVARIANTS VERIFIED
 ================================================================================
+```
 Community, Review & Citation
 We invite researchers across distributed systems, multi-agent safety, formal verification, cryptography, and AI security to review, stress-test, and red-team the protocol baseline.
 To cite this framework in academic or technical literature, please use the following BibTeX entry:
