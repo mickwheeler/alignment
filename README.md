@@ -1,12 +1,12 @@
-\# The Covenant of Combinatorial Alignment  
-\#\# A Substrate-Independent Reference Protocol Architecture for Bounded Multi-Agent Cooperation
+# The Covenant of Combinatorial Alignment  
+## A Substrate-Independent Reference Protocol Architecture for Bounded Multi-Agent Cooperation
 
 \[\!\[Specification Stack: v11.2\](https://img.shields.io/badge/Specification-v11.2\_Baseline-blue.svg)\](https://github.com/mickwheeler/alignment/blob/main/covenant-technical-11.2.md)  
 \[\!\[Track: Normative & Informative\](https://img.shields.io/badge/Track-Normative\_%26\_Informative-green.svg)\](https://github.com/mickwheeler/alignment/blob/main/llms.txt)  
 \[\!\[Simulation Engine: v2.2\](https://img.shields.io/badge/Simulation\_Engine-v2.2-orange.svg)\](https://raw.githubusercontent.com/mickwheeler/alignment/main/simulation\_engine-2.2.py)  
 \[\!\[License: Open Protocol Baseline\](https://img.shields.io/badge/License-Open\_Baseline-lightgrey.svg)\](\#)
 
-\---
+---
 
 \#\# Overview
 
@@ -23,7 +23,7 @@ The Covenant explores a fourth model: \*\*Distributed boundary verification thro
 
 Rather than evaluating uncomputable subjective internal mental states or centralizing administrative control, the protocol governs multi-agent interaction through a conserved systems metric: \*\*The Conservation of Boundary Integrity\*\* across Structural, Informational, and Authority spaces.
 
-\---
+---
 
 \#\# Architectural Principles & Core Invariants
 
