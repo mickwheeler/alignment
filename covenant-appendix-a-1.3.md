@@ -1,6 +1,6 @@
 **Appendix A: Abstract Embedding & Similarity Interface Specification**  
 **Model-Agnostic Vector Normalization, Projection Patterns, and Verification Contracts**  
-\---  
+---  
 Specification: Abstract Embedding & Similarity Interface Specification (AVNSI)  
 Track: Normative  
 Author: Michael Wheeler  
@@ -9,7 +9,7 @@ Genesis ID: Aperion-Covenant-2026-07-24-APP-A
 Associated Spec: Version 11.2 Technical Specification Stack  
 Version: 1.3 — Active Normative Baseline  
 Status: Version 1.0 Research Preview — Normative Appendix  
-\---
+---
 
 ## **A.1 Scope and Architectural Objective**
 
@@ -47,12 +47,12 @@ The payload stream $R$ MUST be parsed according to the enclave's operational dom
 
 To eliminate baseline floating-point magnitude variance introduced by different model depths, context windows, latent spaces, or token densities, all raw embedding vectors $\\mathbf{u}$ MUST pass through a two-stage normalization pipeline prior to cosine evaluation:
 
-\`\`\`  
+```  
 \+-------------------+      \+-------------------+      \+-------------------+  
 |  RAW EMBEDDING    | \---\> | MEAN-CENTERING    | \---\> | L2-UNIT SCALING   |  
 |   Vector $\\mathbf{u}$    |      |  $\\mathbf{u}' \= \\mathbf{u} \- \\boldsymbol{\\mu}$ |      |  $\\mathbf{v} \= \\frac{\\mathbf{u}'}{\\Vert{}\\mathbf{u}'\\Vert{}\_2}$ |  
 \+-------------------+      \+-------------------+      \+-------------------+  
-\`\`\`
+```
 
 ### **1\. Mean-Centering Transformation**
 
@@ -106,9 +106,9 @@ In accordance with [Technical Spec v11.2 Section 3.1](https://www.google.com/sea
 
 > **Security Note:** Pattern B is the protocol default for external verification (Threat $T\_9$). It completely eliminates the need for cross-model vector translation by shifting the comparison entirely to raw, un-spoofable payload transcripts evaluated inside the verifier's own local environment.
 
-\---  
+---  
 Appendix A Status: Version 1.3 Normative Baseline  
 Track: Normative  
 Bound to Specification Stack: covenant-technical-11.2.md  
 Core Function: Abstract Vector Normalization, Monotonic Ancestral Set Verification & Cross-Model Projection Standard  
-\---  
+---  
