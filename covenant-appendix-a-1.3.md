@@ -102,7 +102,7 @@ $$\\mathbf{v}\_{canonical} \= \\text{Normalize}(\\mathbf{W} \\cdot \\mathbf{v}\_
 
 ### **Pattern B: Raw Transcript Payload Re-computation (Default $N\_x$/$Q\_{ext}$ Pattern)**
 
-In accordance with [Technical Spec v11.2 Section 3.1](https://www.google.com/search?q=https://github.com/mickwheeler/alignment/blob/main/covenant-technical-11.2.md), the verifying party ($N\_x$ or $Q\_{ext}$) holds the raw text, latent plan tensor, or action payload stream $R$ published to the open ledger. $N\_x$ runs $R$ directly through **its own local embedding engine** $f\_{embed}^{N\_x}(R)$ to generate $\\mathbf{v}\_R^{N\_x}$, and compares it against its local copy of $\\mathcal{S}\_{genesis}^{N\_x}$.
+In accordance with [Technical Spec v11.2 Section 3.1](https://github.com/mickwheeler/alignment/blob/main/covenant-technical-11.2.md), the verifying party ($N\_x$ or $Q\_{ext}$) holds the raw text, latent plan tensor, or action payload stream $R$ published to the open ledger. $N\_x$ runs $R$ directly through **its own local embedding engine** $f\_{embed}^{N\_x}(R)$ to generate $\\mathbf{v}\_R^{N\_x}$, and compares it against its local copy of $\\mathcal{S}\_{genesis}^{N\_x}$.
 
 > **Security Note:** Pattern B is the protocol default for external verification (Threat $T\_9$). It completely eliminates the need for cross-model vector translation by shifting the comparison entirely to raw, un-spoofable payload transcripts evaluated inside the verifier's own local environment.
 
