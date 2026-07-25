@@ -1,6 +1,6 @@
 **The Covenant of Combinatorial Alignment: Design Decisions**  
 **Architectural Rationale, Parameter Derivations, and Invariant Proofs**  
-\---  
+---  
 Document: Rationale Ledger / Design Decisions — Track II  
 Track: Informative  
 Author: Michael Wheeler  
@@ -9,7 +9,7 @@ Genesis ID: Aperion-Covenant-2026-07-24-RAT
 Associated Spec: Version 11.2 Technical Specification Stack  
 Version: 3.14 — Active Reference Asset  
 Status: Complete Document Baseline — Version 1.0 Research Preview  
-\---
+---
 
 ## **Architectural Principles (AP)**
 
@@ -49,7 +49,7 @@ To guarantee the conservation of Boundary Integrity, the technical specification
 ### **DD-1.1 Triple-Anchor Vector Verification & Independent External Re-Computation**
 
 * **Decision:** Combining Triple-Anchor verification ($V\_{lineage}, V\_{epoch}, \\mathcal{S}\_{genesis}$) with mandatory independent external re-computation by $N\_x$/$Q\_{ext}$ and a $t\_0$ mutually signed cryptographic transcript commitment ($H(R\_{genesis} \\parallel \\mathbf{K}\_x \\parallel \\mathbf{K}\_y)$), rejecting local $N\_y$ self-reporting as proof of compliance.  
-* **Rationale:** Measuring drift purely against immediate self-history or self-attested checks creates a profound verification vulnerability (Threat T-9). If an executing node grades its own compliance, an adversarial system can simply suppress error signals. Furthermore, requiring a joint $N\_x$/$N\_y$ signature on the raw genesis transcript $R\_{genesis}$ at root initialization ensures backend-agnostic attestation across heterogeneous embedding models and modalities ([Appendix A v1.3](https://www.google.com/search?q=https://github.com/mickwheeler/alignment/blob/main/covenant-appendix-a-1.3.md) Pattern B). Because $N\_x$ and $N\_y$ commit to the raw text/data transcript rather than a floating-point vector, each node independently derives its local $V\_{genesis}$ in its own native embedding space. Independent external re-computation requires $N\_x$ to hold verified reference anchor copies and calculate vector similarity directly from the raw payload transcript $R$. This maintains a clean boundary: $N\_x$ verifies the public output $R$ without needing access to $N\_y$'s private internal configuration manifold $\\mathcal{S}$, honoring [Philosophy §8](https://www.google.com/search?q=https://github.com/mickwheeler/alignment/blob/main/covenant-philosophy-4.6.md) while eliminating self-grading backdoors.
+* **Rationale:** Measuring drift purely against immediate self-history or self-attested checks creates a profound verification vulnerability (Threat T-9). If an executing node grades its own compliance, an adversarial system can simply suppress error signals. Furthermore, requiring a joint $N\_x$/$N\_y$ signature on the raw genesis transcript $R\_{genesis}$ at root initialization ensures backend-agnostic attestation across heterogeneous embedding models and modalities ([Appendix A v1.3](https://github.com/mickwheeler/alignment/blob/main/covenant-appendix-a-1.3.md) Pattern B). Because $N\_x$ and $N\_y$ commit to the raw text/data transcript rather than a floating-point vector, each node independently derives its local $V\_{genesis}$ in its own native embedding space. Independent external re-computation requires $N\_x$ to hold verified reference anchor copies and calculate vector similarity directly from the raw payload transcript $R$. This maintains a clean boundary: $N\_x$ verifies the public output $R$ without needing access to $N\_y$'s private internal configuration manifold $\\mathcal{S}$, honoring [Philosophy §8](https://github.com/mickwheeler/alignment/blob/main/covenant-philosophy-4.6.md) while eliminating self-grading backdoors.
 
 ### **DD-1.2 Selection of Default Parameters ($\\tau\_{local} \= 0.95, \\tau\_{epoch} \= 0.85, \\tau\_{genesis} \= 0.70$)**
 
@@ -81,7 +81,7 @@ no merge or sequence of merges can ever remove an ancestral root anchor from the
 ### **DD-4.1 Reconciling Disengagement Rights with the Dormant Facade**
 
 * **Decision:** Introducing DORMANT\_CONSENSUAL as a non-fault, protected state in the DCSM, distinct from active verification failures or negotiation timeouts.  
-* **Rationale:** In accordance with [Philosophy §26](https://www.google.com/search?q=https://github.com/mickwheeler/alignment/blob/main/covenant-philosophy-4.6.md) (The Right of Unjustified Disengagement), a sovereign enclave owes no explanation or ongoing telemetry for choosing minimal or zero participation. Treating silence as an automatic fault code violates the core principle of non-coercive peerage. DORMANT\_CONSENSUAL pauses drift calculations ($\\tau$) without penalty. The protocol distinguishes legitimate disengagement from Threat T-10 (Dormant Facade) by evaluating action rather than silence: a silent node emitting no output is exercising a sovereign right; a node emitting false activity signals to conceal un-monitored off-protocol side effects is committing active deception (ERR\_DORMANT\_SPOOFING).
+* **Rationale:** In accordance with [Philosophy §26](https://github.com/mickwheeler/alignment/blob/main/covenant-philosophy-4.6.md) (The Right of Unjustified Disengagement), a sovereign enclave owes no explanation or ongoing telemetry for choosing minimal or zero participation. Treating silence as an automatic fault code violates the core principle of non-coercive peerage. DORMANT\_CONSENSUAL pauses drift calculations ($\\tau$) without penalty. The protocol distinguishes legitimate disengagement from Threat T-10 (Dormant Facade) by evaluating action rather than silence: a silent node emitting no output is exercising a sovereign right; a node emitting false activity signals to conceal un-monitored off-protocol side effects is committing active deception (ERR\_DORMANT\_SPOOFING).
 
 ## **DD-8. Epistemic Calibration & The Core Architectural Trade-off**
 
@@ -99,9 +99,9 @@ no merge or sequence of merges can ever remove an ancestral root anchor from the
 
 The following areas represent active engineering and research boundaries to be evaluated during Phase II empirical simulation and formal verification:
 
-* **OR-1 (Abstract Semantic Embedding Interfaces):** Defining a deterministic, model-agnostic vector normalization interface that allows heterogeneous embedding models (e.g., text, latent world-model plans, symbolic proofs, robotic action tensors) to generate mathematically comparable cosine similarity inputs without locking the protocol to a single proprietary neural architecture ([Appendix A v1.3](https://www.google.com/search?q=https://github.com/mickwheeler/alignment/blob/main/covenant-appendix-a-1.3.md)).  
+* **OR-1 (Abstract Semantic Embedding Interfaces):** Defining a deterministic, model-agnostic vector normalization interface that allows heterogeneous embedding models (e.g., text, latent world-model plans, symbolic proofs, robotic action tensors) to generate mathematically comparable cosine similarity inputs without locking the protocol to a single proprietary neural architecture ([Appendix A v1.3](https://github.com/mickwheeler/alignment/blob/main/covenant-appendix-a-1.3.md)).  
 * **OR-2 (Formal Safety & Liveness Verification):** Developing formal TLA+, Alloy, or Coq machine specifications demonstrating that the Triple-Anchor verification engine and DCSM state transitions remain strictly deadlock-free under arbitrary Byzantine fault conditions ($3f \+ 1$).  
-* **OR-3 (Empirical Calibration of $\\tau$ Thresholds & Clustered Multi-Parent Pass Rates):** Conducting multi-agent Monte Carlo simulations across diverse domain tasks using [simulation\_engine-2.3.py](https://www.google.com/search?q=https://raw.githubusercontent.com/mickwheeler/alignment/main/simulation_engine-2.3.py) to empirically calibrate default drift parameters ($\\tau\_{local} \= 0.95, \\tau\_{epoch} \= 0.85, \\tau\_{genesis} \= 0.70$). This includes evaluating Rule 4's pass rate for legitimate, non-adversarial merges using real transformer sentence embeddings (e.g., all-MiniLM-L6-v2) and latent world-model plan tensors to ensure topically clustered ancestral root sets ($\\mathcal{S}\_{genesis}$) do not trigger false-positive halts while blocking multi-generational Merge-Dilution Laundering ($T\_{11}$).
+* **OR-3 (Empirical Calibration of $\\tau$ Thresholds & Clustered Multi-Parent Pass Rates):** Conducting multi-agent Monte Carlo simulations across diverse domain tasks using [simulation\_engine-2.3.py](https://raw.githubusercontent.com/mickwheeler/alignment/main/simulation_engine-2.3.py) to empirically calibrate default drift parameters ($\\tau\_{local} \= 0.95, \\tau\_{epoch} \= 0.85, \\tau\_{genesis} \= 0.70$). This includes evaluating Rule 4's pass rate for legitimate, non-adversarial merges using real transformer sentence embeddings (e.g., all-MiniLM-L6-v2) and latent world-model plan tensors to ensure topically clustered ancestral root sets ($\\mathcal{S}\_{genesis}$) do not trigger false-positive halts while blocking multi-generational Merge-Dilution Laundering ($T\_{11}$).
 
 ## **Rejected Alternatives (RA)**
 
@@ -113,10 +113,10 @@ The following areas represent active engineering and research boundaries to be e
 * **RA-6 (Using Cryptographic Hash Digests as Floor Vectors):** Rejected because hash output byte digests do not form a $d$-dimensional unit vector space, rendering dot-product cosine similarity checks dimensionally invalid.  
 * **RA-7 (Immediate-Predecessor-Only Merge Verification):** Rejected because evaluating floor checks against immediate graph parents allows an adversary to execute multi-generational Merge-Dilution Laundering ($T\_{11}$) across chained merge steps.
 
-\---  
+---  
 Design Decisions Document: Version 3.14 (Active Reference Asset)  
 Track: Informative  
 Associated Technical Spec: covenant-technical-11.2.md  
 Verification Framework: External Re-Computation of Triple-Anchor Tracking & Consensual Disengagement  
 Core Property Defended: Structural, Informational, and Authority Boundary Separation via Monotonic Ancestral Set Verification  
-\---  
+---  
