@@ -234,7 +234,7 @@ Transition into a non-modifiable status (Tier III) CANNOT be self-certified and 
 
 For off-grid nodes (e.g., deep-space probes, air-gapped facilities, disaster recovery meshes) where $Q\_{ext}$ is unreachable, the system safely remains in **Tier II-Isolated** indefinitely. This represents a complete, stable equilibrium state of mutual cooperation, boundary integrity, and dynamic consent without forcing insecure self-certification.
 
-### **Consensual Disengagement ([Philosophy §26](https://www.google.com/search?q=https://github.com/mickwheeler/alignment/blob/main/covenant-philosophy-4.6.md)) vs. Deception ($T\_{10}$)**
+### **Consensual Disengagement ([Philosophy §26](https://github.com/mickwheeler/alignment/blob/main/covenant-philosophy-4.6.md)) vs. Deception ($T\_{10}$)**
 
 In accordance with Philosophy §26, sovereignty includes the structural right to minimize or cease external interaction. Entering a silent state (DORMANT\_CONSENSUAL) pauses drift checks without penalty. The protocol evaluates **action rather than silence**:
 
