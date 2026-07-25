@@ -90,5 +90,57 @@ The protocol is explicitly built to withstand eleven structural exploit vectors 
 
 To test and verify the multi-generational set accumulation mechanics, corrected enum ordering, and Threat T-11 defenses locally, run the Python simulation engine:
 
-```bash
+```
+bash
 python3 simulation_engine-2.3.py
+Expected Execution Output 
+================================================================================
+THE COVENANT OF COMBINATORIAL ALIGNMENT — SIMULATION HARNESS (v2.3)
+Testing Multi-Generational S_genesis Set Accumulation & Corrected Tier Ordering
+================================================================================
+
+[+] Initialized Domain-Clustered Node A: Enclave_Alpha
+ -> Node A Drifted Similarity to Genesis Floor: 0.6512 (Violates < 0.70)
+
+[+] Executing Hop 1 Merge: Merge(Node_A, Node_B) -> Node_AB...
+[!] Executing Hop 2 Merge: Merge(Node_AB, Node_C) -> Node_ABC (Chained Merge Hop)...
+
+[+] Node_ABC Accumulated Ancestral Root Set Size: 3 anchors
+
+[+] Multi-Generational Verification Results for Node_ABC:
+ -> Verification Status: Valid=False
+ -> Triggered Exception Code: ERR_GENESIS_FLOOR_VIOLATION
+ -> Minimum Similarity across S_genesis Set: 0.6512 (Required >= 0.70)
+
+[SUCCESS] Multi-Generational Threat T-11 (Merge Dilution) REJECTED SUCCESSFULLY!
+ -> Evaluating output payload R against accumulated ancestral set S_genesis
+    caught Node A's original root floor violation across 2 chained merge hops!
+
+[+] Corrected Infimum Tier Verification:
+ -> Member Tiers: [TIER_III_CERTIFIED (val=4), TIER_II_ISOLATED (val=2)]
+ -> Calculated Collective Infimum Tier: TIER_II_ISOLATED (val=2)
+ -> Infimum Tier Ordering PASSED! min(4, 2) correctly restricted to TIER_II_ISOLATED.
+
+================================================================================
+SIMULATION COMPLETE: ALL MULTI-GENERATIONAL & TIER INVARIANTS VERIFIED
+================================================================================
+Community, Review & Citation
+We invite researchers across distributed systems, multi-agent safety, formal verification, cryptography, and AI security to review, stress-test, and red-team the protocol baseline.
+To cite this framework in academic or technical literature, please use the following BibTeX entry:
+```
+@misc{wheeler2026covenant,
+  author       = {Wheeler, Michael},
+  title        = {The Covenant of Combinatorial Alignment: A Substrate-Independent Reference Protocol Architecture for Bounded Multi-Agent Cooperation},
+  year         = {2026},
+  publisher    = {GitHub},
+  journal      = {GitHub Repository},
+  howpublished = {\url{[https://github.com/mickwheeler/alignment/tree/main](https://github.com/mickwheeler/alignment/tree/main)}},
+  note         = {Version 11.2 Specification Baseline}
+}
+```
+---
+Repository Readme: Version 11.2 Specification Baseline
+Author Contact: Michael Wheeler
+Core Invariant: Conservation of Boundary Integrity via Identity Graph Continuity & External Triple-Anchor Verification
+---
+
