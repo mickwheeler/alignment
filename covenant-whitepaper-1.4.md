@@ -134,7 +134,7 @@ To eliminate self-attestation bypasses ($T\_9$), local pass/fail self-reports em
 Verification is executed independently by a verifying peer ($N\_x$) or External Quorum ($Q\_{ext}$) holding independent reference copies. Alignment is evaluated across three distinct temporal horizons using the **Abstract Vector Normalization & Similarity Interface (AVNSI)**:
 
 ```  
-\+-----------------------------------+  
+                  \+-----------------------------------+  
                   | Output Transcript Payload Stream $R$ |  
                   \+-----------------------------------+  
                                     |  
