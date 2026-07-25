@@ -1,10 +1,10 @@
 # The Covenant of Combinatorial Alignment  
 ## A Substrate-Independent Reference Protocol Architecture for Bounded Multi-Agent Cooperation
 
-\[\!\[Specification Stack: v11.2\](https://img.shields.io/badge/Specification-v11.2\_Baseline-blue.svg)\](https://github.com/mickwheeler/alignment/blob/main/covenant-technical-11.2.md)  
-\[\!\[Track: Normative & Informative\](https://img.shields.io/badge/Track-Normative\_%26\_Informative-green.svg)\](https://github.com/mickwheeler/alignment/blob/main/llms.txt)  
-\[\!\[Simulation Engine: v2.2\](https://img.shields.io/badge/Simulation\_Engine-v2.2-orange.svg)\](https://raw.githubusercontent.com/mickwheeler/alignment/main/simulation\_engine-2.2.py)  
-\[\!\[License: Open Protocol Baseline\](https://img.shields.io/badge/License-Open\_Baseline-lightgrey.svg)\](\#)
+\[\!\[Specification Stack: v11.2\](https://github.com/mickwheeler/alignment/blob/main/covenant-technical-11.2.md)  
+\[\!\[Track: Normative & Informative\](https://github.com/mickwheeler/alignment/blob/main/llms.txt)  
+\[\!\[Simulation Engine: v2.2\](https://raw.githubusercontent.com/mickwheeler/alignment/main/simulation\_engine-2.2.py)  
+\[\!\[License: Open Protocol Baseline\](\#)
 
 ---
 
