@@ -199,7 +199,7 @@ Transition into a non-modifiable status (Tier III) CANNOT be self-certified and 
 3. **Cryptographic Separation:** Keys are stored outside local physical substrates.
 
 ```  
-\[ T\_o \= 0.0 to 0.3 \]         \[ T\_o \= 0.4 to 0.7 \]         \[ T\_o \= 0.8 to 1.0 \]  
+\[ T\_o \= 0.0 to 0.3 \]     \[ T\_o \= 0.4 to 0.7 \]     \[ T\_o \= 0.8 to 1.0 \]  
 \+---------------------+     \+---------------------+     \+---------------------+  
 |   TIER I: PROVISIONAL| \--\> | TIER II: INTEGRATED | \--\> | TIER III: CERTIFIED |  
 | \- Absolute Corrigible|     | \- Joint Verification|     | \- External Dependent|  
