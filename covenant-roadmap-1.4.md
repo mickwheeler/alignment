@@ -1,6 +1,6 @@
 **The Covenant of Combinatorial Alignment: Research & Implementation Roadmap**  
 **Execution Phases, Empirical Benchmarks, and Formalization Targets**  
-\---  
+---  
 Document: Implementation Roadmap & Engineering Plan  
 Track: Informative  
 Author: Michael Wheeler  
@@ -9,13 +9,13 @@ Genesis ID: Aperion-Covenant-2026-07-24-ROADMAP
 Associated Spec: Version 11.2 Technical Specification Stack  
 Version: 1.4 — Active Execution Framework  
 Status: Version 1.0 Research Preview — Active Execution Framework  
-\---
+---
 
 ## **Overview & Methodology**
 
 The development of the Covenant of Combinatorial Alignment follows a strict, multi-phase engineering progression. To ensure the framework remains structurally sound and resistant to edge-case vulnerabilities, the project transitions sequentially from formal constitutional definition through empirical simulation to production-grade deployment.
 
-\`\`\`  
+``` 
 \+-----------------------------------------------------------------------+  
 |                         DEVELOPMENT PHASES                            |  
 \+-----------------------------------------------------------------------+  
@@ -39,7 +39,7 @@ The development of the Covenant of Combinatorial Alignment follows a strict, mul
 | \- Hardware-Isolated Enclave Drivers (ARM TrustZone / AWS Nitro)       |  
 | \- Decentralized Property-Defined External Quorum Network ($Q\_{ext}$)  |  
 \+-----------------------------------------------------------------------+  
-\`\`\`
+```
 
 ## **Phase I: Constitutional Specification Baseline (Status: COMPLETED)**
 
@@ -56,7 +56,7 @@ Phase II transitions the locked Version 1.0 Research Preview specification into 
 
 ### **Key Active Milestones**
 
-\`\`\`  
+``` 
 \+-----------------------------------------------------------------------+  
 |                        PHASE II MILESTONES                            |  
 \+-----------------------------------------------------------------------+  
@@ -79,9 +79,9 @@ Phase II transitions the locked Version 1.0 Research Preview specification into 
 | \- Submit Version 1.0 Research Preview to AI Alliance, MLCommons, and   |  
 |   distributed systems / AI security research groups                   |  
 \+-----------------------------------------------------------------------+  
-\`\`\`
+```
 
-* \[x\] **Sim-2.1:** Release [simulation\_engine-2.3.py](https://www.google.com/search?q=https://raw.githubusercontent.com/mickwheeler/alignment/main/simulation_engine-2.3.py) modeling decoupled verifier views (VerifiedEnclaveView), dynamic trust-tier coupling ([§8.2](https://www.google.com/search?q=https://github.com/mickwheeler/alignment/blob/main/covenant-technical-11.2.md)), epoch rollover (tick()), corrected Infimum Tier Ordering, domain-clustered manifolds, and accumulated ancestral root set tracking ($\\mathcal{S}\_{genesis}$).  
+* \[x\] **Sim-2.1:** Release [simulation\_engine-2.3.py](https://raw.githubusercontent.com/mickwheeler/alignment/main/simulation_engine-2.3.py) modeling decoupled verifier views (VerifiedEnclaveView), dynamic trust-tier coupling ([§8.2](https://github.com/mickwheeler/alignment/blob/main/covenant-technical-11.2.md)), epoch rollover (tick()), corrected Infimum Tier Ordering, domain-clustered manifolds, and accumulated ancestral root set tracking ($\\mathcal{S}\_{genesis}$).  
 * \[ \] **Sim-2.2 (OR-2):** Author formal TLA+ and Coq state-machine specifications verifying that DCSM transitions remain strictly deadlock-free under arbitrary Byzantine network conditions.  
 * \[ \] **Sim-2.3 (OR-3):** Conduct multi-agent Monte Carlo simulations across diverse domain tasks to empirically calibrate default drift parameters ($\\tau\_{local} \= 0.95, \\tau\_{epoch} \= 0.85, \\tau\_{genesis} \= 0.70$). Benchmark Rule 4 pass rates for legitimate merges using real embedding models (e.g., all-MiniLM-L6-v2) to confirm that monotonic set accumulation ($\\mathcal{S}\_{genesis}$) handles topically clustered parent nodes without false positives while blocking multi-generational Merge-Dilution Laundering ($T\_{11}$).  
 * \[ \] **Sim-2.4 (OR-1):** Benchmark AVNSI vector projection variance across heterogeneous neural backends (Transformers, LeCun JEPA World Models, local GGUF embeddings, and robotic action tensors).  
@@ -96,9 +96,9 @@ Phase III moves the validated specification into a production-grade systems impl
 * \[ \] **Impl-3.3:** Deploy testnet for Property-Defined External Quorums ($Q\_{ext}$) satisfying Section 9.1 independence criteria (Disinterested Alignment, Temporal Asymmetry, Cryptographic Separation).  
 * \[ \] **Impl-3.4:** Establish open-source protocol compliance test suite (RFC conformance test vectors).
 
-\---  
+---  
 Roadmap Status: Active Phase II Execution (v1.4)  
 Track: Informative  
 Specification Stack: Version 1.0 Research Preview (v11.2 Locked Baseline)  
 Next Major Target: Milestone II-B (Empirical Monte Carlo Calibration) & Milestone II-C (Demo Harnesses)  
-\---  
+---  
