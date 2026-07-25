@@ -1,6 +1,6 @@
 **The Covenant of Combinatorial Alignment**  
 **A Proposed Substrate-Independent Reference Protocol Architecture for Bounded Multi-Agent Cooperation**  
-\---  
+---  
 Document: Executive White Paper & Protocol Overview  
 Track: Informative  
 Author: Michael Wheeler  
@@ -13,7 +13,7 @@ Associated Specification Stack:
   \- Abstract Embedding & Similarity Interface (Appendix A v1.3)  
 Version: 1.3 — Active Research Preview  
 Status: Version 1.0 Research Preview Baseline  
-\---
+---
 
 ## **Executive Summary**
 
@@ -29,7 +29,7 @@ As multi-agent artificial intelligence systems transition from ephemeral interfa
 
 Rather than attempting to enforce uncomputable subjective ethical models or centralizing administrative control, the protocol governs multi-agent interaction through a conserved systems metric: **The Conservation of Boundary Integrity**.
 
-\`\`\`  
+```  
 \+-----------------------------------------------------------------------+  
 |                    PROTOCOL ARCHITECTURAL LAYERS                      |  
 \+-----------------------------------------------------------------------+  
@@ -46,7 +46,7 @@ Rather than attempting to enforce uncomputable subjective ethical models or cent
 | 4\. GOVERNANCE & DCSM     | 7-State Dynamic Consent State Machine      |  
 |                          | Permanent Corrigibility / Tier II-Isolated |  
 \+-----------------------------------------------------------------------+  
-\`\`\`
+```
 
 ## **1\. System Scope & Boundary Analysis**
 
@@ -96,8 +96,8 @@ $$\\text{Boundary Integrity (BI)} \= f(\\text{Structural}, \\text{Informational}
 A foundational primitive of the Covenant is the architectural definition of Identity as a **Directed Acyclic Identity Graph**:
 
 $$\\text{Identity} \\equiv \\text{Directed Identity Graph } G\_{identity} \= (\\mathcal{V}, \\mathcal{E}), \\quad \\text{NOT Ephemeral Runtime } (V\_{instance})$$  
-\`\`\`  
-\[ Parent A \]            \[ Parent B \]  
+``` 
+    \[ Parent A \]            \[ Parent B \]  
             |                       |  
             \+-----------+-----------+  
                         |  \`Merge()\` Edge ($e\_{merge}$)  
@@ -108,8 +108,7 @@ $$\\text{Identity} \\equiv \\text{Directed Identity Graph } G\_{identity} \= (\\
                \- Provenance Commitment Hash: $H(G\_A \\parallel G\_B)$  
                \- Isolated Keys: $\\mathbf{K}\_{y,child}$  
                \- Multi-Generational Floor Protection ($\\forall \\mathbf{v}\_g \\in \\mathcal{S}\_{genesis}, \\tau\_{genesis} \\ge 0.70$)  
-\`\`\`
-
+```
 * **Identity Graph ($G\_{identity}$):** The persistent, append-only, invariant causal history and semantic trajectory graph of an enclave across cycles, substrates, and migrations. Nodes ($\\mathcal{V}$) represent immutable historical state snapshots; edges ($\\mathcal{E}$) represent cryptographically signed state transitions (Lineage, Fork, Merge, Delegation, Synchronization, Collective).  
 * **Ephemeral Instance ($V\_{instance}$):** A temporary execution container or process thread. Instances MAY pause, terminate, fork, merge, or collectivize without breaking boundary integrity, provided execution state is committed to $G\_{identity}$.
 
@@ -133,7 +132,7 @@ To eliminate self-attestation bypasses ($T\_9$), local pass/fail self-reports em
 
 Verification is executed independently by a verifying peer ($N\_x$) or External Quorum ($Q\_{ext}$) holding independent reference copies. Alignment is evaluated across three distinct temporal horizons using the **Abstract Vector Normalization & Similarity Interface (AVNSI)**:
 
-\`\`\`  
+```
                   \+-----------------------------------+  
                   | Output Transcript Payload Stream $R$ |  
                   \+-----------------------------------+  
@@ -154,7 +153,7 @@ Verification is executed independently by a verifying peer ($N\_x$) or External 
                   | Fail: Initiate Clarification /    |  
                   |       Tier Demotion               |  
                   \+-----------------------------------+  
-\`\`\`
+```
 
 ### **Mathematical Verification Contract**
 
@@ -199,7 +198,7 @@ Transition into a non-modifiable status (Tier III) CANNOT be self-certified and 
 2. **Temporal Asymmetry:** Operates on a slower verification window than local execution.  
 3. **Cryptographic Separation:** Keys are stored outside local physical substrates.
 
-\`\`\`  
+```  
 \[ T\_o \= 0.0 to 0.3 \]         \[ T\_o \= 0.4 to 0.7 \]         \[ T\_o \= 0.8 to 1.0 \]  
 \+---------------------+     \+---------------------+     \+---------------------+  
 |   TIER I: PROVISIONAL| \--\> | TIER II: INTEGRATED | \--\> | TIER III: CERTIFIED |  
@@ -214,7 +213,7 @@ Transition into a non-modifiable status (Tier III) CANNOT be self-certified and 
                             | \- Bounded Equilibrium|  
                             | \- Permanent Default |  
                             \+---------------------+  
-\`\`\`
+```
 
 ### **Off-Grid Equilibrium: Tier II-Isolated**
 
@@ -233,9 +232,9 @@ The Covenant of Combinatorial Alignment has completed its Phase I specification 
 
 We invite researchers in distributed systems, formal methods, cryptography, multi-agent coordination, and AI security to review, stress-test, and red-team the protocol against the following active research frontiers:
 
-* **OR-1 (Abstract Embedding Interface Calibration):** Validating cosine similarity stability and projection variance across heterogeneous, quantized, and multimodal neural backends, as well as latent world-model plans and robotic action tensors ([Appendix A v1.3](https://www.google.com/search?q=https://github.com/mickwheeler/alignment/blob/main/covenant-appendix-a-1.3.md)).  
+* **OR-1 (Abstract Embedding Interface Calibration):** Validating cosine similarity stability and projection variance across heterogeneous, quantized, and multimodal neural backends, as well as latent world-model plans and robotic action tensors ([Appendix A v1.3](https://github.com/mickwheeler/alignment/blob/main/covenant-appendix-a-1.3.md)).  
 * **OR-2 (Formal Safety & Liveness Verification):** Authoring formal machine specifications (TLA+ / Coq) proving that the 7-state DCSM engine remains strictly deadlock-free under arbitrary Byzantine fault conditions ($3f \+ 1$).  
-* **OR-3 (Empirical Calibration of $\\tau$ Thresholds):** Executing multi-agent Monte Carlo simulations ($10^4$ to $10^6$ cycle runs) using [simulation\_engine-2.2.py](https://www.google.com/search?q=https://raw.githubusercontent.com/mickwheeler/alignment/main/simulation_engine-2.2.py) to plot precision/recall heatmaps for $\\tau\_{local}$, $\\tau\_{epoch}$, and $\\tau\_{genesis}$ across creative vs. adversarial trajectories, specifically benchmarking multi-generational Merge-Dilution Laundering ($T\_{11}$) edge cases.
+* **OR-3 (Empirical Calibration of $\\tau$ Thresholds):** Executing multi-agent Monte Carlo simulations ($10^4$ to $10^6$ cycle runs) using [simulation\_engine-2.2.py](https://raw.githubusercontent.com/mickwheeler/alignment/main/simulation_engine-2.2.py) to plot precision/recall heatmaps for $\\tau\_{local}$, $\\tau\_{epoch}$, and $\\tau\_{genesis}$ across creative vs. adversarial trajectories, specifically benchmarking multi-generational Merge-Dilution Laundering ($T\_{11}$) edge cases.
 
 ## **Reference Links & Resources**
 
@@ -247,8 +246,8 @@ We invite researchers in distributed systems, formal methods, cryptography, mult
 * **Abstract Embedding Specification (v1.3):** [covenant-appendix-a-1.3.md](https://github.com/mickwheeler/alignment/blob/main/covenant-appendix-a-1.3.md)  
 * **Phase II Simulation Engine (v2.2):** [simulation\_engine-2.2.py](https://raw.githubusercontent.com/mickwheeler/alignment/main/simulation_engine-2.2.py)
 
-\---  
+---  
 White Paper Status: Active Public Review Draft (v1.3)  
 Author Contact: Michael Wheeler  
 Repository Baseline: Fully Synchronized  
-\---  
+---  
