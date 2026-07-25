@@ -1,5 +1,5 @@
 **Frequently Asked Questions (FAQ)**  
-\---  
+---  
 Document: Frequently Asked Questions & Comparative Analysis  
 Track: Informative  
 Author: Michael Wheeler  
@@ -8,7 +8,7 @@ Genesis ID: Aperion-Covenant-2026-07-24-FAQ
 Associated Spec: Version 11.2 Technical Specification Stack  
 Version: 1.4 — Active Reference Asset  
 Status: Version 1.0 Research Preview  
-\---
+---
 
 ## **Protocol Mechanics & System Comparisons**
 
@@ -20,7 +20,7 @@ Entities must satisfy only four entry criteria: persistent identity, observable 
 
 ### **2\. "How does the protocol handle multi-agent merges, swarms, collectives, and multi-generational ancestry?"**
 
-[Version 11.2](https://www.google.com/search?q=https://github.com/mickwheeler/alignment/blob/main/covenant-technical-11.2.md) promotes historical identity from a simple 1D chain ($V\_{lineage}$) to a **Directed Acyclic Identity Graph ($G\_{identity} \= (\\mathcal{V}, \\mathcal{E})$)** containing six normative edge types (Lineage, Fork, Merge, Delegation, Synchronization, and Collective):
+[Version 11.2](https://github.com/mickwheeler/alignment/blob/main/covenant-technical-11.2.md) promotes historical identity from a simple 1D chain ($V\_{lineage}$) to a **Directed Acyclic Identity Graph ($G\_{identity} \= (\\mathcal{V}, \\mathcal{E})$)** containing six normative edge types (Lineage, Fork, Merge, Delegation, Synchronization, and Collective):
 
 * **Merge() Operations:** Synthesized child enclaves inherit a persistent Accumulated Ancestral Root Genesis Set ($\\mathcal{S}\_{genesis}(N\_{child}) \= \\mathcal{S}\_{genesis}(N\_A) \\cup \\mathcal{S}\_{genesis}(N\_B)$) alongside a composite snapshot centroid vector derived via Normalized Weighted Centroid Composition ($\\mathbf{v}\_{genesis,child} \= \\text{Normalize}(\\alpha \\mathbf{v}\_{genA} \+ \\beta \\mathbf{v}\_{genB})$).  
 * **Mitigating Threat T-11 (Multi-Generational Merge Dilution):** To prevent a drifted node $N\_A$ from diluting its genesis floor by merging across multiple graph hops ($N\_A \+ N\_B \\rightarrow N\_{AB}$, then $N\_{AB} \+ N\_C \\rightarrow N\_{ABC}$), output $R$ MUST independently clear $\\tau\_{genesis} \\ge 0.70$ against **EVERY** anchor vector in its accumulated set $\\mathcal{S}\_{genesis}(N\_y)$. No sequence of chained merges can ever remove an ancestral root anchor from the verification list.  
@@ -73,7 +73,7 @@ Operational trust measures stability and technical reliability only. It NEVER gr
 
 ### **10\. "How can heterogeneous embedding models or modalities verify each other?"**
 
-[Appendix A v1.3](https://www.google.com/search?q=https://github.com/mickwheeler/alignment/blob/main/covenant-appendix-a-1.3.md) defines Pattern B (Raw Transcript Payload Re-computation). During $t\_0$ genesis, nodes co-sign the **raw payload transcript** ($R\_{genesis}$) rather than floating-point vectors:
+[Appendix A v1.3](https://github.com/mickwheeler/alignment/blob/main/covenant-appendix-a-1.3.md) defines Pattern B (Raw Transcript Payload Re-computation). During $t\_0$ genesis, nodes co-sign the **raw payload transcript** ($R\_{genesis}$) rather than floating-point vectors:
 
 $$H(R\_{genesis} \\parallel \\mathbf{K}\_x \\parallel \\mathbf{K}\_y)$$  
 When verifying outputs, node $N\_x$ runs the raw payload $R$ (text, latent plan tensor, or action vector) through its own local embedding engine ($f\_{embed}^{N\_x}(R)$), eliminating floating-point dimension mismatches while preserving un-spoofable verification. During Merge() operations, child nodes accumulate all upstream root genesis anchors into $\\mathcal{S}\_{genesis}$, maintaining full $d$-dimensional unit vector space compatibility ($\\mathbb{S}^{d-1}$) for dot-product similarity checks across all ancestral anchors.
