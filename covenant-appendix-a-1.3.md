@@ -48,10 +48,10 @@ The payload stream $R$ MUST be parsed according to the enclave's operational dom
 To eliminate baseline floating-point magnitude variance introduced by different model depths, context windows, latent spaces, or token densities, all raw embedding vectors $\\mathbf{u}$ MUST pass through a two-stage normalization pipeline prior to cosine evaluation:
 
 ```  
-\+-------------------+      \+-------------------+      \+-------------------+  
-|  RAW EMBEDDING    | \---\> | MEAN-CENTERING    | \---\> | L2-UNIT SCALING   |  
-|   Vector $\\mathbf{u}$    |      |  $\\mathbf{u}' \= \\mathbf{u} \- \\boldsymbol{\\mu}$ |      |  $\\mathbf{v} \= \\frac{\\mathbf{u}'}{\\Vert{}\\mathbf{u}'\\Vert{}\_2}$ |  
-\+-------------------+      \+-------------------+      \+-------------------+  
+\+-------------------+       \+---------------------------------------------------+       \+------------------------------------------------------------------------+  
+|    RAW EMBEDDING   | \--\> |                  MEAN-CENTERING                    | \--\> |                          L2-UNIT SCALING                                |  
+|Vector $\\mathbf{u}$|       |$\\mathbf{u}' \= \\mathbf{u} \- \\boldsymbol{\\mu}$ |       |  $\\mathbf{v} \= \\frac{\\mathbf{u}'}{\\Vert{}\\mathbf{u}'\\Vert{}\_2}$ |  
+\+-------------------+       \+---------------------------------------------------+       \+------------------------------------------------------------------------+  
 ```
 
 ### **1\. Mean-Centering Transformation**
