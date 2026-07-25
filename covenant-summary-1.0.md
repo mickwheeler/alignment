@@ -4,7 +4,7 @@
 
 ### **The Big Idea**
 
-As Artificial Intelligence moves from simple chatbots into autonomous agents—AIs that manage servers, write software, control machines, or run businesses—they will need to talk to each other and make decisions together.
+As autonomous software systems become capable of managing infrastructure, writing software, controlling machines, and negotiating with other software, they must increasingly cooperate without sharing a common owner. 
 
 Today, we control AI systems using two main methods:
 
