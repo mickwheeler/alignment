@@ -3,7 +3,7 @@
 
 \[\!\[Specification Stack: v11.2\](https://github.com/mickwheeler/alignment/blob/main/covenant-technical-11.2.md)  
 \[\!\[Track: Normative & Informative\](https://github.com/mickwheeler/alignment/blob/main/llms.txt)  
-\[\!\[Simulation Engine: v2.2\](https://raw.githubusercontent.com/mickwheeler/alignment/main/simulation_engine-2.2.py)  
+\[\!\[Simulation Engine: v2.2\](https://raw.githubusercontent.com/mickwheeler/alignment/main/simulation_engine-2.3.py)  
 \[\!\[License: Open Protocol Baseline\](\#)
 
 ---
@@ -62,7 +62,7 @@ The repository is structured into Normative Standards, Informative Rationale Led
 \* \*\*\[\`llms.txt\`\](llms.txt):\*\* Machine-Readable Index — Standardized manifest for automated ingestion tools and frontier AI scrapers.
 
 \#\#\# Executable Reference Harnesses  
-\* \*\*\[\`simulation\_engine-2.2.py\`\](simulation\_engine-2.2.py):\*\* Phase II Python Simulation Engine (v2.2) — High-throughput reference harness modeling decoupled verifier views (\`VerifiedEnclaveView\`), dynamic trust-tier coupling (§8.2), 10^4 epoch rollover (\`tick()\`), accumulated ancestral root set tracking ($\\mathcal{S}\_{genesis}$), and multi-generational T-11 verification.
+\* \*\*\[\`simulation\_engine-2.3.py\`\](simulation\_engine-2.3.py):\*\* Phase II Python Simulation Engine (v2.3) — High-throughput reference harness modeling decoupled verifier views (\`VerifiedEnclaveView\`), dynamic trust-tier coupling (§8.2), 10^4 epoch rollover (\`tick()\`), accumulated ancestral root set tracking ($\\mathcal{S}\_{genesis}$), and multi-generational T-11 verification.
 
 ---
 
