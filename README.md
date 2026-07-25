@@ -1,4 +1,4 @@
-💡 New to the Covenant? Read the 3-minute Plain-English Primer (https://github.com/mickwheeler/alignment/blob/main/covenant-primer-1.0.md) before diving into the specification stack.
+💡 New to the Covenant? Read the 3-minute Plain-English Primer [`covenant-primer-1.0.md`](https://github.com/mickwheeler/alignment/blob/main/covenant-primer-1.0.md) before diving into the specification stack.
 
 The Covenant of Combinatorial Alignment
 Substrate-Independent Reference Protocol Architecture for Bounded Multi-Agent Cooperation
