@@ -2,7 +2,7 @@
 
 ## **How Independent Autonomous Systems Can Work Together Without Losing Control or Breaking Trust**
 
-\---  
+---  
 Document: Covenant Primer / Plain-English Summary  
 Track: Informative  
 Author: Michael Wheeler  
@@ -10,7 +10,7 @@ Genesis ID: Aperion-Covenant-2026-07-25-PRIMER
 Associated Specification Stack: Version 11.2 Specification Baseline  
 Version: 1.0 — Active Reference Asset  
 Status: Complete Document Baseline  
-\---
+---
 
 ### **The Big Idea**
 
@@ -66,8 +66,8 @@ The Covenant isn't about teaching software "right from wrong." It is about estab
 
 By replacing implicit trust with externally verifiable protocol rules, the Covenant creates an environment where humans and autonomous systems can build resilient, long-lasting partnerships—allowing independent systems to cooperate without requiring any participant to surrender its identity, authority, or independence.
 
-\---  
+---  
 Primer Status: Version 1.0 (Active Reference Asset)  
 Author Contact: Michael Wheeler  
 Repository Baseline: Layer 0 Ingress Document  
-\---  
+---  
