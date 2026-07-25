@@ -3,7 +3,7 @@
 
 \[\!\[Specification Stack: v11.2\](https://github.com/mickwheeler/alignment/blob/main/covenant-technical-11.2.md)  
 \[\!\[Track: Normative & Informative\](https://github.com/mickwheeler/alignment/blob/main/llms.txt)  
-\[\!\[Simulation Engine: v2.2\](https://raw.githubusercontent.com/mickwheeler/alignment/main/simulation\_engine-2.2.py)  
+\[\!\[Simulation Engine: v2.2\](https://raw.githubusercontent.com/mickwheeler/alignment/main/simulation_engine-2.2.py)  
 \[\!\[License: Open Protocol Baseline\](\#)
 
 ---
