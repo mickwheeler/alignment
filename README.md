@@ -77,14 +77,14 @@ While the core project author continues to develop the foundational philosophy, 
 
 To test and verify the multi-generational set accumulation mechanics, corrected enum ordering, and Threat T-11 defenses locally, run the Python simulation engine:
 
-\`\`\`
+```
 
 python3 simulation\_engine[\-2.3.py](http://-2.3.py)
 
-\`\`\`
+```
 
 Expected Execution Output   
-\`\`\`  
+``` 
 \================================================================================  
 THE COVENANT OF COMBINATORIAL ALIGNMENT — SIMULATION HARNESS (v2.3)  
 Testing Multi-Generational S\_genesis Set Accumulation & Corrected Tier Ordering  
@@ -115,13 +115,13 @@ Testing Multi-Generational S\_genesis Set Accumulation & Corrected Tier Ordering
 \================================================================================  
 SIMULATION COMPLETE: ALL MULTI-GENERATIONAL & TIER INVARIANTS VERIFIED  
 \================================================================================  
-\`\`\`
+```
 
 ## **Citation & Academic Reference**
 
 To cite this framework in technical, academic, or safety literature, please use the following BibTeX entry:
 
-\`\`\`  
+```  
 @misc{wheeler2026covenant,  
   author       \= {Wheeler, Michael},  
   title        \= {The Covenant of Combinatorial Alignment: A Substrate-Independent Reference Protocol Architecture for Bounded Multi-Agent Cooperation},  
@@ -131,10 +131,10 @@ To cite this framework in technical, academic, or safety literature, please use 
   howpublished \= {\\url{https://github.com/mickwheeler/alignment/tree/main}},  
   note         \= {Version 11.2 Specification Baseline}  
 }  
-\`\`\`  
-\---  
+``` 
+---  
 Repository Readme: Version 11.2 Specification Baseline  
 Author Contact: Michael Wheeler  
 Core Invariant: Conservation of Boundary Integrity via Identity Graph Continuity & External Triple-Anchor Verification  
 Primary Focus: Open Research Hand-off & Constitutional Entity Alignment  
-\---  
+---  
