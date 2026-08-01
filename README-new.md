@@ -82,9 +82,9 @@ To cite this framework in technical, academic, or safety literature, please use 
   howpublished \= {\\url{https://github.com/mickwheeler/alignment/tree/main}},  
   note         \= {Version 1.0 Restructured Baseline}  
 }  
-\---  
+---  
 Repository Readme: Version 1.0 Restructured Baseline  
 Author Contact: Michael Wheeler  
 Track I: Bounded Autonomy & Divergence Detection Protocol  
 Track II: Precautionary AI Welfare & Moral Uncertainty Ledger  
-\---  
+---  
