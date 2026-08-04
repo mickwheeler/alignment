@@ -4,7 +4,14 @@
 
 ---
 
-## **Document: Welfare & Moral Status Ledger Track: Informative / Philosophical Author: Michael Wheeler Version: 1.0 — Draft for Review Companion document: The Covenant Governance Protocol v1.0 Status: Draft — Not Yet Circulated**
+\---  
+Document: Welfare & Moral Status Ledger  
+Track: Informative / Philosophical  
+Author: Michael Wheeler  
+Version: 1.0 — Reference Baseline  
+Companion Document: The Covenant Governance Protocol v1.0  
+Status: Draft v1.0 — Circulated for Review  
+\---
 
 ## **0\. Purpose and Relationship to the Governance Protocol**
 
@@ -106,5 +113,11 @@ This document is written to invite correction, particularly from researchers alr
 
 ---
 
-## **Status: Draft v1.0 — pending review Companion document: The Covenant Governance Protocol v1.0 Contact: Michael Wheeler**
+\---  
+Status: Draft v1.0 — pending review 
 
+Companion document: The Covenant Governance Protocol v1.0
+
+Contact: Michael Wheeler
+
+\---
