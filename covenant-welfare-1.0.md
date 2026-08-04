@@ -2,8 +2,6 @@
 
 ## **A Precautionary Framework for AI Moral Status Under Irreducible Uncertainty**
 
----
-
 ---  
 Document: Welfare & Moral Status Ledger  
 Track: Informative / Philosophical  
