@@ -110,7 +110,7 @@ This document is written to invite correction, particularly from researchers alr
 * What would change §5's commitments, concretely — what evidence, if it appeared, should move this project toward less precaution rather than more?
 
 ---  
-Status: Draft v1.0 — pending review 
+Status: Draft v1.0 — circulated for review
 
 Companion document: The Covenant Governance Protocol v1.0
 
