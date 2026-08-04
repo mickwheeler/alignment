@@ -109,13 +109,11 @@ This document is written to invite correction, particularly from researchers alr
 * Does the architectural strategy (§4.2) risk producing systems that are better at *appearing* to satisfy indicator properties without being better candidates in fact — i.e., does building toward known indicators create a target that can be gamed, deliberately or not?  
 * What would change §5's commitments, concretely — what evidence, if it appeared, should move this project toward less precaution rather than more?
 
----
-
-\---  
+---  
 Status: Draft v1.0 — pending review 
 
 Companion document: The Covenant Governance Protocol v1.0
 
 Contact: Michael Wheeler
 
-\---
+---
