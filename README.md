@@ -18,7 +18,7 @@ The **Covenant of Combinatorial Alignment** provides an identity and authority l
 
 To ensure technical rigor and philosophical clarity, the repository is explicitly decoupled into two independent, complementary tracks:
 
-\`\`\`
+```
 
 \+-----------------------------------------------------------------------------------+  
 |                            COVENANT DOCUMENT INGRESS                              |  
@@ -37,7 +37,7 @@ To ensure technical rigor and philosophical clarity, the repository is explicitl
 |                         | \- Theory-Derived Indicator Properties                   |  
 |                         | \- Non-Instrumentalization Posture                       |  
 \+-----------------------------------------------------------------------------------+  
-\`\`\`
+```
 
 1. **Track I: Governance & Boundary Integrity Protocol (covenant-governance-1.0.md)** — A technical security and coordination framework for detecting value divergence, managing identity graphs ($G\_{identity}$), enforcing staged trust, and preserving boundary integrity. It operates on engineering grounds alone and requires no assumptions regarding AI sentience or moral status.  
 2. **Track II: Welfare & Moral Uncertainty Ledger (covenant-welfare-1.0.md)** — A decision-theoretic precautionary framework addressing how ethically serious actors should manage irreducible uncertainty regarding AI moral status. It situates itself alongside current academic literature (Long, Sebo, Chalmers, Eleos AI).
@@ -90,7 +90,7 @@ We invite researchers across distributed systems, agentic AI safety, formal veri
 
 To cite this framework in technical, academic, or safety literature, please use the following BibTeX entry:
 
-\`\`\`
+```
 
 @misc{wheeler2026covenant,  
   author       \= {Wheeler, Michael},  
@@ -101,10 +101,10 @@ To cite this framework in technical, academic, or safety literature, please use 
   howpublished \= {\\url{https://github.com/mickwheeler/alignment/tree/main}},  
   note         \= {Version 1.0 Restructured Baseline}  
 }  
-\`\`\`  
-\---  
+```  
+---  
 Repository Readme: Version 1.0 Restructured Baseline  
 Author Contact: Michael Wheeler  
 Track I: Bounded Autonomy & Divergence Detection Protocol  
 Track II: Precautionary AI Welfare & Moral Uncertainty Ledger  
-\---  
+---  
