@@ -14,6 +14,8 @@ This document specifies a governance protocol for cooperation between autonomous
 
 This split is deliberate. An earlier draft of this work attempted to let a single technical protocol serve as evidence for an ethical claim it could not actually support — verification of process continuity is not verification of moral status, and conflating them weakened both halves. Readers evaluating this document should hold it to the standard of a security and coordination protocol, not a philosophical argument.
 
+While capability asymmetry serves as a primary design driver for the protocol, its core mechanics apply universally wherever independently governed entities require verifiable cooperation and legibility, regardless of whether the participants possess equal or asymmetric capabilities.
+
 ### **0.1 Terminology Note**
 
 Earlier drafts of this work used "sovereignty" to describe an agent's bounded operational autonomy. That term collides with an unrelated and much more prominent usage in current AI policy — national/institutional control over AI infrastructure, data, and compute ("sovereign AI," "AI sovereignty" in the sense used by the EU, various states, and bodies like Brookings and the Atlantic Council). To avoid a reviewer misreading this as a geopolitical document, this specification uses **bounded autonomy** and **operational tier** throughout instead.
