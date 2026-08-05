@@ -79,7 +79,7 @@ To cite this framework in technical, academic, or safety literature, please use 
   year         \= {2026},  
   publisher    \= {GitHub},  
   journal      \= {GitHub Repository},  
-  howpublished \= {https://github.com/mickwheeler/alignment/main](https://github.com/mickwheeler/alignment/tree/main},  
+  howpublished \= {[https://github.com/mickwheeler/alignment/main](https://github.com/mickwheeler/alignment/tree/main)},  
   note         \= {Version 1.0 Restructured Baseline}  
 }  
 ---  
