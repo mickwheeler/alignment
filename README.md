@@ -9,7 +9,7 @@ The Covenant is an open reference protocol that enables independently governed a
 
 | If your primary goal is to... | Go to... |
 | :--- | :--- |
-| 💡 **Understand the core concept in 3 minutes** | 📄 [Layer 0: Plain-English Primer (`covenant-primer-1.0.md`)](covenant-primer-1.0.md) |
+| 💡 **Understand the core concept in 3 minutes** | 📄 [Layer 0: Plain-English Primer (`covenant-primer-1.1.md`)](covenant-primer-1.1.md) |
 | 🛡️ **Evaluate the governance protocol & security model** | 📄 [Track I: Governance Protocol (`covenant-governance-1.0.md`)](covenant-governance-1.0.md) |
 | 📜 **Explore decision-theoretic AI welfare & ethics** | 📄 [Track II: Welfare Ledger (`covenant-welfare-1.0.md`)](covenant-welfare-1.0.md) |
 | ❓ **Understand design trade-offs vs. PKI/OAuth & FAQs** | 📄 [Design Decisions & FAQ (`FAQ-1.4.md`)](FAQ-1.4.md) |
