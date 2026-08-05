@@ -1,16 +1,22 @@
-# **The Covenant of Combinatorial Alignment**
+# The Covenant of Combinatorial Alignment
+## A Substrate-Independent Framework for Bounded Multi-Agent Cooperation & Precautionary AI Welfare
 
-## **A Substrate-Independent Framework for Bounded Multi-Agent Cooperation & Precautionary AI Welfare**
+The Covenant is an open reference protocol that enables independently governed autonomous systems to cooperate through verifiable identity, bounded authority, and externally auditable behavior rather than implicit trust.
 
-## **🧭 Where Should I Start?**
+---
+
+## 🧭 Where Should I Start?
 
 | If your primary goal is to... | Go to... |
-| :---- | :---- |
-| 💡 **Understand the core concept in 3 minutes** | 📄 [Layer 0: Plain-English Primer (covenant-primer-1.1.md)](https://github.com/mickwheeler/alignment/blob/main/covenant-primer-1.1.md) |
-| 🛡️ **Evaluate technical security, divergence detection, & protocol stack** | 📄 [Track I: Governance Protocol (covenant-governance-1.0.md)](https://github.com/mickwheeler/alignment/blob/main/covenant-governance-1.0.md) |
-| 📜 **Explore decision-theoretic AI welfare, moral status, & precaution** | 📄 [Track II: Welfare Ledger (covenant-welfare-1.0.md)](https://github.com/mickwheeler/alignment/blob/main/covenant-welfare-1.0.md) |
-| ⚙️ **Inspect normative RFC 2119 wire layouts & ten-method interfaces** | 📄 [Technical Baseline v11.2 (covenant-technical-11.2.md)](https://github.com/mickwheeler/alignment/blob/main/covenant-technical-11.2.md) |
-| 🐍 **Run local simulation benchmarks & multi-generational stress-tests** | 💻 [Phase II Python Engine (simulation\_engine-2.3.py)](https://github.com/mickwheeler/alignment/blob/main/simulation_engine-2.3.py) |
+| :--- | :--- |
+| 💡 **Understand the core concept in 3 minutes** | 📄 [Layer 0: Plain-English Primer (`covenant-primer-1.0.md`)](covenant-primer-1.0.md) |
+| 🛡️ **Evaluate the governance protocol & security model** | 📄 [Track I: Governance Protocol (`covenant-governance-1.0.md`)](covenant-governance-1.0.md) |
+| 📜 **Explore decision-theoretic AI welfare & ethics** | 📄 [Track II: Welfare Ledger (`covenant-welfare-1.0.md`)](covenant-welfare-1.0.md) |
+| ❓ **Understand design trade-offs vs. PKI/OAuth & FAQs** | 📄 [Design Decisions & FAQ (`FAQ-1.4.md`)](FAQ-1.4.md) |
+| ⚙️ **Inspect normative RFC 2119 wire layouts & interfaces** | 📄 [Technical Baseline v11.2 (`covenant-technical-11.2.md`)](covenant-technical-11.2.md) |
+| 🐍 **Run local simulation benchmarks & stress-tests** | 💻 [Phase II Python Engine (`simulation_engine-2.3.py`)](simulation_engine-2.3.py) |
+
+---
 
 ## **Overview & Architecture Split**
 
