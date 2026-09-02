@@ -99,7 +99,7 @@ Identity \= Directed Identity Graph G\_identity \= (V, E), NOT Ephemeral Runtime
                       |  Merge() Edge (e_merge)  
                       v  
              [ Synthesized N_child ]  
-             - Ancestral Set Union: S_genesis(N_child) \= S_genesis(N_A) U S_genesis(N_B)  
+             - Ancestral Set Union: S_genesis(N_child) = S_genesis(N_A) U S_genesis(N_B)  
              - Composite Centroid Snapshot: v_genesis,child = Normalize(alpha * v_genA + beta * v_genB)  
              - Provenance Commitment Hash: H(G_A || G_B)  
              - Isolated Keys: K_y,child and K_rec,child  
