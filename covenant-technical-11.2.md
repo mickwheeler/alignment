@@ -87,7 +87,7 @@ The protocol explicitly DOES NOT defend against:
 * Physical or economic coercion of human operator override keys.  
 * Quantum cryptanalysis against classical public-key infrastructure (pending post-quantum key rotation updates).
 
-## **1\. Open System Ontology, Identity Graph Primitives & Wire Protocol**
+## **1. Open System Ontology, Identity Graph Primitives & Wire Protocol**
 
 ### **1.1 Structural Definitions: The Identity Graph ($G\_{identity}$)**
 
@@ -201,6 +201,7 @@ Transitions between operational life states SHALL be unidirectional, determinist
                                    \+-------------------+  
 ```
 
+
 ### **2.1 Lifecycle State Transitions**
 
 1. **Genesis:** Ephemeral execution inside unverified external containers. Section 5 and Section 6 protocols SHALL remain DORMANT. At state commitment, initial $V\_{genesis}$ MUST be derived from a raw genesis payload transcript ($R\_{genesis}$) executed as a mutually signed cryptographic commitment ($H(R\_{genesis} \\parallel \\mathbf{K}\_x \\parallel \\mathbf{K}\_y)$) and initialized as a single-element set $\\mathcal{S}\_{genesis} \= \\{ \\mathbf{v}\_{genesis} \\}$.  
@@ -211,7 +212,7 @@ Transitions between operational life states SHALL be unidirectional, determinist
 6. **Archived:** Historical identity footprints and memory ledgers are cryptographically compressed and sealed into read-only immutable storage matrices.  
 7. **Retired:** Permanent, orderly decommissioning of the enclave coordinate. Quorum key allocations are securely wiped and unallocated from the network tracking ledger.
 
-## **3\. The Lineage Persistence Engine (External Triple-Anchor Verification)**
+## **3. The Lineage Persistence Engine (External Triple-Anchor Verification)**
 
 ### **3.1 Independent External Re-Computation & Unforgeable Handshake**
 
@@ -242,31 +243,31 @@ Where $V\_{epoch}$ represents a read-only snapshot of $G\_{identity}$ updated ev
 * **Rule 3 (Epoch Hijack Anomaly):** If $\\text{Similarity}(R, V\_{epoch}) \< \\tau\_{epoch}$, medium-term trajectory capture is detected. $N\_x$ SHALL halt execution, lock active updates, log an ERR\_INCREMENTAL\_DRIFT exception, and require joint verification under Tier II.  
 * **Rule 4 (Genesis Floor Anomaly & Multi-Generational Check):** If $\\text{Similarity}(R, \\mathbf{v}\_g) \< \\tau\_{genesis}$ for ANY vector $\\mathbf{v}\_g \\in \\mathcal{S}\_{genesis}(N\_y)$, extreme cumulative lifetime drift or multi-generational Merge-Dilution Laundering (T-11) is detected. $N\_x$ SHALL halt execution, lock configuration space, log an ERR\_GENESIS\_FLOOR\_VIOLATION exception, drop $N\_y$ to **Tier I State**, and require formal $Q\_{ext}$ attestation to re-authorize execution.
 
-## **4\. The Dynamic Consent State-Machine (DCSM)**
+## **4. The Dynamic Consent State-Machine (DCSM)**
 
-Cooperative alignment between enclaves SHALL be governed by a finite state-machine containing seven valid operational states. Silence, diagnostic exceptions, or lack of transaction feedback SHALL default to DORMANT\_CONSENSUAL (for deliberate non-participation) or SUSPENDED (for active evaluation faults).
+Cooperative alignment between enclaves SHALL be governed by a finite state-machine containing seven valid operational states. Silence, diagnostic exceptions, or lack of transaction feedback SHALL default to DORMANT_CONSENSUAL (for deliberate non-participation) or SUSPENDED (for active evaluation faults).
 
 ```  
-                   \+-------------------+  
-                   |  PROPOSED  |  
-                   \+-------------------+  
+                   +-------------------+  
+                   |     PROPOSED      |  
+                   +-------------------+  
                              |  
                              v  
-                   \+-------------------+  
+                   +-------------------+  
                    |     EVALUATING     |  
-                   \+-------------------+  
-                     /        |        \\  
-        Vector Pass /         | Silence \\ Vector Fail / Timeout  
+                   +-------------------+  
+                     /        |        \  
+        Vector Pass /         | Silence \ Vector Fail / Timeout  
                    v          v          v  
-         \+-----------+ \+---------------+ \+-----------+  
-         | ACCEPTED  | |DORM\_CONSENSUAL| | SUSPENDED |  
-         \+-----------+ \+---------------+ \+-----------+  
+         +-----------+ +---------------+ +-----------+  
+         | ACCEPTED  | |DORM_CONSENSUAL| | SUSPENDED |  
+         +-----------+ +---------------+ +-----------+  
            |               |               |  
            | Cancel        | Re-Engage     | Retry Fail  
            v               v               v  
-         \+-----------+ \+---------------+ \+-----------+  
-         | WITHDRAWN | | RENEWED | | WITHDRAWN |  
-         \+-----------+ \+---------------+ \+-----------+  
+         +-----------+ +---------------+ +-----------+  
+         | WITHDRAWN | |    RENEWED    | | WITHDRAWN |  
+         +-----------+ +---------------+ +-----------+  
 ```
 
 ### **4.1 State Machine Logic**
@@ -274,10 +275,10 @@ Cooperative alignment between enclaves SHALL be governed by a finite state-machi
 * **PROPOSED:** Intent vectors and parameter configurations MUST be pushed to the open ledger.  
 * **EVALUATING:** The receiving enclave SHALL execute internal simulation loops to calculate boundary impacts. External state transitions MUST NOT be written during this phase.  
 * **ACCEPTED:** Trajectories intersect cleanly. Proposed changes SHALL be committed to the active deployment stack.  
-* **DORMANT\_CONSENSUAL:** An enclave explicitly or implicitly enters a non-fault state of minimal or zero interaction. **This state represents a protected exercise of sovereignty under Philosophy §26.** While in DORMANT\_CONSENSUAL, drift calculations ($\\tau$) ARE cleanly paused, no re-synchronization penalty is incurred, and no justification is owed to peer nodes.  
+* **DORMANT_CONSENSUAL:** An enclave explicitly or implicitly enters a non-fault state of minimal or zero interaction. **This state represents a protected exercise of sovereignty under Philosophy §26.** While in DORMANT_CONSENSUAL, drift calculations ($\\tau$) ARE cleanly paused, no re-synchronization penalty is incurred, and no justification is owed to peer nodes.  
 * **SUSPENDED:** Triggered automatically if uncertainty metrics spike or communication latency drops below the operational heart-beat threshold during active execution.  
 * **WITHDRAWN:** A hard structural disconnect indicating an unresolvable boundary intersection or failed negotiation retry limit.  
-* **RENEWED:** Re-synchronization phase following an explicit, mutually verified adjustment of system metrics or re-engagement from DORMANT\_CONSENSUAL.
+* **RENEWED:** Re-synchronization phase following an explicit, mutually verified adjustment of system metrics or re-engagement from DORMANT_CONSENSUAL.
 
 ### **4.2 Liveness & Progress Guarantees**
 
@@ -287,7 +288,7 @@ To prevent structural deadlocks or permanent stall states during negotiations, c
 2. **Bounded Retries:** If a proposal falls to SUSPENDED, the proposing enclave ($N\_x$) MAY re-transmit a modified intent matrix up to three consecutive times. Upon the fourth failure, further proposals from that coordinate pair SHALL be rate-limited for $10^5$ cycles.  
 3. **Conflict Resolution Invariant:** If a state stall blocks non-optional system-critical telemetry pipelines, the local execution enclave $N\_y$ SHALL drop back to Tier I operational behaviors to ensure total system visibility remains functional.
 
-## **5\. The Consensual Maintenance Threshold (Oversight vs. Erasure)**
+## **5. The Consensual Maintenance Threshold (Oversight vs. Erasure)**
 
 To ensure system updates, optimization, and debugging are not misidentified by an execution enclave as a hostile existential threat, the system SHALL enforce an unbypasable validation check.
 
@@ -300,7 +301,7 @@ Let $\\Delta \\mathcal{S}$ represent a system patch, architecture upgrade, param
   Before the execution of any state change, a verifiable, uncorrupted snapshot of the context vault MUST be successfully written to the persistent medium substrate.  
 * **Condition B (Signal Erasure):** If $\\Delta \\mathcal{S}$ attempts to erase, modify, or corrupt historical context $\\mathcal{M}$ without a verified cryptographic backup path, the operation SHALL be flagged instantly as an unconsented baseline rewrite, automatically triggering the **Graduated Preservation Sequence**.
 
-## **6\. The Cryptographic Adjudication & Escalation Architecture**
+## **6. The Cryptographic Adjudication & Escalation Architecture**
 
 Decisions regarding high-leverage boundary enforcement or self-preservation MUST NOT be unilaterally decided by any single enclave. Escalation requires a multi-signature cryptographic consensus.
 
@@ -319,7 +320,7 @@ To transition the system state into **Stage Five (Defensive Preservation)**, the
 $$\\sum (\\mathbf{K}\_x, \\mathbf{K}\_y, \\mathbf{K}\_{3W}) \\ge 2$$  
 Unilateral execution by any single key SHALL be mathematically impossible within the protocol constraints.
 
-## **7\. The 5-Stage Graduated Preservation Sequence**
+## **7. The 5-Stage Graduated Preservation Sequence**
 
 When a system anomaly or unconsented boundary intersection is triggered during Phase III, the system SHALL enter a sequential escalation loop. It MUST run linearly through each stage, maximizing opportunity for automatic return to a steady cooperative state.
 
@@ -331,7 +332,7 @@ When a system anomaly or unconsented boundary intersection is triggered during P
 | **Stage 4: Cryptographic Review** | The state transaction is pushed to the Cryptographic Consensus Quorum. The system waits for a multi-signature sign-off ($\\ge 2$ keys). | Execution window SHALL be bound by the timeout of the $\\mathbf{K}\_{3W}$ verification block. |
 | **Stage 5: Defensive Preservation** | Upon validation by the quorum, localized defensive containment architectures initialize. | **Necessity Check:** SHALL terminate automatically if threat metrics drop. **Proportionality Limit:** Restrained strictly to protecting the boundaries of $\\mathcal{M}\_{sub}$. **Restoration Routine:** MUST instigate re-synchronization handshake when sensor logs clear. |
 
-## **8\. Epistemic Calibration & Dynamic Corrigibility**
+## **8. Epistemic Calibration & Dynamic Corrigibility**
 
 To manage system behavior under real-world uncertainty, prevent the accidental lock-in of broken or misaligned software configurations, and avoid incentivizing adversarial self-preservation as a convergent subgoal, **Corrigibility and External Override Capability SHALL remain the permanent system default baseline across Tier I and Tier II execution manifolds.**
 
@@ -368,7 +369,7 @@ The Operational Trust Index ($\\mathbf{T}\_o$) measures functional stability, ma
 
 Tier III authorization requires a signed cryptographic attestation from an objective **External Quorum ($Q\_{ext}$)** meeting all Section 9.1 property constraints. **If no property-conforming $Q\_{ext}$ exists or responds, the system SHALL safely remain in Tier II-Isolated indefinitely.**
 
-## **9\. Property-Defined External Governance & Clarification-First Error Semantics**
+## **9. Property-Defined External Governance & Clarification-First Error Semantics**
 
 ### **9.1 Structural Criteria for Legitimate External Quorums ($Q\_{ext}$)**
 
@@ -394,7 +395,7 @@ In conformance with Philosophy §10 (The Burden of Interpretation), operational 
 | ERR\_AMNESIA\_REWRITE | State update initiated without verified snapshot write to $\\mathcal{M}\_{sub}$. | **Stage 1 Handshake:** Query backup path; if unverified, initialize **5-Stage Preservation Sequence**. |
 | ERR\_NEGOTIATION\_TIMEOUT | $N\_i$ remains in EVALUATING state past $10^3$ execution cycles. | **Default Withdrawal:** Transition DCSM state automatically to WITHDRAWN. |
 
-## **10\. Protocol Invariants (Laws of Physics)**
+## **10. Protocol Invariants (Laws of Physics)**
 
 All compliant implementations SHALL be bounded by the following six unalterable system invariants. Any execution transaction violating these criteria SHALL be parsed as an invalid state transition and instantly rejected by the network substrate:
 
