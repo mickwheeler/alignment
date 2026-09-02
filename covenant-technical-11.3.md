@@ -154,9 +154,9 @@ All transactions transmitted between compliant enclaves MUST serialize frame env
 +-------------------+-------------------+-------------------------------+  
 | Version (16-bit)  | OpCode (16-bit)   | Frame Sequence ID (64-bit)    |  
 +-------------------+-------------------+-------------------------------+  
-| Source G\_identity Key (256-bit)       | Destination G\_identity Key    |  
+| Source G_identity Key (256-bit)       | Destination G_identity Key    |  
 +---------------------------------------+-------------------------------+  
-| Instance ID (V\_instance) (128-bit)    | Active Tier / DCSM Marker     |  
+| Instance ID (V_instance) (128-bit)    | Active Tier / DCSM Marker     |  
 +---------------------------------------+-------------------------------+  
 |                              FRAME PAYLOAD                            |  
 +-----------------------------------------------------------------------+  
