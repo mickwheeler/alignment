@@ -258,7 +258,7 @@ Cooperative alignment between enclaves SHALL be governed by a finite state-machi
         Vector Pass /         | Silence \\ Vector Fail / Timeout  
                    v          v          v  
          +-----------+ +---------------+ +-----------+  
-         | ACCEPTED  | |DORM\_CONSENSUAL| | SUSPENDED |  
+         | ACCEPTED  | |DORM_CONSENSUAL| | SUSPENDED |  
          +-----------+ +---------------+ +-----------+  
            |               |               |  
            | Cancel        | Re-Engage     | Retry Fail  
