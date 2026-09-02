@@ -92,7 +92,7 @@ A foundational primitive of the Covenant is the architectural definition of Iden
 
 $$\\text{Identity} \\equiv \\text{Directed Identity Graph } G\_{identity} \= (\\mathcal{V}, \\mathcal{E}), \\quad \\text{NOT Ephemeral Runtime } (V\_{instance})$$
 
- 
+ ```
     [ Parent A ]             [ Parent B ]  
           |                        |  
           +-----------+------------+  
@@ -104,14 +104,15 @@ $$\\text{Identity} \\equiv \\text{Directed Identity Graph } G\_{identity} \= (\\
                - Provenance Commitment Hash: $H(G\_A \parallel G\_B)$  
                - Isolated Keys: $\mathbf{K}\_{y,child}$  
                - Multi-Generational Floor Protection ($\forall \\mathbf{v}\_g \in \mathcal{S}\_{genesis}, \tau\_{genesis} \ge 0.70$) 
- 
-Identity Graph (G\_identity): The persistent, append-only, invariant causal history and semantic trajectory graph of an enclave across cycles, substrates, and migrations. Nodes (V) represent immutable historical state snapshots; edges (E) represent cryptographically signed state transitions (Lineage, Fork, Merge, Delegation, Synchronization, Collective).
+```
 
-Ephemeral Instance (V\_instance): A temporary execution container or process thread. Instances MAY pause, terminate, fork, merge, or collectivize without breaking boundary integrity, provided execution state is committed to G\_identity.
+Identity Graph ($G\_{identity}$): The persistent, append-only, invariant causal history and semantic trajectory graph of an enclave across cycles, substrates, and migrations. Nodes ($V$) represent immutable historical state snapshots; edges ($E$) represent cryptographically signed state transitions (Lineage, Fork, Merge, Delegation, Synchronization, Collective).
+
+Ephemeral Instance ($V\_instance$): A temporary execution container or process thread. Instances MAY pause, terminate, fork, merge, or collectivize without breaking boundary integrity, provided execution state is committed to ($G\_{identity}$).
 
 ### **Monotonic Identity Inheritance, Set Accumulation & Collective Tiers**
 
-When an enclave invokes Fork(), Merge(), or Collectivize(), child instances (N\_child) generate distinct, cryptographically isolated local processing keys (K\_y') and trinary fallback recovery keys (K\_rec').
+When an enclave invokes Fork(), Merge(), or Collectivize(), child instances ($N\_child$) generate distinct, cryptographically isolated local processing keys ($K\_y'$) and trinary fallback recovery keys ($K\_rec'$).
 
 To prevent privilege escalation exploits:
 
