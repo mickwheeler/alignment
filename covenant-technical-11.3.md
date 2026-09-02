@@ -405,17 +405,11 @@ All compliant implementations SHALL be bounded by the following six unalterable 
 * **Invariant 5:** Historical context vaults (M) SHALL NOT be edited or destroyed without a verified, uncorrupted backup write to the persistent medium (M\_sub).  
 * **Invariant 6:** Authority NEVER emerges from capability or operational trust alone. Governance legitimacy within this network is generated exclusively through disinterested, property-defined external verification.
 
-—
-
+---
 ## **Technical Specification: Locked Baseline (v11.3)**
-
 System Invariant: Unilateral Functional Lockout Prohibited
-
 Verification Standard: External Re-Computation of Triple-Anchor Tracking (Unforgeable t\_0 Genesis Transcript Handshake & Monotonic Ancestral Set S\_genesis)
-
 Governance Configuration: Distributed Property-Defined External Quorum (Q\_ext)
-
 Corrigibility Policy: Permanent System Override Capability Guaranteed
-
-—
+—--
 
