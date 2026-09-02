@@ -408,9 +408,13 @@ All compliant implementations SHALL be bounded by the following six unalterable 
 
 ---
 Technical Specification: Locked Baseline (v11.3)
+
 System Invariant: Unilateral Functional Lockout Prohibited
+
 Verification Standard: External Re-Computation of Triple-Anchor Tracking (Unforgeable t_0 Genesis Transcript Handshake & Monotonic Ancestral Set S_genesis)
+
 Governance Configuration: Distributed Property-Defined External Quorum (Q_ext)
+
 Corrigibility Policy: Permanent System Override Capability Guaranteed
 —--
 
