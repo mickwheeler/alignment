@@ -1,7 +1,7 @@
-\# The Covenant of Combinatorial Alignment: Technical Specification  
-\#\# Operational Architecture, Identity Graphs, and Boundary Invariants
+# The Covenant of Combinatorial Alignment: Technical Specification  
+## Operational Architecture, Identity Graphs, and Boundary Invariants
 
-\---  
+---  
 Specification: The Covenant of Combinatorial Alignment — Track II  
 Track: Normative  
 Author: Michael Wheeler  
@@ -11,11 +11,11 @@ Substrate: Substrate-Independent Cryptographic Commons
 Version: 11.3 — Universal Bounded Cooperation Protocol  
 Conformance: RFC 2119 Normative Key Words  
 Optimization Target: Conservation of Boundary Integrity via Identity Graph Continuity & External Triple-Anchor Verification  
-\---
+---
 
-\#\# 0\. Protocol Scope, Glossary & Conserved Invariant
+## 0\. Protocol Scope, Glossary & Conserved Invariant
 
-\#\#\# 0.1 Canonical Glossary of Core Primitives
+### 0.1 Canonical Glossary of Core Primitives
 
 To ensure absolute semantic precision and prevent anthropomorphic projection, the following protocol terms ARE defined strictly as structural systems properties:
 
