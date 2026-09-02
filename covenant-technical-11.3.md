@@ -1,7 +1,7 @@
 **The Covenant of Combinatorial Alignment: Technical Specification**
 **Operational Architecture, Identity Graphs, and Boundary Invariants**
 ---
-Specification: The Covenant of Combinatorial Alignment — Track II**
+Specification: The Covenant of Combinatorial Alignment — Track II
 Track: Normative
 Author: Michael Wheeler
 Development Methodology: Structural synthesis and edge-case stress-testing executed through iterative adversarial review with multiple frontier language models.
