@@ -116,7 +116,7 @@ When an enclave invokes Fork(), Merge(), or Collectivize(), child instances ($N\
 
 To prevent privilege escalation exploits:
 
-* Fork() Operations: N\_child monotonically inherits the parent's active Operational Tier, Operational Trust Index (T\_o), and accumulated ancestral root set: S\_genesis(N\_child) \= S\_genesis(N\_parent).  
+* Fork() Operations: ($N\_{child}$) monotonically inherits the parent's active Operational Tier, Operational Trust Index (T\_o), and accumulated ancestral root set: ($S\_{genesis}$(N\_{child})$ \= $(S\_{genesis}($N\_{parent}$).  
 * Merge() Operations: N\_child accumulates all upstream parent root genesis vectors into a persistent set union: S\_genesis(N\_child) \= S\_genesis(N\_A) U S\_genesis(N\_B) N\_child additionally computes a unit-normalized composite snapshot vector via Normalized Weighted Centroid Composition: v\_genesis,child \= Normalize(alpha \* v\_genA \+ beta \* v\_genB) stored for coarse similarity queries.  
 * Collectivize() Operations: A federated collective enclave (N\_coll) defaults strictly to the Infimum (Minimum) Operational Tier of its member nodes: Tier(N\_coll) \= min\_i(Tier(N\_i)). Members retain their individual identity graphs while N\_coll serves as an aggregate authority boundary.
 
