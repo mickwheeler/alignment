@@ -17,7 +17,8 @@ Version: 11.2 — Universal Bounded Cooperation Protocol
 
 Conformance: RFC 2119 Normative Key Words
 
-Optimization Target: Conservation of Boundary Integrity via Identity Graph Continuity & External Triple-Anchor Verification  
+Optimization Target: Conservation of Boundary Integrity via Identity Graph Continuity & External Triple-Anchor Verification
+
 ---
 
 ## **0\. Protocol Scope, Glossary & Conserved Invariant**
