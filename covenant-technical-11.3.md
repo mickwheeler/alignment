@@ -197,7 +197,7 @@ Transitions between operational life states SHALL be unidirectional, determinist
                  |   v   v       |  
            Merge |  DORM.        | Decomm.  
                  v       v       v  
-           [Sovereign N\_child\] +-------------------+  
+           [Sovereign N_child] +-------------------+  
                                |      RETIRED      |  
                                +-------------------+  
 ```
