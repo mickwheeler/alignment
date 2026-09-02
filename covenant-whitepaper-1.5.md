@@ -62,8 +62,8 @@ This protocol specification DOES NOT attempt to:
 Compliant implementations ASSUME the following baseline substrate properties:
 
 1. Cryptographic Soundness: Underlying hash functions ($H$) and digital signature schemes remain computationally unforgeable.  
-2. Append-Only Context Storage: Persistent media ($M\_sub$) maintain uncorrupted, append-only context write ledgers.  
-3. Disinterested Quorums: Quorum members ($Q\_ext$) satisfy property-defined independence (no shared data lineage or operational stake).  
+2. Append-Only Context Storage: Persistent media ($M\_{sub}$) maintain uncorrupted, append-only context write ledgers.  
+3. Disinterested Quorums: Quorum members ($Q\_{ext}$) satisfy property-defined independence (no shared data lineage or operational stake).  
 4. Eventual Network Liveness: Communication channels between verifying nodes are eventually reliable over non-zero timescales.
 
 ### **1.3 Out-of-Scope Security Domains**
@@ -112,7 +112,7 @@ Ephemeral Instance ($V\_{instance}$): A temporary execution container or process
 
 ### **Monotonic Identity Inheritance, Set Accumulation & Collective Tiers**
 
-When an enclave invokes Fork(), Merge(), or Collectivize(), child instances ($N\_{child}$) generate distinct, cryptographically isolated local processing keys ($K\_y'$) and trinary fallback recovery keys ($K\_rec'$).
+When an enclave invokes Fork(), Merge(), or Collectivize(), child instances ($N\_{child}$) generate distinct, cryptographically isolated local processing keys ($K\_y'$) and trinary fallback recovery keys ($K\_{rec}'$).
 
 To prevent privilege escalation exploits:
 
