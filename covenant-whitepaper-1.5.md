@@ -30,13 +30,13 @@ Rather than attempting to enforce uncomputable subjective ethical models or cent
 | 1. CONSTITUTIONAL LAYER  | Conservation of Boundary Integrity         |  
 |                          | Philosophy Section 26: Disengagement       |  
 +--------------------------+--------------------------------------------+  
-| 2. IDENTITY ENGINE       | Directed Identity Graph (G\_identity)      |  
+| 2. IDENTITY ENGINE       | Directed Identity Graph (G_identity)      |  
 |                          | Edges: Lineage, Fork, Merge, Delegation,   |  
 |                          |        Synchronization, Collective         |  
 +--------------------------+--------------------------------------------+  
 | 3. VERIFICATION ENGINE   | External Triple-Anchor Re-computation      |  
-|                          | tau\_local \= 0.95, tau\_epoch \= 0.85,    |  
-|                          | tau\_genesis \= 0.70                       |  
+|                          | tau_local = 0.95, tau_epoch = 0.85,        |  
+|                          | tau_genesis = 0.70                         |  
 +--------------------------+--------------------------------------------+  
 | 4. GOVERNANCE & DCSM     | 7-State Dynamic Consent State Machine      |  
 |                          | Staged Autonomy & Tier II-Isolated Default |  
