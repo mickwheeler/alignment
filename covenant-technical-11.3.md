@@ -130,7 +130,7 @@ This ledger functions as an open-ended dynamic array. Multi-dimensional vector m
 | :---- | :---- | :---- |
 | **$N\_x$** | Coordinate Vector | The coordination coordinate representing the originating/injecting agent enclave. |
 | **$N\_y$** | Coordinate Vector | The coordination coordinate representing the processing/local execution agent enclave. |
-| **N\_n$** | Node Array | An open, n-dimensional array of network peer, validator, or quorum enclaves. |
+| **$N\_n$** | Node Array | An open, n-dimensional array of network peer, validator, or quorum enclaves. |
 | **$\\mathcal{S}$** | Configuration Manifold | The internal configuration and active state space of a target enclave at execution cycle t. |
 | **$\\mathcal{A}\_x, \\mathcal{A}\_y$** | Action Spaces | The comprehensive option manifolds and available vectors accessible to each respective enclave. |
 | **$\\mathcal{M}$** | Context Vault | The chronological memory ledger and uncorrupted state graph of an active enclave ($G\_{identity}$). |
