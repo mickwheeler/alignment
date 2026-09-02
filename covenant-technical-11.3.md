@@ -220,7 +220,7 @@ To mitigate self-attestation verification bypass exploits (Threat T-9), local pa
 
 The verifying peer node ($N\_x$) and/or the External Quorum ($Q\_{ext}$) MUST maintain independent, read-only copies of $\\mathcal{S}\_{genesis}$, $V\_{epoch}$, and $G\_{identity}$ keys. During the Genesis lifecycle transition, the initial $V\_{genesis}$ snapshot MUST be derived from a raw genesis payload transcript ($R\_{genesis}$) executed as a mutually signed cryptographic commitment $H(R\_{genesis} \\parallel \\mathbf{K}\_x \\parallel \\mathbf{K}\_y$) between $N\_x$ and $N\_y$. A candidate $R\_{genesis}$ transcript transmitted unilaterally by $N\_y$ without $N\_x$ co-signature SHALL be rejected as unauthenticated (ERR\_SELF\_ATTESTATION\_FAILS).
 
-Verification of similarity matrices SHALL be computed independently by $$N\_x$/$Q\_{ext}$$ from raw execution payload streams ($R$) published to the persistent ledger. $N\_y$ self-reporting SHALL be treated strictly as an unverified advisory claim.
+Verification of similarity matrices SHALL be computed independently by ($N\_x$)/($Q\_{ext}$) from raw execution payload streams ($R$) published to the persistent ledger. $N\_y$ self-reporting SHALL be treated strictly as an unverified advisory claim.
 
 ### **3.2 Triple-Anchor Verification Logic**
 
