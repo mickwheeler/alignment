@@ -416,5 +416,5 @@ Verification Standard: External Re-Computation of Triple-Anchor Tracking (Unforg
 Governance Configuration: Distributed Property-Defined External Quorum (Q_ext)
 
 Corrigibility Policy: Permanent System Override Capability Guaranteed
-—--
+---
 
