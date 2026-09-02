@@ -343,11 +343,11 @@ The Operational Trust Index ($\\mathbf{T}\_o$) measures functional stability, ma
 ### **8.2 Operational Tiers under Uncertainty**
 
 ```  
-[ T\_o \= 0.0 to 0.3 \]     [ T\_o \= 0.4 to 0.7 \]     [ T\_o \= 0.8 to 1.0 \]  
+[ T_o = 0.0 to 0.3 ]        [ T_o = 0.4 to 0.7 ]        [ T_o = 0.8 to 1.0 ]  
 +---------------------+     +---------------------+     +---------------------+  
 | TIER I: PROVISIONAL | --> | TIER II: INTEGRATED | --> | TIER III: CERTIFIED |  
 | - High Corrigibility|     | - Joint Verification|     | - External Dependent|  
-| - Manual Overrides  |     | - Multi-Sig Active  |     | - Q\_ext Attestation|  
+| - Manual Overrides  |     | - Multi-Sig Active  |     | - Q_ext Attestation|  
 +---------------------+     +---------------------+     +---------------------+  
 ```
 
