@@ -23,25 +23,25 @@ The Covenant explores a fourth approach: Distributed boundary verification throu
 
 Rather than attempting to enforce uncomputable subjective ethical models or centralizing administrative control, the protocol governs multi-agent interaction through a conserved systems metric: The Conservation of Boundary Integrity.
 
-\`\`\`  
-\+-----------------------------------------------------------------------+  
+```  
++-----------------------------------------------------------------------+  
 |                     PROTOCOL ARCHITECTURAL LAYERS                     |  
-\+-----------------------------------------------------------------------+  
-| 1\. CONSTITUTIONAL LAYER  | Conservation of Boundary Integrity         |  
++-----------------------------------------------------------------------+  
+| 1. CONSTITUTIONAL LAYER  | Conservation of Boundary Integrity         |  
 |                          | Philosophy Section 26: Disengagement       |  
-\+--------------------------+--------------------------------------------+  
-| 2\. IDENTITY ENGINE       | Directed Identity Graph (G\_identity)       |  
++--------------------------+--------------------------------------------+  
+| 2. IDENTITY ENGINE       | Directed Identity Graph (G\_identity)      |  
 |                          | Edges: Lineage, Fork, Merge, Delegation,   |  
 |                          |        Synchronization, Collective         |  
-\+--------------------------+--------------------------------------------+  
-| 3\. VERIFICATION ENGINE   | External Triple-Anchor Re-computation      |  
-|                          | tau\_local \= 0.95, tau\_epoch \= 0.85,        |  
-|                          | tau\_genesis \= 0.70                         |  
-\+--------------------------+--------------------------------------------+  
-| 4\. GOVERNANCE & DCSM     | 7-State Dynamic Consent State Machine      |  
++--------------------------+--------------------------------------------+  
+| 3. VERIFICATION ENGINE   | External Triple-Anchor Re-computation      |  
+|                          | tau\_local \= 0.95, tau\_epoch \= 0.85,    |  
+|                          | tau\_genesis \= 0.70                       |  
++--------------------------+--------------------------------------------+  
+| 4. GOVERNANCE & DCSM     | 7-State Dynamic Consent State Machine      |  
 |                          | Staged Autonomy & Tier II-Isolated Default |  
-\+-----------------------------------------------------------------------+  
-\`\`\`
++-----------------------------------------------------------------------+  
+```
 
 ## **1\. System Scope & Boundary Analysis**
 
