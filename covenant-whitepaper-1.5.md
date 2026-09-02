@@ -96,7 +96,7 @@ $$\\text{Identity} \\equiv \\text{Directed Identity Graph } G\_{identity} \= (\\
     [ Parent A ]             [ Parent B ]  
           |                        |  
           +-----------+------------+  
-                      |  (Merge() Edge ($e_{merge}$))
+                      |  [Merge() Edge ($e_{merge}$)]
                       v  
                [ Synthesized $N\_{child}$ \]  
                - Ancestral Set Union: ($\mathcal{S}\_{genesis}(N\_{child}) = \mathcal{S}\_{genesis}(N\_A) \cup \\mathcal{S}\_{genesis}(N\_B)$)
