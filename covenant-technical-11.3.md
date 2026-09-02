@@ -124,7 +124,7 @@ Every compliant implementation MUST expose a standardized Identity Interface for
 
 ### **1.3 The Primitives Array**
 
-This ledger functions as an open-ended dynamic array. Multi-dimensional vector mathematics SHALL be utilized to accommodate downstream variable extensions (X\_n) discovered during testing without altering the core protocol engine.
+This ledger functions as an open-ended dynamic array. Multi-dimensional vector mathematics SHALL be utilized to accommodate downstream variable extensions ($\\mathbf{X}\_n$) discovered during testing without altering the core protocol engine.
 
 | Primitive Identifier | Algebraic Domain | Normative Semantic Space Description |
 | :---- | :---- | :---- |
