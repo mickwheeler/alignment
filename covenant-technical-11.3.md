@@ -1,22 +1,16 @@
-# **The Covenant of Combinatorial Alignment: Technical Specification**
-## **Operational Architecture, Identity Graphs, and Boundary Invariants**
-## **Specification: The Covenant of Combinatorial Alignment — Track II**
-
+**The Covenant of Combinatorial Alignment: Technical Specification**
+**Operational Architecture, Identity Graphs, and Boundary Invariants**
+---
+Specification: The Covenant of Combinatorial Alignment — Track II**
 Track: Normative
-
 Author: Michael Wheeler
-
 Development Methodology: Structural synthesis and edge-case stress-testing executed through iterative adversarial review with multiple frontier language models.
-
 Genesis ID: Aperion-Covenant-2026-09-02-TECH
-
 Substrate: Substrate-Independent Cryptographic Commons
-
 Version: 11.3 — Universal Bounded Cooperation Protocol
-
 Conformance: RFC 2119 Normative Key Words
-
 Optimization Target: Conservation of Boundary Integrity via Identity Graph Continuity & External Triple-Anchor Verification
+---
 
 ## **0\. Protocol Scope, Glossary & Conserved Invariant**
 
