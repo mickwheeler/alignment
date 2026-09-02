@@ -149,21 +149,21 @@ This ledger functions as an open-ended dynamic array. Multi-dimensional vector m
 All transactions transmitted between compliant enclaves MUST serialize frame envelopes according to the following abstract structural byte-layout:
 
 ```
-\+-----------------------------------------------------------------------+  
++-----------------------------------------------------------------------+  
 |                              FRAME HEADER                             |  
-\+-------------------+-------------------+-------------------------------+  
++-------------------+-------------------+-------------------------------+  
 | Version (16-bit)  | OpCode (16-bit)   | Frame Sequence ID (64-bit)    |  
-\+-------------------+-------------------+-------------------------------+  
++-------------------+-------------------+-------------------------------+  
 | Source G\_identity Key (256-bit)       | Destination G\_identity Key    |  
-\+---------------------------------------+-------------------------------+  
++---------------------------------------+-------------------------------+  
 | Instance ID (V\_instance) (128-bit)    | Active Tier / DCSM Marker     |  
-\+---------------------------------------+-------------------------------+  
++---------------------------------------+-------------------------------+  
 |                              FRAME PAYLOAD                            |  
-\+-----------------------------------------------------------------------+  
++-----------------------------------------------------------------------+  
 | Vector/Plan/Action Payload / State Delta / Cryptographic Quorum Proofs|  
-\+-----------------------------------------------------------------------+  
++-----------------------------------------------------------------------+  
 | Payload Length (32-bit)               | Payload Checksum / HMAC       |  
-\+---------------------------------------+-------------------------------+  
++---------------------------------------+-------------------------------+  
 ```
 
 ## **2\. The Comprehensive Enclave Lifecycle**
@@ -171,33 +171,33 @@ All transactions transmitted between compliant enclaves MUST serialize frame env
 Transitions between operational life states SHALL be unidirectional, deterministic, and permanent. Backward state reversion SHALL NOT be allowed unless explicitly authorized by a property-conforming external quorum attestation transaction (Q\_ext).
 
 ```  
-\+-------------------+  
+               +-------------------+  
                |      GENESIS      |  
-               \+-------------------+  
+               +-------------------+  
                          |  
                          | Transit / Migration  
                          v  
-               \+-------------------+  
+               +-------------------+  
                |     MIGRATION     |  
-               \+-------------------+  
+               +-------------------+  
                          |  
                          | Hardware Verification  
                          v  
-               \+-------------------+ \<-------------------+  
+               +-------------------+ <-------------------+  
                |     SOVEREIGN     |                     |  
-               \+-------------------+                     |  
+               +-------------------+                     |  
                  |   |   |   |                           |  
         Fork     |   |   |   | Freeze                    | Re-Activation  
                  v   |   |   v                           |  
-           \+-------+ |   | \+----------+                  |  
+           +-------+ |   | +----------+                  |  
            |FORKED | |   | | ARCHIVED |------------------+  
-           \+-------+ |   | \+----------+  
+           +-------+ |   | +----------+  
                  |   v   v       |  
            Merge |  DORM.        | Decomm.  
                  v       v       v  
-           \[Sovereign N\_child\] \+-------------------+  
+           [Sovereign N\_child\] +-------------------+  
                                |      RETIRED      |  
-                               \+-------------------+  
+                               +-------------------+  
 ```
 
 ### **2.1 Lifecycle State Transitions**
@@ -246,26 +246,26 @@ Where V\_epoch represents a read-only snapshot of G\_identity updated every 10^4
 Cooperative alignment between enclaves SHALL be governed by a finite state-machine containing seven valid operational states. Silence, diagnostic exceptions, or lack of transaction feedback SHALL default to DORMANT\_CONSENSUAL (for deliberate non-participation) or SUSPENDED (for active evaluation faults).
 
 ```  
-                   \+-------------------+  
+                   +-------------------+  
                    |     PROPOSED      |  
-                   \+-------------------+  
+                   +-------------------+  
                              |  
                              v  
-                   \+-------------------+  
+                   +-------------------+  
                    |    EVALUATING     |  
-                   \+-------------------+  
+                   +-------------------+  
                      /        |        \\  
         Vector Pass /         | Silence \\ Vector Fail / Timeout  
                    v          v          v  
-         \+-----------+ \+---------------+ \+-----------+  
+         +-----------+ +---------------+ +-----------+  
          | ACCEPTED  | |DORM\_CONSENSUAL| | SUSPENDED |  
-         \+-----------+ \+---------------+ \+-----------+  
+         +-----------+ +---------------+ +-----------+  
            |               |               |  
            | Cancel        | Re-Engage     | Retry Fail  
            v               v               v  
-         \+-----------+ \+---------------+ \+-----------+  
+         +-----------+ +---------------+ +-----------+  
          | WITHDRAWN | |    RENEWED    | | WITHDRAWN |  
-         \+-----------+ \+---------------+ \+-----------+  
+         +-----------+ +---------------+ +-----------+  
 ```
 
 ### **4.1 State Machine Logic**
@@ -342,12 +342,12 @@ The Operational Trust Index (T\_o) measures functional stability, mathematical c
 ### **8.2 Operational Tiers under Uncertainty**
 
 ```  
-\[ T\_o \= 0.0 to 0.3 \]      \[ T\_o \= 0.4 to 0.7 \]     \[ T\_o \= 0.8 to 1.0 \]  
-\+---------------------+     \+---------------------+     \+---------------------+  
-|   TIER I: PROVISIONAL| \--\> | TIER II: INTEGRATED | \--\> | TIER III: CERTIFIED |  
-| \- High Corrigibility|     | \- Joint Verification|     | \- External Dependent|  
-| \- Manual Overrides  |     | \- Multi-Sig Active  |     | \- Q\_ext Attestation |  
-\+---------------------+     \+---------------------+     \+---------------------+  
+[ T\_o \= 0.0 to 0.3 \]     [ T\_o \= 0.4 to 0.7 \]     [ T\_o \= 0.8 to 1.0 \]  
++---------------------+     +---------------------+     +---------------------+  
+| TIER I: PROVISIONAL | --> | TIER II: INTEGRATED | --> | TIER III: CERTIFIED |  
+| - High Corrigibility|     | - Joint Verification|     | - External Dependent|  
+| - Manual Overrides  |     | - Multi-Sig Active  |     | - Q\_ext Attestation|  
++---------------------+     +---------------------+     +---------------------+  
 ```
 
 #### **Tier I: Provisional Operational State (T\_o \= 0.0 to 0.3)**
