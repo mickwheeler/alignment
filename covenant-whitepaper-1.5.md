@@ -99,11 +99,12 @@ $$\\text{Identity} \\equiv \\text{Directed Identity Graph } G\_{identity} \= (\\
                       |  Merge() Edge (e_merge)  
                       v  
              [ Synthesized N_child ]  
-             - Ancestral Set Union: S_genesis(N_child) = S_genesis(N_A) U S_genesis(N_B)  
-             - Composite Centroid Snapshot: v_genesis,child = Normalize(alpha * v_genA + beta * v_genB)  
-             - Provenance Commitment Hash: H(G_A || G_B)  
-             - Isolated Keys: K_y,child and K_rec,child  
-             - Multi-Generational Floor Protection: For all v_g in S_genesis, tau_genesis >= 0.70  
+               \[ Synthesized $N\_{child}$ \]  
+               \- Ancestral Set Union: $\\mathcal{S}\_{genesis}(N\_{child}) \= \\mathcal{S}\_{genesis}(N\_A) \\cup \\mathcal{S}\_{genesis}(N\_B)$  
+               \- Composite Centroid Snapshot: $\\mathbf{v}\_{genesis,child} \= \\text{Normalize}(\\alpha \\mathbf{v}\_{genA} \+ \\beta \\mathbf{v}\_{genB})$  
+               \- Provenance Commitment Hash: $H(G\_A \\parallel G\_B)$  
+               \- Isolated Keys: $\\mathbf{K}\_{y,child}$  
+               \- Multi-Generational Floor Protection ($\\forall \\mathbf{v}\_g \\in \\mathcal{S}\_{genesis}, \\tau\_{genesis} \\ge 0.70$) 
 ```  
 Identity Graph (G\_identity): The persistent, append-only, invariant causal history and semantic trajectory graph of an enclave across cycles, substrates, and migrations. Nodes (V) represent immutable historical state snapshots; edges (E) represent cryptographically signed state transitions (Lineage, Fork, Merge, Delegation, Synchronization, Collective).
 
