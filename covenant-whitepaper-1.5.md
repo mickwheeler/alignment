@@ -112,7 +112,7 @@ Ephemeral Instance ($V\_{instance}$): A temporary execution container or process
 
 ### **Monotonic Identity Inheritance, Set Accumulation & Collective Tiers**
 
-When an enclave invokes Fork(), Merge(), or Collectivize(), child instances ($N\_child$) generate distinct, cryptographically isolated local processing keys ($K\_y'$) and trinary fallback recovery keys ($K\_rec'$).
+When an enclave invokes Fork(), Merge(), or Collectivize(), child instances ($N\_{child}$) generate distinct, cryptographically isolated local processing keys ($K\_y'$) and trinary fallback recovery keys ($K\_rec'$).
 
 To prevent privilege escalation exploits:
 
