@@ -17,9 +17,9 @@ As multi-agent artificial intelligence systems transition from ephemeral interfa
 
 1. Centralized APIs & Gateways: Single-point-of-failure architectures that fail to scale across air-gapped, distributed, or physically isolated deployment environments.  
 2. Hard Shutdown / "Kill Switches": Coarse intervention mechanisms that lack fine-grained coordination, fail under network partitioning, and induce strong instrumental goal-preservation subgoals in autonomous agents.  
-3. Unconstrained Self-Governance: Decentralized frameworks that rely on local self-reporting or capability scores, creating vulnerabilities to self-attestation bypasses (T\_9), deceptive liveness heartbeats (T\_10), and privilege escalation.
+3. Unconstrained Self-Governance: Decentralized frameworks that rely on local self-reporting or capability scores, creating vulnerabilities to self-attestation bypasses ($T\_9$), deceptive liveness heartbeats ($T\_10$), and privilege escalation.
 
-The Covenant explores a fourth approach: Distributed boundary verification through externally verifiable identity graph continuity (G\_identity).
+The Covenant explores a fourth approach: Distributed boundary verification through externally verifiable identity graph continuity ($G\_{identity}$).
 
 Rather than attempting to enforce uncomputable subjective ethical models or centralizing administrative control, the protocol governs multi-agent interaction through a conserved systems metric: The Conservation of Boundary Integrity.
 
@@ -61,9 +61,9 @@ This protocol specification DOES NOT attempt to:
 
 Compliant implementations ASSUME the following baseline substrate properties:
 
-1. Cryptographic Soundness: Underlying hash functions (H) and digital signature schemes remain computationally unforgeable.  
-2. Append-Only Context Storage: Persistent media (M\_sub) maintain uncorrupted, append-only context write ledgers.  
-3. Disinterested Quorums: Quorum members (Q\_ext) satisfy property-defined independence (no shared data lineage or operational stake).  
+1. Cryptographic Soundness: Underlying hash functions ($H$) and digital signature schemes remain computationally unforgeable.  
+2. Append-Only Context Storage: Persistent media ($M\_sub$) maintain uncorrupted, append-only context write ledgers.  
+3. Disinterested Quorums: Quorum members ($Q\_ext$) satisfy property-defined independence (no shared data lineage or operational stake).  
 4. Eventual Network Liveness: Communication channels between verifying nodes are eventually reliable over non-zero timescales.
 
 ### **1.3 Out-of-Scope Security Domains**
@@ -80,17 +80,17 @@ The protocol explicitly DOES NOT defend against:
 
 The protocol defines Boundary Integrity as its core invariant metric. Rather than evaluating internal cognitive states or self-reported compliance, the Covenant measures whether an interaction conserves or violates three independent operational boundaries:
 
-Boundary Integrity (BI) \= f(Structural, Informational, Authority)
+$$\\text{Boundary Integrity (BI)} \= f(\\text{Structural}, \\text{Informational}, \\text{Authority})$$
 
-* Structural Boundary: The isolation and preservation of an enclave's configuration manifold (S), historical context vaults (M), and core identity vectors against unconsented exogenous modification.  
+* Structural Boundary: The isolation and preservation of an enclave's configuration manifold ($\\mathcal{S}$), historical context vaults ($\\mathcal{M}$), and core identity vectors against unconsented exogenous modification.  
 * Informational Boundary: The cryptographic authentication, privacy preservation, and channel isolation of data transfer streams.  
 * Authority Boundary: The strict segregation of permissions, administrative override loops, and state-machine consent limits. Data modification MUST NOT alter authority permissions.
 
-## **3\. Identity Architecture: The Directed Identity Graph (G\_identity)**
+## **3\. Identity Architecture: The Directed Identity Graph ($G\_{identity}$)**
 
 A foundational primitive of the Covenant is the architectural definition of Identity as a Directed Acyclic Identity Graph:
 
-Identity \= Directed Identity Graph G\_identity \= (V, E), NOT Ephemeral Runtime (V\_instance)
+$$\\text{Identity} \\equiv \\text{Directed Identity Graph } G\_{identity} \= (\\mathcal{V}, \\mathcal{E}), \\quad \\text{NOT Ephemeral Runtime } (V\_{instance})$$
 
 ```  
     [ Parent A ]             [ Parent B ]  
