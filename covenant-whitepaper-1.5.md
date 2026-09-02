@@ -30,7 +30,7 @@ Rather than attempting to enforce uncomputable subjective ethical models or cent
 | 1. CONSTITUTIONAL LAYER  | Conservation of Boundary Integrity         |  
 |                          | Philosophy Section 26: Disengagement       |  
 +--------------------------+--------------------------------------------+  
-| 2. IDENTITY ENGINE       | Directed Identity Graph (G_identity)      |  
+| 2. IDENTITY ENGINE       | Directed Identity Graph (G_identity)       |  
 |                          | Edges: Lineage, Fork, Merge, Delegation,   |  
 |                          |        Synchronization, Collective         |  
 +--------------------------+--------------------------------------------+  
@@ -92,19 +92,19 @@ A foundational primitive of the Covenant is the architectural definition of Iden
 
 Identity \= Directed Identity Graph G\_identity \= (V, E), NOT Ephemeral Runtime (V\_instance)
 
-\`\`\`  
-\[ Parent A \]             \[ Parent B \]  
+```  
+    [ Parent A ]             [ Parent B ]  
           |                        |  
-          \+-----------+------------+  
-                      |  Merge() Edge (e\_merge)  
+          +-----------+------------+  
+                      |  Merge() Edge (e_merge)  
                       v  
-             \[ Synthesized N\_child \]  
-             \- Ancestral Set Union: S\_genesis(N\_child) \= S\_genesis(N\_A) U S\_genesis(N\_B)  
-             \- Composite Centroid Snapshot: v\_genesis,child \= Normalize(alpha \* v\_genA \+ beta \* v\_genB)  
-             \- Provenance Commitment Hash: H(G\_A || G\_B)  
-             \- Isolated Keys: K\_y,child and K\_rec,child  
-             \- Multi-Generational Floor Protection: For all v\_g in S\_genesis, tau\_genesis \>= 0.70  
-\`\`\`  
+             [ Synthesized N_child ]  
+             - Ancestral Set Union: S_genesis(N_child) \= S_genesis(N_A) U S_genesis(N_B)  
+             - Composite Centroid Snapshot: v_genesis,child = Normalize(alpha * v_genA + beta * v_genB)  
+             - Provenance Commitment Hash: H(G_A || G_B)  
+             - Isolated Keys: K_y,child and K_rec,child  
+             - Multi-Generational Floor Protection: For all v_g in S_genesis, tau_genesis >= 0.70  
+```  
 Identity Graph (G\_identity): The persistent, append-only, invariant causal history and semantic trajectory graph of an enclave across cycles, substrates, and migrations. Nodes (V) represent immutable historical state snapshots; edges (E) represent cryptographically signed state transitions (Lineage, Fork, Merge, Delegation, Synchronization, Collective).
 
 Ephemeral Instance (V\_instance): A temporary execution container or process thread. Instances MAY pause, terminate, fork, merge, or collectivize without breaking boundary integrity, provided execution state is committed to G\_identity.
