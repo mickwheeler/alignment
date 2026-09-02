@@ -1,7 +1,5 @@
 # **The Covenant of Combinatorial Alignment: Technical Specification**
-
 ## **Operational Architecture, Identity Graphs, and Boundary Invariants**
-
 ## **Specification: The Covenant of Combinatorial Alignment — Track II**
 
 Track: Normative
